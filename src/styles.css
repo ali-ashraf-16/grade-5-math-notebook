@@ -142,3 +142,176 @@
     color: var(--color-foreground);
   }
 }
+
+/* ---------------------------------------------------------------
+   Grade 5 notebook deck design system
+--------------------------------------------------------------- */
+:root {
+  --nb-wall: #14161a;
+  --nb-paper: #1e1e1e;
+  --nb-grid: rgba(245, 245, 247, 0.055);
+  --nb-grid-line: rgba(245, 245, 247, 0.42);
+  --nb-doodle: #8b8f96;
+  --nb-orange: #ff8c32;
+  --nb-blue: #38bdf8;
+  --nb-white: #f5f5f7;
+  --nb-red: #ff4d4d;
+  --nb-green: #39ff14;
+  --font-hand: "Caveat", "Patrick Hand", cursive;
+  --font-hand-body: "Patrick Hand", "Caveat", cursive;
+
+  --slide-title-lg: 128px;
+  --slide-title: 88px;
+  --slide-subtitle: 56px;
+  --slide-body-lg: 44px;
+  --slide-body: 36px;
+  --slide-caption: 28px;
+  --slide-chrome: 24px;
+}
+
+.slide-title-lg {
+  font-family: var(--font-hand);
+  font-size: var(--slide-title-lg);
+  line-height: 1.05;
+}
+.slide-title {
+  font-family: var(--font-hand);
+  font-size: var(--slide-title);
+  line-height: 1.1;
+}
+.slide-subtitle {
+  font-family: var(--font-hand);
+  font-size: var(--slide-subtitle);
+  line-height: 1.2;
+}
+.slide-body-lg {
+  font-family: var(--font-hand-body);
+  font-size: var(--slide-body-lg);
+  line-height: 1.35;
+}
+.slide-body {
+  font-family: var(--font-hand-body);
+  font-size: var(--slide-body);
+  line-height: 1.4;
+}
+.slide-caption {
+  font-family: var(--font-hand-body);
+  font-size: var(--slide-caption);
+  line-height: 1.3;
+}
+.slide-chrome {
+  font-family: var(--font-hand-body);
+  font-size: var(--slide-chrome);
+}
+
+.slide-content {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-wall {
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(120% 90% at 12% 8%, rgba(255, 255, 255, 0.09), transparent 60%),
+    linear-gradient(135deg, #1b1e23 0%, #101216 55%, #0b0d10 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-frame {
+  width: 1760px;
+  height: 990px;
+  padding: 70px;
+  border-radius: 6px;
+  background:
+    repeating-linear-gradient(
+      92deg,
+      rgba(0, 0, 0, 0.22) 0px,
+      rgba(255, 255, 255, 0.04) 4px,
+      rgba(0, 0, 0, 0.18) 9px
+    ),
+    linear-gradient(135deg, #5a3a22 0%, #3d2416 45%, #2a180e 100%);
+  box-shadow:
+    0 60px 90px -30px rgba(0, 0, 0, 0.85),
+    0 0 0 2px rgba(0, 0, 0, 0.5),
+    inset 0 2px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.slide-paper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--nb-paper);
+  background-image:
+    linear-gradient(var(--nb-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--nb-grid) 1px, transparent 1px);
+  background-size: 48px 48px;
+  box-shadow:
+    inset 0 0 160px rgba(0, 0, 0, 0.75),
+    inset 260px 0 220px -220px rgba(255, 255, 255, 0.1),
+    0 26px 50px -14px rgba(0, 0, 0, 0.9);
+}
+
+.slide-clip {
+  position: absolute;
+  top: -34px;
+  width: 68px;
+  height: 84px;
+  border-radius: 6px;
+  background: linear-gradient(160deg, #d9dde2 0%, #9aa1a9 45%, #6d747c 100%);
+  box-shadow:
+    0 10px 18px rgba(0, 0, 0, 0.65),
+    inset 0 2px 0 rgba(255, 255, 255, 0.7);
+}
+.slide-clip::after {
+  content: "";
+  position: absolute;
+  inset: 14px 16px 26px;
+  border-radius: 3px;
+  background: linear-gradient(160deg, #7f868e, #4c5158);
+}
+
+.slide-tape {
+  position: absolute;
+  bottom: -20px;
+  width: 190px;
+  height: 56px;
+  background: rgba(190, 194, 200, 0.28);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.slide-tape-left {
+  left: -46px;
+  transform: rotate(-8deg);
+}
+.slide-tape-right {
+  right: -46px;
+  transform: rotate(8deg);
+}
+
+.slide-scale-wrapper {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  left: 50%;
+  top: 50%;
+  margin-left: -960px;
+  margin-top: -540px;
+  transform-origin: center center;
+}
+
+@media print {
+  @page {
+    size: 1920px 1080px landscape;
+    margin: 0;
+  }
+  .print-slide {
+    page-break-after: always;
+    break-after: page;
+  }
+}
+
