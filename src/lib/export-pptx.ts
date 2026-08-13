@@ -11,7 +11,6 @@ const HAND = "Comic Sans MS";
 
 const W = 10;
 const H = 5.625;
-const K = 0.75; // scale factor from the 13.333in design grid
 
 function modelRows(model: Model) {
   const header = [
@@ -55,8 +54,8 @@ export async function downloadPptx() {
     s.addShape("rect", {
       x: 0.315,
       y: 0.315,
-      w: W - 0.84,
-      h: H - 0.84,
+      w: W - 0.63,
+      h: H - 0.63,
       fill: { color: PAPER },
       line: { color: "0B0D10", width: 1 },
     });
