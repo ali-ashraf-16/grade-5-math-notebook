@@ -72,7 +72,7 @@ export function AdditionColumn({
   total,
 }: {
   addends: string[];
-  total?: string;
+  total?: string | undefined;
 }) {
   return (
     <div
