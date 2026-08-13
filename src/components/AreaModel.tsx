@@ -28,6 +28,7 @@ export function AreaModel({
   fontSize = 44,
 }: AreaModelProps) {
   const headW = 150;
+  const headH = Math.round(cellH * 0.55);
 
   return (
     <table
@@ -36,12 +37,12 @@ export function AreaModel({
     >
       <tbody>
         <tr>
-          <td style={{ width: headW, height: 96 }} />
+          <td style={{ width: headW, height: headH }} />
           {cols.map((c, i) => (
             <td
               key={i}
               className="nb-glow-red text-center align-middle"
-              style={{ width: cellW, height: 96, fontSize: fontSize + 16 }}
+              style={{ width: cellW, height: headH, fontSize: fontSize + 14 }}
             >
               {c}
             </td>
@@ -51,7 +52,7 @@ export function AreaModel({
           <tr key={ri}>
             <td
               className="nb-glow-green text-center align-middle"
-              style={{ width: headW, height: cellH, fontSize: fontSize + 16 }}
+              style={{ width: headW, height: cellH, fontSize: fontSize + 14 }}
             >
               {r}
             </td>

@@ -8,7 +8,7 @@ function Title({ children }: { children: string }) {
 
 function Banner({ children }: { children: string }) {
   return (
-    <div className="nb-banner mx-auto mt-10 w-full max-w-[1400px] text-center">
+    <div className="nb-banner mx-auto mt-8 w-full max-w-[1400px] text-center">
       <span
         className="nb-glow-white"
         style={{ fontFamily: "var(--font-hand)", fontSize: 68 }}
@@ -66,13 +66,13 @@ export function SlideRenderer({ slide }: { slide: Slide }) {
     return (
       <SlideFrame>
         <Title>{slide.title}</Title>
-        <div className="mt-14 flex flex-1 items-center justify-between gap-16">
+        <div className="mt-10 flex flex-1 items-center justify-between gap-16">
           {slide.model && (
             <AreaModel
               {...slide.model}
               cellW={cols >= 3 ? 330 : 420}
-              cellH={cols >= 3 ? 160 : 190}
-              fontSize={cols >= 3 ? 40 : 48}
+              cellH={cols >= 3 ? 140 : 165}
+              fontSize={cols >= 3 ? 38 : 46}
             />
           )}
           {slide.addends && (
@@ -103,12 +103,12 @@ export function SlideRenderer({ slide }: { slide: Slide }) {
       <SlideFrame>
         <Title>{slide.title}</Title>
         <Banner>{`Solve using an area model: ${slide.problem} = ?`}</Banner>
-        <div className="mt-12 flex flex-1 items-center justify-between gap-16">
+        <div className="mt-8 flex flex-1 items-center justify-between gap-16">
           {slide.model && (
             <AreaModel
               {...slide.model}
               cellW={cols >= 3 ? 330 : 420}
-              cellH={cols >= 3 ? 170 : 200}
+              cellH={cols >= 3 ? 130 : 150}
             />
           )}
           <BlankAddition lines={cols >= 3 ? 6 : 5} />
