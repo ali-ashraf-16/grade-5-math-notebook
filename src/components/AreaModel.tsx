@@ -5,15 +5,30 @@ export interface AreaModelProps {
   cols: string[];
   /** row headers (left factor parts) */
   rows: string[];
-  /** grid values, rows x cols; null renders a blank "?" cell */
+  /** grid values, rows x cols; null renders an empty box to fill in */
   cells: Cell[][];
-  scale?: number;
+  /** width of a body cell in px */
+  cellW?: number;
+  /** height of a body cell in px */
+  cellH?: number;
+  /** font size of the text inside a body cell */
+  fontSize?: number;
 }
 
-/** Hand-drawn style area model grid. */
-export function AreaModel({ cols, rows, cells, scale = 1 }: AreaModelProps) {
-  const w = 190 * scale;
-  const h = 110 * scale;
+/**
+ * Neon chalk area model: red place-value column headers, lime row headers and
+ * a glowing cyan grid holding the partial products.
+ */
+export function AreaModel({
+  cols,
+  rows,
+  cells,
+  cellW = 380,
+  cellH = 170,
+  fontSize = 44,
+}: AreaModelProps) {
+  const headW = 150;
+  const headH = Math.round(cellH * 0.55);
 
   return (
     <table
@@ -22,12 +37,12 @@ export function AreaModel({ cols, rows, cells, scale = 1 }: AreaModelProps) {
     >
       <tbody>
         <tr>
-          <td style={{ width: w, height: h }} />
+          <td style={{ width: headW, height: headH }} />
           {cols.map((c, i) => (
             <td
               key={i}
-              className="text-center align-middle text-[var(--nb-blue)]"
-              style={{ width: w, height: h, fontSize: 44 * scale }}
+              className="nb-glow-red text-center align-middle"
+              style={{ width: cellW, height: headH, fontSize: fontSize + 14 }}
             >
               {c}
             </td>
@@ -36,8 +51,8 @@ export function AreaModel({ cols, rows, cells, scale = 1 }: AreaModelProps) {
         {rows.map((r, ri) => (
           <tr key={ri}>
             <td
-              className="text-center align-middle text-[var(--nb-blue)]"
-              style={{ width: w, height: h, fontSize: 44 * scale }}
+              className="nb-glow-green text-center align-middle"
+              style={{ width: headW, height: cellH, fontSize: fontSize + 14 }}
             >
               {r}
             </td>
@@ -46,16 +61,10 @@ export function AreaModel({ cols, rows, cells, scale = 1 }: AreaModelProps) {
               return (
                 <td
                   key={ci}
-                  className="border-2 text-center align-middle"
-                  style={{
-                    width: w,
-                    height: h,
-                    fontSize: 44 * scale,
-                    borderColor: "var(--nb-grid-line)",
-                    color: v === null ? "var(--nb-orange)" : "var(--nb-green)",
-                  }}
+                  className="nb-cell nb-glow-blue text-center align-middle"
+                  style={{ width: cellW, height: cellH, fontSize }}
                 >
-                  {v === null ? "?" : v}
+                  {v ?? ""}
                 </td>
               );
             })}
@@ -70,36 +79,51 @@ export function AreaModel({ cols, rows, cells, scale = 1 }: AreaModelProps) {
 export function AdditionColumn({
   addends,
   total,
+  fontSize = 56,
 }: {
   addends: string[];
   total?: string | undefined;
+  fontSize?: number;
 }) {
   return (
     <div
-      className="inline-block rounded-md border-2 px-10 py-6 text-right"
-      style={{
-        borderColor: "var(--nb-grid-line)",
-        fontFamily: "var(--font-hand)",
-      }}
+      className="inline-block text-right"
+      style={{ fontFamily: "var(--font-hand)", minWidth: 340 }}
     >
       {addends.map((a, i) => (
-        <div
-          key={i}
-          className="slide-body-lg text-[var(--nb-white)]"
-          style={{ letterSpacing: "0.08em" }}
-        >
-          {i === addends.length - 1 ? "+ " : "  "}
+        <div key={i} className="nb-glow-blue" style={{ fontSize, lineHeight: 1.25 }}>
+          {i === 0 ? "" : "+ "}
           {a}
         </div>
       ))}
       {total && (
         <div
-          className="slide-body-lg mt-2 border-t-2 pt-2 text-[var(--nb-red)]"
-          style={{ borderColor: "var(--nb-grid-line)", letterSpacing: "0.08em" }}
+          className="nb-glow-blue mt-3 pt-3"
+          style={{
+            fontSize: fontSize + 8,
+            borderTop: "4px solid rgba(56,189,248,0.9)",
+            boxShadow: "0 -6px 20px -12px rgba(56,189,248,0.9)",
+          }}
         >
           {total}
         </div>
       )}
+    </div>
+  );
+}
+
+/** Blank answer lines with a + sign, used on practice slides. */
+export function BlankAddition({ lines = 5 }: { lines?: number }) {
+  return (
+    <div className="flex items-center gap-8">
+      <div className="nb-glow-blue" style={{ fontFamily: "var(--font-hand)", fontSize: 72 }}>
+        +
+      </div>
+      <div className="flex flex-col gap-12" style={{ width: 320 }}>
+        {Array.from({ length: lines }).map((_, i) => (
+          <div key={i} className="nb-blank-line" />
+        ))}
+      </div>
     </div>
   );
 }

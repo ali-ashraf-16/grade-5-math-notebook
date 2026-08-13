@@ -15,7 +15,7 @@ export function SlideFrame({ children }: { children: ReactNode }) {
             <div className="slide-clip" style={{ left: "1240px" }} />
             <div className="slide-tape slide-tape-left" />
             <div className="slide-tape slide-tape-right" />
-            <div className="relative z-10 flex h-full w-full flex-col px-[130px] py-[110px]">
+            <div className="relative z-10 flex h-full w-full flex-col px-[110px] py-[70px]">
               {children}
             </div>
           </div>

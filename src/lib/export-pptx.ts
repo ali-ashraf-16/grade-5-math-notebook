@@ -17,23 +17,33 @@ function modelRows(model: Model) {
     { text: "", options: { fill: { color: PAPER } } },
     ...model.cols.map((c) => ({
       text: c,
-      options: { color: BLUE, align: "center" as const, fill: { color: PAPER } },
+      options: {
+        color: RED,
+        bold: true,
+        align: "center" as const,
+        fill: { color: PAPER },
+      },
     })),
   ];
   const body = model.rows.map((r, ri) => [
     {
       text: r,
-      options: { color: BLUE, align: "center" as const, fill: { color: PAPER } },
+      options: {
+        color: GREEN,
+        bold: true,
+        align: "center" as const,
+        fill: { color: PAPER },
+      },
     },
     ...model.cols.map((_, ci) => {
       const v = model.cells[ri]?.[ci] ?? null;
       return {
-        text: v === null ? "?" : v,
+        text: v ?? "",
         options: {
-          color: v === null ? ORANGE : GREEN,
+          color: BLUE,
           align: "center" as const,
           fill: { color: PAPER },
-          border: [{ pt: 1, color: "BFC4CB" }] as never,
+          border: [{ pt: 1.5, color: BLUE }] as never,
         },
       };
     }),
@@ -62,116 +72,162 @@ export async function downloadPptx() {
     return s;
   };
 
+  /** Centered cyan title with an underline, like the reference deck. */
+  const addTitle = (s: ReturnType<typeof addBase>, text: string) => {
+    s.addText(text, {
+      x: 0.6,
+      y: 0.45,
+      w: W - 1.2,
+      h: 0.7,
+      align: "center",
+      fontFace: HAND,
+      fontSize: 32,
+      bold: true,
+      color: BLUE,
+    });
+    s.addShape("rect", {
+      x: 1.4,
+      y: 1.14,
+      w: W - 2.8,
+      h: 0.03,
+      fill: { color: BLUE },
+      line: { color: BLUE, width: 0 },
+    });
+  };
+
   for (const slide of slides as Slide[]) {
     const s = addBase();
 
     if (slide.kind === "cover") {
       s.addText("GRADE 5 MATHEMATICS", {
-        x: 0.6, y: 0.75, w: W - 1.6, h: 0.525,
-        align: "center", fontFace: HAND, fontSize: 19.5, color: BLUE,
+        x: 0.6, y: 0.8, w: W - 1.2, h: 0.6,
+        align: "center", fontFace: HAND, fontSize: 26, color: WHITE,
       });
       s.addText(slide.unit, {
-        x: 0.6, y: 1.35, w: W - 1.6, h: 0.9,
-        align: "center", fontFace: HAND, fontSize: 45.0, bold: true, color: ORANGE,
+        x: 0.6, y: 1.45, w: W - 1.2, h: 1.0,
+        align: "center", fontFace: HAND, fontSize: 60, bold: true, color: ORANGE,
       });
-      s.addText(slide.lesson, {
-        x: 0.6, y: 2.175, w: W - 1.6, h: 0.6,
-        align: "center", fontFace: HAND, fontSize: 30.0, color: BLUE,
-      });
-      s.addText(slide.title, {
-        x: 0.9, y: 2.775, w: W - 2.4, h: 0.675,
-        align: "center", fontFace: HAND, fontSize: 21.0, color: WHITE,
+      s.addText(`${slide.lesson}: ${slide.title}`, {
+        x: 0.6, y: 2.45, w: W - 1.2, h: 0.8,
+        align: "center", fontFace: HAND, fontSize: 30, color: BLUE,
       });
       s.addText("Prepared by", {
-        x: 0.6, y: 3.9, w: W - 1.6, h: 0.375,
-        align: "center", fontFace: HAND, fontSize: 15.0, color: WHITE,
+        x: 0.6, y: 3.7, w: W - 1.2, h: 0.45,
+        align: "center", fontFace: HAND, fontSize: 22, color: WHITE,
       });
       s.addText("Mr. Ali Ashraf", {
-        x: 0.6, y: 4.2, w: W - 1.6, h: 0.675,
-        align: "center", fontFace: HAND, fontSize: 30.0, color: WHITE, italic: true,
+        x: 0.6, y: 4.15, w: W - 1.2, h: 0.8,
+        align: "center", fontFace: HAND, fontSize: 38, bold: true, color: WHITE,
       });
       continue;
     }
 
     if (slide.kind === "quiz") {
       s.addText(`Quiz · Question ${slide.n} of 10`, {
-        x: 0.6, y: 0.9, w: W - 1.6, h: 0.45,
-        align: "center", fontFace: HAND, fontSize: 18.0, color: BLUE,
+        x: 0.6, y: 0.75, w: W - 1.2, h: 0.5,
+        align: "center", fontFace: HAND, fontSize: 26, color: BLUE,
       });
       s.addText(slide.question, {
-        x: 0.6, y: 1.95, w: W - 1.6, h: 1.05,
-        align: "center", fontFace: HAND, fontSize: 45.0, bold: true, color: ORANGE,
+        x: 1.2, y: 1.85, w: W - 2.4, h: 1.3,
+        align: "center", valign: "middle", fontFace: HAND, fontSize: 54, bold: true,
+        color: ORANGE, line: { color: ORANGE, width: 2.5 }, rectRadius: 0.12,
       });
       if (slide.sub) {
         s.addText(slide.sub, {
-          x: 0.6, y: 3.225, w: W - 1.6, h: 0.525,
-          align: "center", fontFace: HAND, fontSize: 18.0, color: WHITE,
+          x: 0.6, y: 3.5, w: W - 1.2, h: 0.6,
+          align: "center", fontFace: HAND, fontSize: 26, color: WHITE,
         });
       }
       continue;
     }
 
-    s.addText(slide.label, {
-      x: 0.675, y: 0.6, w: 3.75, h: 0.375, fontFace: HAND, fontSize: 16.5, color: BLUE,
-    });
-    s.addText(slide.title, {
-      x: 0.675, y: 0.938, w: W - 2.4, h: 0.675,
-      fontFace: HAND, fontSize: 28.5, bold: true, color: ORANGE,
-    });
+    addTitle(s, slide.title);
 
     if (slide.kind === "concept") {
       s.addText(
         slide.lines.map((t) => ({
           text: t,
-          options: { bullet: true, color: WHITE, fontFace: HAND, fontSize: 18.0, paraSpaceAfter: 16 },
+          options: {
+            bullet: true,
+            color: WHITE,
+            fontFace: HAND,
+            fontSize: 26,
+            paraSpaceAfter: 26,
+          },
         })),
-        { x: 0.825, y: 1.8, w: W - 2.4, h: 2.55 },
+        { x: 0.9, y: 1.6, w: W - 1.8, h: 3.2 },
       );
       continue;
     }
 
+    const nCols = slide.model?.cols.length ?? 2;
+    const colW = nCols >= 3 ? 1.55 : 2.05;
+
+    if (slide.kind === "practice") {
+      s.addText(`Solve using an area model: ${slide.problem} = ?`, {
+        x: 1.0, y: 1.35, w: W - 2.0, h: 0.65,
+        align: "center", valign: "middle", fontFace: HAND, fontSize: 28,
+        color: WHITE, line: { color: ORANGE, width: 2.5 }, rectRadius: 0.1,
+      });
+    }
+
     if (slide.model) {
+      const tableW = 0.8 + colW * nCols;
       s.addTable(modelRows(slide.model), {
-        x: 0.675,
-        y: 1.875,
-        w: 1.05 * (slide.model.cols.length + 1),
-        rowH: 0.465,
+        x: 0.55,
+        y: slide.kind === "practice" ? 2.2 : 1.5,
+        w: tableW,
+        colW: [0.8, ...Array<number>(nCols).fill(colW)],
+        rowH: slide.kind === "practice" ? 0.62 : 0.55,
         fontFace: HAND,
-        fontSize: 15.0,
+        fontSize: nCols >= 3 ? 13 : 16,
         valign: "middle",
-        border: { pt: 1, color: "BFC4CB" },
+        border: { pt: 1.5, color: BLUE },
       });
     }
 
     if (slide.kind === "example") {
       if (slide.addends) {
-        s.addText(slide.addends.map((a) => `+ ${a}`).join("\n"), {
-          x: 6.3, y: 1.8, w: 2.4, h: 1.95,
-          align: "right", fontFace: HAND, fontSize: 16.5, color: WHITE, lineSpacingMultiple: 1.1,
+        const lines = slide.addends
+          .map((a, i) => (i === 0 ? a : `+ ${a}`))
+          .join("\n");
+        s.addText(lines, {
+          x: 6.6, y: 1.5, w: 2.6, h: 2.1,
+          align: "right", fontFace: HAND,
+          fontSize: slide.addends.length > 4 ? 18 : 22,
+          color: BLUE, lineSpacingMultiple: 1.15,
         });
       }
       if (slide.total) {
-        s.addText(`= ${slide.total}`, {
-          x: 6.3, y: 3.75, w: 2.4, h: 0.45,
-          align: "right", fontFace: HAND, fontSize: 19.5, bold: true, color: RED,
+        s.addShape("rect", {
+          x: 7.3, y: 3.6, w: 1.9, h: 0.03,
+          fill: { color: BLUE }, line: { color: BLUE, width: 0 },
+        });
+        s.addText(slide.total, {
+          x: 6.6, y: 3.65, w: 2.6, h: 0.55,
+          align: "right", fontFace: HAND, fontSize: 26, bold: true, color: BLUE,
         });
       }
       if (slide.answer) {
         s.addText(slide.answer, {
-          x: 0.9, y: 4.575, w: W - 2.4, h: 0.6,
-          align: "center", fontFace: HAND, fontSize: 21.0, bold: true, color: ORANGE,
-          line: { color: ORANGE, width: 2 },
+          x: 1.4, y: 4.55, w: W - 2.8, h: 0.62,
+          align: "center", valign: "middle", fontFace: HAND, fontSize: 30, bold: true,
+          color: ORANGE, line: { color: ORANGE, width: 2.5 }, rectRadius: 0.1,
         });
       }
     } else {
-      s.addText(`${slide.problem} = ______`, {
-        x: 0.9, y: 4.575, w: W - 2.4, h: 0.525,
-        align: "center", fontFace: HAND, fontSize: 21.0, color: BLUE,
+      // Practice: blank answer lines on the right of the empty grid.
+      s.addText("+", {
+        x: 6.7, y: 3.05, w: 0.4, h: 0.5,
+        fontFace: HAND, fontSize: 30, color: BLUE, align: "center",
       });
-      s.addText("Fill in every partial product, then add them together.", {
-        x: 6.15, y: 2.25, w: 3.0, h: 0.9,
-        fontFace: HAND, fontSize: 15.0, color: WHITE,
-      });
+      const rows = nCols >= 3 ? 6 : 5;
+      for (let i = 0; i < rows; i++) {
+        s.addShape("rect", {
+          x: 7.2, y: 2.3 + i * 0.45, w: 1.9, h: 0.025,
+          fill: { color: WHITE }, line: { color: WHITE, width: 0 },
+        });
+      }
     }
   }
 
