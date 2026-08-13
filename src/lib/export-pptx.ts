@@ -44,7 +44,8 @@ function modelRows(model: Model) {
 export async function downloadPptx() {
   const PptxGenJS = (await import("pptxgenjs")).default;
   const pptx = new PptxGenJS();
-  pptx.layout = "LAYOUT_16x9";
+  pptx.defineLayout({ name: "DECK16x9", width: W, height: H });
+  pptx.layout = "DECK16x9";
   pptx.title = `Unit 5 · Lesson 4 — ${DECK_TITLE}`;
   pptx.author = "Mr. Ali Ashraf";
 
