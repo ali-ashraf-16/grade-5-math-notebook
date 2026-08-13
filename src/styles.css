@@ -160,13 +160,14 @@
   --font-hand: "Caveat", "Patrick Hand", cursive;
   --font-hand-body: "Patrick Hand", "Caveat", cursive;
 
-  --slide-title-lg: 128px;
-  --slide-title: 88px;
-  --slide-subtitle: 56px;
-  --slide-body-lg: 44px;
-  --slide-body: 36px;
-  --slide-caption: 28px;
-  --slide-chrome: 24px;
+  --slide-title-lg: 168px;
+  --slide-title: 104px;
+  --slide-subtitle: 72px;
+  --slide-body-lg: 58px;
+  --slide-body: 48px;
+  --slide-caption: 38px;
+  --slide-chrome: 32px;
+
 }
 
 .slide-title-lg {
