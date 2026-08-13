@@ -294,6 +294,57 @@
   transform: rotate(8deg);
 }
 
+/* Neon chalk treatment (matches the reference deck) */
+.nb-glow-blue {
+  color: var(--nb-blue);
+  text-shadow: 0 0 18px rgba(56, 189, 248, 0.75), 0 0 42px rgba(56, 189, 248, 0.35);
+}
+.nb-glow-orange {
+  color: var(--nb-orange);
+  text-shadow: 0 0 18px rgba(255, 140, 50, 0.75), 0 0 42px rgba(255, 140, 50, 0.35);
+}
+.nb-glow-green {
+  color: var(--nb-green);
+  text-shadow: 0 0 18px rgba(57, 255, 20, 0.7), 0 0 40px rgba(57, 255, 20, 0.3);
+}
+.nb-glow-red {
+  color: var(--nb-red);
+  text-shadow: 0 0 18px rgba(255, 77, 77, 0.75), 0 0 40px rgba(255, 77, 77, 0.35);
+}
+.nb-glow-white {
+  color: var(--nb-white);
+  text-shadow: 0 0 16px rgba(245, 245, 247, 0.5);
+}
+
+.nb-slide-title {
+  font-family: var(--font-hand);
+  font-size: var(--slide-title);
+  line-height: 1.1;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 4px solid rgba(56, 189, 248, 0.85);
+  box-shadow: 0 6px 24px -10px rgba(56, 189, 248, 0.8);
+}
+
+.nb-banner {
+  border: 4px solid var(--nb-orange);
+  border-radius: 18px;
+  padding: 22px 44px;
+  box-shadow: 0 0 26px rgba(255, 140, 50, 0.45), inset 0 0 26px rgba(255, 140, 50, 0.12);
+}
+
+.nb-cell {
+  border: 3px solid rgba(56, 189, 248, 0.9);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.35), inset 0 0 18px rgba(56, 189, 248, 0.08);
+}
+
+.nb-blank-line {
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(245, 245, 247, 0.85);
+  box-shadow: 0 0 14px rgba(245, 245, 247, 0.5);
+}
+
 .slide-scale-wrapper {
   position: absolute;
   width: 1920px;
@@ -304,6 +355,7 @@
   margin-top: -540px;
   transform-origin: center center;
 }
+
 
 @media print {
   @page {
