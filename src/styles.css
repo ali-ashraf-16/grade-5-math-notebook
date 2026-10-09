@@ -1173,3 +1173,394 @@ body { font-family:'Nunito Sans',sans-serif; }
 .paper.is-dense .worked-item-card .worked-answer p {
   font-size: 14px !important;
 }
+
+
+
+/* =========================================================================
+   OCTOBER REVISION - LUXURY A4 COVER PAGE STYLES (MBIS)
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Outfit:wght@500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap');
+
+.cover-slot {
+  display: none;
+}
+.cover-slot.active-page {
+  display: block;
+}
+
+.paper.cover-paper {
+  background: #ffffff !important;
+  background-image: none !important;
+  box-shadow: 0 12px 36px rgba(11, 47, 92, 0.18), 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+  font-family: 'Montserrat', sans-serif !important;
+  color: #1a273a !important;
+  padding: 0 !important;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.cover-paper .binding {
+  display: block;
+  z-index: 10;
+}
+
+.cover-inner-sheet {
+  position: absolute;
+  inset: 0;
+  padding: 30px 42px 24px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.cover-watermark-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: 
+    radial-gradient(circle at 12% 18%, rgba(200, 162, 81, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 88% 82%, rgba(11, 47, 92, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(245, 240, 230, 0.35) 0%, transparent 70%);
+}
+
+.cover-math-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Framing Borders & Accents */
+.cover-border-outer {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  border: 2px solid #c8a251;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cover-border-inner {
+  position: absolute;
+  top: 19px;
+  left: 19px;
+  right: 19px;
+  bottom: 19px;
+  border: 1px solid rgba(11, 47, 92, 0.22);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cover-corner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-color: #0b2f5c;
+  z-index: 3;
+}
+.cover-corner.corner-tl {
+  top: 12px;
+  left: 12px;
+  border-top: 4px solid #0b2f5c;
+  border-left: 4px solid #0b2f5c;
+}
+.cover-corner.corner-tr {
+  top: 12px;
+  right: 12px;
+  border-top: 4px solid #0b2f5c;
+  border-right: 4px solid #0b2f5c;
+}
+.cover-corner.corner-bl {
+  bottom: 12px;
+  left: 12px;
+  border-bottom: 4px solid #0b2f5c;
+  border-left: 4px solid #0b2f5c;
+}
+.cover-corner.corner-br {
+  bottom: 12px;
+  right: 12px;
+  border-bottom: 4px solid #0b2f5c;
+  border-right: 4px solid #0b2f5c;
+}
+
+.cover-content-layout {
+  position: relative;
+  z-index: 5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+/* Header Section */
+.cover-header {
+  text-align: center;
+  padding-top: 2px;
+}
+
+.cover-school-name {
+  font-family: 'Cinzel', serif !important;
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  color: #0b2f5c !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  margin: 0 0 3px 0 !important;
+  line-height: 1.2 !important;
+}
+
+.cover-school-slogan {
+  font-family: 'Playfair Display', serif !important;
+  font-style: italic !important;
+  font-size: 13px !important;
+  color: #c8a251 !important;
+  letter-spacing: 2.2px !important;
+  margin-bottom: 12px !important;
+  font-weight: 600 !important;
+}
+
+.cover-logo-container {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 60%, rgba(200, 162, 81, 0.12) 100%);
+}
+
+.cover-logo-img {
+  width: 140px;
+  height: 140px;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(11, 47, 92, 0.18));
+}
+
+/* Hero Section */
+.cover-hero {
+  text-align: center;
+  margin: 6px 0;
+  padding: 0 8px;
+}
+
+.cover-grade-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #0b2f5c 0%, #16467d 100%);
+  color: #ffffff;
+  padding: 6px 26px;
+  border-radius: 30px;
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: 1.5px solid #c8a251;
+  box-shadow: 0 4px 12px rgba(11, 47, 92, 0.2);
+  margin-bottom: 12px;
+}
+.cover-grade-pill .star {
+  color: #f7d070;
+  font-size: 12px;
+}
+
+.cover-subject-title {
+  font-family: 'Cinzel', serif !important;
+  font-size: 44px !important;
+  font-weight: 900 !important;
+  letter-spacing: 6px !important;
+  color: #0b2f5c !important;
+  text-transform: uppercase !important;
+  line-height: 1.05 !important;
+  margin: 0 0 8px 0 !important;
+  text-shadow: 0 2px 4px rgba(11, 47, 92, 0.08);
+}
+
+.cover-title-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 10px auto;
+  width: 55%;
+}
+.cover-title-divider .line {
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, #c8a251 50%, transparent);
+}
+.cover-title-divider .diamond {
+  width: 8px;
+  height: 8px;
+  background: #c8a251;
+  transform: rotate(45deg);
+}
+
+.cover-revision-banner {
+  background: linear-gradient(135deg, rgba(200, 162, 81, 0.14) 0%, rgba(200, 162, 81, 0.04) 100%);
+  border: 1.5px solid #c8a251;
+  border-radius: 12px;
+  padding: 14px 28px;
+  margin: 10px auto;
+  max-width: 520px;
+  box-shadow: inset 0 0 20px rgba(200, 162, 81, 0.08);
+}
+.cover-revision-title {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 29px !important;
+  font-weight: 900 !important;
+  letter-spacing: 4px !important;
+  color: #9e1b32 !important;
+  text-transform: uppercase !important;
+  line-height: 1.1 !important;
+  margin: 0 0 4px 0 !important;
+}
+.cover-revision-subtitle {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2px !important;
+  color: #4a5d73 !important;
+  text-transform: uppercase !important;
+  margin: 0 !important;
+}
+
+.cover-topics-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #5b6f84;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.cover-topics-strip .bullet {
+  color: #c8a251;
+  font-size: 10px;
+}
+
+/* Credits Grid */
+.cover-credits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 10px auto 4px auto;
+  max-width: 630px;
+  width: 100%;
+}
+
+.cover-credit-card {
+  background: #fbfcfe;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  padding: 12px 16px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+.cover-credit-card.prep-card {
+  border-top: 3.5px solid #0b2f5c;
+}
+.cover-credit-card.sup-card {
+  border-top: 3.5px solid #c8a251;
+}
+
+.credit-badge-label {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #718096;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.credit-name {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: #0b2f5c !important;
+  letter-spacing: 0.5px !important;
+  margin: 0 0 2px 0 !important;
+}
+.credit-name .amp {
+  color: #c8a251;
+  font-weight: 900;
+  margin: 0 3px;
+}
+
+.credit-role {
+  font-size: 11px;
+  font-weight: 500;
+  color: #5a6e85;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Footer Strip */
+.cover-footer-strip {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.footer-meta-badge {
+  color: #0b2f5c;
+  font-weight: 800;
+  background: rgba(11, 47, 92, 0.06);
+  padding: 3px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(11, 47, 92, 0.15);
+}
+
+/* Print specific for cover */
+@media print {
+  .cover-slot {
+    display: block !important;
+    break-after: page !important;
+    page-break-after: always !important;
+    width: 210mm !important;
+    height: 297mm !important;
+  }
+  .paper.cover-paper {
+    width: 210mm !important;
+    height: 297mm !important;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .cover-inner-sheet {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .cover-revision-banner {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .cover-grade-pill {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
