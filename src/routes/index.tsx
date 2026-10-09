@@ -123,7 +123,7 @@ function Paper({ sheet, index, isMini = false }: { sheet: Sheet; index: number; 
     <div className="paper-content">
       <div className="paper-running">
         <span>GRADE 5 · MATHEMATICS</span>
-        <span>{chapter?.concept && chapter.concept >= 3 ? `UNIT 2 · CONCEPT ${chapter.concept - 2}` : `UNIT 1 · CONCEPT ${chapter?.concept}`}</span>
+        <span>{chapter?.concept === 5 ? 'HOMEWORK BOOKLET · HARDEST QUESTIONS' : chapter?.concept && chapter.concept >= 3 ? `UNIT 2 · CONCEPT ${chapter.concept - 2}` : `UNIT 1 · CONCEPT ${chapter?.concept}`}</span>
       </div>
       <div className="paper-lesson-banner">
         <span className="lesson-badge">{chapter?.lessons}</span>
@@ -424,11 +424,11 @@ function Notebook() {
                   <h3>Decimal Place Value & Equations</h3>
                   <p>Rules, models & worked cases</p>
                 </div>
-                {[1, 2, 3, 4].map(concept => (
+                {[1, 2, 3, 4, 5].map(concept => (
                   <div className="concept-group" key={concept}>
                     <h4>
-                      {concept >= 3 ? `Unit 2 · Concept ${concept - 2}` : `Concept ${concept}`}
-                      <small>{concept === 1 ? 'Decimal place value' : concept === 2 ? 'Addition & subtraction' : concept === 3 ? 'Expressions & equations' : 'Factors & multiples'}</small>
+                      {concept === 5 ? 'Homework Booklet · Hardest Questions' : concept >= 3 ? `Unit 2 · Concept ${concept - 2}` : `Concept ${concept}`}
+                      <small>{concept === 1 ? 'Decimal place value' : concept === 2 ? 'Addition & subtraction' : concept === 3 ? 'Expressions & equations' : concept === 4 ? 'Factors & multiples' : 'Booklet challenges solved step by step'}</small>
                     </h4>
                     {chapters.filter(c => c.concept === concept).map(c => (
                       <Button
