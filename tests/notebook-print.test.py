@@ -37,3 +37,5 @@ class NotebookPrintRules(unittest.TestCase):
                 count = await page.locator('.paper').count()
                 self.assertEqual(len(re.findall(rb'/Type /Page\b', pdf)), (count + 1) // 2)
             await browser.close()
+if __name__ == "__main__":
+    unittest.main()
