@@ -16,7 +16,34 @@ export const Route = createFileRoute('/')({
 });
 
 type Model = { type: string; parts?: number[]; removed?: number; caption?: string; number?: string; labels?: string[] };
-type Sheet = { id: string; chapter: string; title: string; sourcePages?: number[]; tag?: string; vocabulary?: string[][]; rule?: string; question?: string; steps?: string[]; answer?: string; note?: string; words?: string[][]; model?: Model; column?: { lines: string[] }; shift?: { direction: string; places: number; input: string; output: string; operation: string; factor: number } };
+type SheetItem = {
+  label?: string;
+  question: string;
+  steps?: string[];
+  answer?: string;
+  column?: { lines: string[] };
+  shift?: { direction: string; places: number; input: string; output: string; operation: string; factor: number };
+  model?: Model;
+};
+
+type Sheet = {
+  id: string;
+  chapter: string;
+  title: string;
+  sourcePages?: number[];
+  tag?: string;
+  vocabulary?: string[][];
+  rule?: string;
+  question?: string;
+  steps?: string[];
+  answer?: string;
+  note?: string;
+  words?: string[][];
+  model?: Model;
+  column?: { lines: string[] };
+  shift?: { direction: string; places: number; input: string; output: string; operation: string; factor: number };
+  items?: SheetItem[];
+};
 
 const sheets: Sheet[] = revision.sheets;
 const assessmentSheets: Sheet[] = revision.assessmentSheets;
@@ -143,12 +170,51 @@ function Paper({ sheet, index, isMini = false }: { sheet: Sheet; index: number; 
           </div>
         )}
         <div className="revision-rule"><span className="rule-label">The rule</span><p>{sheet.rule}</p></div>
-        <h3 className="worked-label">Worked case</h3><p className="worked-question">{sheet.question}</p>
-        {sheet.shift && <div className="decimal-move"><span>{sheet.shift.input}</span><span className="move-arrow">{sheet.shift.direction === 'right' ? '→' : '←'}<small>{sheet.shift.places} {sheet.shift.places === 1 ? 'place' : 'places'} {sheet.shift.direction}</small></span><mark>{sheet.shift.output}</mark></div>}
-        <ol className="worked-steps">{sheet.steps?.map((step,i) => <li key={i}>{step}</li>)}</ol>
-        {sheet.model && <MathModel model={sheet.model}/>}
-        {sheet.column && <pre className="column-work">{sheet.column.lines.join('\n')}</pre>}
-        <div className="worked-answer"><Check size={20}/><p>{sheet.answer}</p></div>
+        {sheet.items && sheet.items.length > 0 ? (
+          <div className="worked-items-container">
+            {sheet.items.map((item, idx) => (
+              <section key={idx} className="worked-item-card">
+                <div className="worked-item-header">
+                  <span className="worked-item-badge">{item.label || `Question ${idx + 1}`}</span>
+                  <p className="worked-question worked-item-question">{item.question}</p>
+                </div>
+                {item.shift && (
+                  <div className="decimal-move">
+                    <span>{item.shift.input}</span>
+                    <span className="move-arrow">
+                      {item.shift.direction === 'right' ? '→' : '←'}
+                      <small>{item.shift.places} {item.shift.places === 1 ? 'place' : 'places'} {item.shift.direction}</small>
+                    </span>
+                    <mark>{item.shift.output}</mark>
+                  </div>
+                )}
+                {item.steps && item.steps.length > 0 && (
+                  <ol className="worked-steps">
+                    {item.steps.map((st, sidx) => <li key={sidx}>{st}</li>)}
+                  </ol>
+                )}
+                {item.column && <pre className="column-work">{item.column.lines.join('\n')}</pre>}
+                {item.model && <MathModel model={item.model} />}
+                {item.answer && (
+                  <div className="worked-answer">
+                    <Check size={18} />
+                    <p>{item.answer}</p>
+                  </div>
+                )}
+              </section>
+            ))}
+          </div>
+        ) : (
+          <>
+            <h3 className="worked-label">Worked case</h3>
+            <p className="worked-question">{sheet.question}</p>
+            {sheet.shift && <div className="decimal-move"><span>{sheet.shift.input}</span><span className="move-arrow">{sheet.shift.direction === 'right' ? '→' : '←'}<small>{sheet.shift.places} {sheet.shift.places === 1 ? 'place' : 'places'} {sheet.shift.direction}</small></span><mark>{sheet.shift.output}</mark></div>}
+            <ol className="worked-steps">{sheet.steps?.map((step,i) => <li key={i}>{step}</li>)}</ol>
+            {sheet.model && <MathModel model={sheet.model}/>}
+            {sheet.column && <pre className="column-work">{sheet.column.lines.join('\n')}</pre>}
+            <div className="worked-answer"><Check size={20}/><p>{sheet.answer}</p></div>
+          </>
+        )}
         <div className={`revision-note ${index%3 === 0 ? 'yellow' : index%3 === 1 ? 'green' : 'pink'}`}><strong>Remember</strong><p>{sheet.note}</p></div>
       </>}
     </div>
