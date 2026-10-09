@@ -1,0 +1,139 @@
+{
+  "vocabulary": [
+    [
+      "Decimal Point",
+      "العلامة العشرية",
+      "The dot (.) separating whole numbers from decimal fraction parts (e.g. 3.14)."
+    ],
+    [
+      "Tenths",
+      "جزء من عشرة",
+      "First digit to the right of decimal point: 1 part out of 10 = 0.1 = 1/10."
+    ],
+    [
+      "Hundredths",
+      "جزء من مائة",
+      "Second digit to the right of decimal point: 1 part out of 100 = 0.01 = 1/100."
+    ],
+    [
+      "Thousandths",
+      "جزء من ألف",
+      "Third digit to the right of decimal point: 1 part out of 1,000 = 0.001 = 1/1,000."
+    ],
+    [
+      "Standard Form",
+      "الصيغة الرمزية (القياسية)",
+      "Writing the number using digits only (e.g. 3,249.578)."
+    ],
+    [
+      "Word Form",
+      "الصيغة اللفظية (الكلامية)",
+      "Writing the number in words (e.g. Three thousand, two hundred forty-nine and five hundred seventy-eight thousandths)."
+    ],
+    [
+      "Expanded Form",
+      "الصيغة الممتدة",
+      "Writing the sum of the value of each digit (e.g. 3000 + 200 + 40 + 9 + 0.5 + 0.07 + 0.008)."
+    ],
+    [
+      "Unit Form",
+      "صيغة الوحدات",
+      "Stating the count of each place value (e.g. 3 Thousands, 2 Hundreds, 4 Tens, 9 Ones, 5 Tenths...)."
+    ],
+    [
+      "Place Value Shuffle",
+      "تحريك القيمة المكانية",
+      "Digits shifting left when multiplying by 10 (+10x) or right when dividing by 10 (÷10)."
+    ],
+    [
+      "Composing / Decomposing",
+      "تكوين وتفكيك الأعداد",
+      "Composing = putting together; Decomposing = breaking apart into expanded components."
+    ],
+    [
+      "Comparing Decimals",
+      "مقارنة الأعداد العشرية",
+      "Line up decimal points and compare place values from left to right using >, <, =."
+    ],
+    [
+      "Rounding Decimals",
+      "تقريب الأعداد العشرية",
+      "Approximating to whole number, Tenth, Hundredth using Midpoint or Rounding Rule."
+    ],
+    [
+      "Benchmark Decimals",
+      "الأعداد العشرية المرجعية",
+      "Key decimal values used for quick mental estimation (0, 0.5, 1)."
+    ],
+    [
+      "Front-End Estimation",
+      "التقدير من أول رقم يسار",
+      "Keeping the highest place value digit and replacing all other digits with zeros."
+    ]
+  ],
+  "lessons": [
+    {
+      "title": "LESSON 1: DECIMALS TO THE THOUSANDTHS PLACE | الدرس 1: الأعداد العشرية حتى الجزء من ألف",
+      "theory": "• EN: A decimal fraction with 3 decimal places represents Thousandths (e.g. 0.001 = 1/1,000). Place Value Chart: Millions | Thousands | Ones . Tenths | Hundredths | Thousandths.\n• عربي: الكسر العشري المكون من 3 أرقام على يمين العلامة العشرية يمثل الأجزاء من ألف (مثل 0.001 = 1/1000). جدول القيمة المكانية يمتد من الملايين حتى الجزء من ألف.",
+      "teacher": "🍏 TEACHER PREP NOTES | توجيهات للمعلم:\n• EN: Use 10x10x10 base-ten block grids or thousandth square models to show that 1 whole = 10 tenths = 100 hundredths = 1,000 thousandths.\n• عربي: استخدم نماذج المربعات لتوضيح أن الواحد الصحيح ينقسم إلى 10 أجزاء من عشرة أو 100 جزء من مائة أو 1000 جزء من ألف.",
+      "parent": "🏠 PARENT GUIDANCE | دليل ولي الأمر:\n• EN: Help your child notice that moving 1 place to the right makes the digit value 10 times smaller (÷10).\n• عربي: ساعد طفلك على ملاحظة أن التحرك خانة واحدة لليمين يجعل قيمة الرقم تصغر 10 مرات.",
+      "example": "📝 WORKED EXAMPLE 1: Reading & Writing Decimals to Thousandths Place\nQuestion: Write the number 3,249.578 in Word Form, Expanded Form, and Unit Form.\n\nStep-by-Step Explanation:\n  • Standard Form: 3,249.578\n  • Word Form: Three thousand, two hundred forty-nine and five hundred seventy-eight thousandths.\n  • Expanded Form: 3,000 + 200 + 40 + 9 + 0.5 + 0.07 + 0.008\n  • Unit Form: 3 Thousands, 2 Hundreds, 4 Tens, 9 Ones, 5 Tenths, 7 Hundredths, 8 Thousandths.\n\nFinal Solution: Word Form: Three thousand, two hundred forty-nine and five hundred seventy-eight thousandths.\n💡 توضيح سريع: لاحظ أن كلمة 'and' تستخدم دائماً مكان العلامة العشرية Decimal Point عند قراءة العدد بالكلمات.",
+      "drills": "✏️ TRY IT YOURSELF | اختبر نفسك: Lesson 1 Drills\n  1. Write in Standard Form: Seven and forty-six thousandths. [Answer: _______]\n  2. In the number 85.394, what is the place value of digit 4? [Answer: _______]\n  3. What is the value of digit 9 in 16.295? [Answer: _______]\n  4. Complete: 0.45 = _______ thousandths. [Answer: _______]"
+    },
+    {
+      "title": "LESSONS 2 & 3: PLACE VALUE SHUFFLE & COMPOSING/DECOMPOSING | الدرسان 2 و3: تحريك القيمة المكانية وتكوين وتفكيك الأعداد",
+      "theory": "• EN: Place Value Shuffle: Multiplying by 10 shifts all digits 1 place LEFT (value becomes 10x bigger). Dividing by 10 shifts all digits 1 place RIGHT (value becomes 1/10). Composing = putting together; Decomposing = breaking apart into different expanded forms.\n• عربي: عند الضرب في 10 تتحرك جميع الأرقام خانة واحدة لليسار وتزيد قيمتها 10 أضعاف. عند القسمة على 10 تتحرك جميع الأرقام خانة واحدة لليمين وتقل قيمتها إلى العُشر. تكوين الأعداد هو تجميعها، وتفكيك الأعداد هو كتابتها بأكثر من صيغة ممتدة.",
+      "teacher": "🍏 TEACHER PREP NOTES | توجيهات للمعلم:\n• EN: Use place value slider charts on whiteboard to physically demonstrate how digits shuffle left during multiplication and right during division.\n• عربي: استخدم شريط حركة القيمة المكانية التفاعلي لتوضيح كيف تتحرك الأرقام جهة اليسار عند الضرب وخانة لليمين عند القسمة.",
+      "parent": "🏠 PARENT GUIDANCE | دليل ولي الأمر:\n• EN: Remind your child that adding a zero at the end of a decimal (e.g. 0.3 = 0.30 = 0.300) does NOT change its value.\n• عربي: ذكر طفلك بأن وضع الأصفار على يمين أخر رقم عشري (مثل 0.300) لا يغير من قيمة العدد النهائي.",
+      "example": "📝 WORKED EXAMPLE 2: Place Value Shuffle & Decomposing Decimals\nQuestion: a) Evaluate 8.7 × 10 and 2.5 ÷ 10 using place value chart.\nb) Decompose 504.82 in 3 different ways.\n\nStep-by-Step Explanation:\n  • For 8.7 × 10: Digit 8 moves from Ones to Tens (80), Digit 7 moves from Tenths to Ones (7). Result = 87.\n  • For 2.5 ÷ 10: Digit 2 moves from Ones to Tenths (0.2), Digit 5 moves from Tenths to Hundredths (0.05). Result = 0.25.\n  • Decomposing 504.82 Way 1 (Expanded): 500 + 4 + 0.8 + 0.02\n  • Decomposing 504.82 Way 2 (Whole + Decimals): 504 + 0.82\n  • Decomposing 504.82 Way 3 (Mixed): 504 + 0.8 + 0.02\n\nFinal Solution: a) 8.7 × 10 = 87; 2.5 ÷ 10 = 0.25 | b) 500 + 4 + 0.8 + 0.02\n💡 توضيح سريع: الضرب في 10 يحرك الأرقام خانة لليسار، والقسمة على 10 تحرك الأرقام خانة لليمين.",
+      "drills": "✏️ TRY IT YOURSELF | اختبر نفسك: Lessons 2 & 3 Drills\n  1. Evaluate: 43.5 × 100 = _______\n  2. Evaluate: 6.2 ÷ 10 = _______\n  3. Decompose 34.527 in expanded form: _______ + _______ + _______ + _______ + _______\n  4. Compose into standard form: 500 + 40 + 9 + 0.02 + 0.007 = _______"
+    },
+    {
+      "title": "LESSON 4: COMPARING DECIMALS | الدرس 4: مقارنة الأعداد العشرية",
+      "theory": "• EN: To compare two decimals: 1) Line up decimal points. 2) Compare digits from highest place value (left to right). 3) Annex trailing zeros to make equal decimal digits if needed.\n• عربي: لمقارنة عددين عشريين: 1) اضبط العلامات العشرية فوق بعضها. 2) قارن الأرقام من يسار إلى يمين حسب القيمة المكانية. 3) أضف أصفاراً على اليمين لتساوى عدد الخانات العشرية.",
+      "teacher": "🍏 TEACHER PREP NOTES | توجيهات للمعلم:\n• EN: Emphasize that the number with more digits is NOT automatically greater! E.g., 0.5 is greater than 0.099.\n• عربي: أكد على أن العدد الذي يحتوى على أرقام أكثر ليس هو الأكبر دائماً! فمثلاً 0.5 أكبر من 0.099 لأن 5 أعشار أكبر من 0 أجزاء من عشرة.",
+      "parent": "🏠 PARENT GUIDANCE | دليل ولي الأمر:\n• EN: Ask your child to annex zeros so both numbers have 3 decimal places before comparing.\n• عربي: اطلب من طفلك توحيد عدد الخانات العشرية بإضافة أصفار على اليمين قبل البدء بالمقارنة.",
+      "example": "📝 WORKED EXAMPLE 3: Comparing Decimals Step-by-Step\nQuestion: Compare using >, <, or =: a) 2.948 and 2.957  b) 0.26 and 0.206\n\nStep-by-Step Explanation:\n  • For 2.948 vs 2.957: Ones are equal (2=2), Tenths are equal (9=9). Compare Hundredths: 4 < 5. Therefore, 2.948 < 2.957.\n  • For 0.26 vs 0.206: Annex zero to 0.26 -> 0.260. Compare Tenths: 2=2. Compare Hundredths: 6 > 0. Therefore, 0.260 > 0.206.\n\nFinal Solution: a) 2.948 < 2.957  |  b) 0.26 > 0.206\n💡 توضيح سريع: تذكر دائماً وضع الأصفار التوضيحية لتسهيل المقارنة (0.260 أكبر من 0.206).",
+      "drills": "✏️ TRY IT YOURSELF | اختبر نفسك: Lesson 4 Drills\n  1. Compare using >, <, or =: 52.008 [   ] 52.8\n  2. Compare using >, <, or =: 3.02 [   ] 3.019\n  3. Arrange in ascending order: 1.401 , 1.055 , 1.3 , 1.28\n  4. Which is smaller: 2.102 or 2.14? [Answer: _______]"
+    },
+    {
+      "title": "LESSON 5: ROUNDING DECIMALS | الدرس 5: تقريب الأعداد العشرية",
+      "theory": "• EN: Strategy 1: Midpoint Strategy on a vertical line. Strategy 2: Rounding Rule (underline target digit, look at next digit right: 0-4 stays same, 5-9 add 1 to target digit).\n• عربي: الاستراتيجية 1: استراتيجية نقطة المنتصف على خط أعداد رأسي. الاستراتيجية 2: قاعدة التقريب (حدد الرقم المطلوب تقريبه، انظر للرقم المباشر على يمينه: إذا كان 0-4 يبقي كما هو، إذا كان 5-9 يزيد 1).",
+      "teacher": "🍏 TEACHER PREP NOTES | توجيهات للمعلم:\n• EN: Demonstrate midpoint visually: if a number is at or above midpoint, round up; if below, round down.\n• عربي: وضح نقطة المنتصف بصرياً: إذا كان العدد عند نقطة المنتصف أو أعلى منها نُقرب للأعلى، وإذا كان أقل نُقرب للأسفل.",
+      "parent": "🏠 PARENT GUIDANCE | دليل ولي الأمر:\n• EN: Remind parents that rounding to the nearest Whole Number means looking at the Tenths digit.\n• عربي: ذَكّر ولي الأمر بأن التقريب لأقرب عدد صحيح يعني النظر إلى رقم الأجزاء من عشرة.",
+      "example": "📝 WORKED EXAMPLE 4: Rounding to Different Place Values\nQuestion: Round 8.765 to: a) Nearest Whole Number  b) Nearest Tenth  c) Nearest Hundredth\n\nStep-by-Step Explanation:\n  • Number: 8.765\n  • a) Nearest Whole Number: Target digit 8. Digit to right is 7 (≥5) -> Round up to 9.\n  • b) Nearest Tenth: Target digit 7. Digit to right is 6 (≥5) -> Round up 7+1=8 -> 8.8.\n  • c) Nearest Hundredth: Target digit 6. Digit to right is 5 (≥5) -> Round up 6+1=7 -> 8.77.\n\nFinal Solution: a) 9  |  b) 8.8  |  c) 8.77\n💡 توضيح سريع: عند التقريب لأقرب جزء من مائة نحتفظ برقمين فقط بعد العلامة العشرية.",
+      "drills": "✏️ TRY IT YOURSELF | اختبر نفسك: Lesson 5 Drills\n  1. Round 27.68 to the nearest whole number: _______\n  2. Round 8.378 to the nearest Tenth: _______\n  3. Round 1.277 to the nearest Hundredth: _______\n  4. Round 2.0509 to the nearest Thousandth: _______"
+    },
+    {
+      "title": "LESSONS 6 & 7: ESTIMATING & MODELING DECIMAL ADDITION | الدرسان 6 و7: تقدير نواتج الجمع ونمذجة جمع الأعداد العشرية",
+      "theory": "• EN: Estimating Decimal Sums: 1) Rounding Strategy (round each addend to nearest whole or Tenth). 2) Front-End Estimation (use front-left digit). 3) Benchmark Decimals (0, 0.5, 1). Modeling Addition: Use 10x10 hundredths grid. Standard Algorithm: Line up decimal points vertically and add right-to-left with regrouping.\n• عربي: تقدير نواتج الجمع: 1) استراتيجية التقريب. 2) التقدير من أول رقم يسار. 3) الأعداد العشرية المرجعية (0، 0.5، 1). النمذجة: استخدام شبكة 10×10 للمئات. الخوارزمية المعيارية: ضبط العلامات العشرية رأسياً وإضافة أصفار لتوحيد الخانات والجمع مع إعادة التجميع.",
+      "teacher": "🍏 TEACHER PREP NOTES | توجيهات للمعلم:\n• EN: Enforce the golden rule of decimal operations: ALIGN THE DECIMAL POINTS FIRST before adding or subtracting!\n• عربي: شدد على القاعدة الذهبية للعمليات العشرية: اضبط العلامات العشرية فوق بعضها رأسياً أولاً قبل الجمع أو الطرح!",
+      "parent": "🏠 PARENT GUIDANCE | دليل ولي الأمر:\n• EN: Encourage your child to estimate first to check if their exact answer is reasonable.\n• عربي: شجع طفلك على التقدير أولاً ليتأكد هل إجابته الدقيقة معقولة ومنطقية أم لا.",
+      "example": "📝 WORKED EXAMPLE 5: Estimating & Exact Addition of Decimals\nQuestion: a) Estimate the sum of 45.561 + 14.047 using rounding to nearest Whole Number.\nb) Find the exact sum of 2,923.42 + 4,581.3.\n\nStep-by-Step Explanation:\n  • a) Estimation: 45.561 rounds to 46; 14.047 rounds to 14. Estimated Sum = 46 + 14 = 60.\n  • b) Exact Addition Step 1: Line up decimal points vertically and annex zero to 4,581.3 -> 4,581.30.\n  •    2,923.42\n + 4,581.30\n ------------\n   7,504.72\n\nFinal Solution: a) Estimated Sum ≈ 60  |  b) Exact Sum = 7,504.72\n💡 توضيح سريع: تأكد دائماً من إضافة صفر على اليمين لتوحيد عدد الخانات العشرية قبل بدء الجمع.",
+      "drills": "✏️ TRY IT YOURSELF | اختبر نفسك: Lessons 6 & 7 Drills\n  1. Estimate 0.52 + 0.49 using rounding: _______\n  2. Evaluate exact sum: 3.13 + 5.49 = _______\n  3. Evaluate exact sum: 127.3 + 16.45 = _______\n  4. Evaluate exact sum: 14.72 + 7.5 + 0.231 = _______"
+    },
+    {
+      "title": "LESSONS 8 TO 10: MODELING & SUBTRACTING DECIMALS TO THOUSANDTHS | الدروس 8 إلى 10: نمذجة وطرح الأعداد العشرية حتى الجزء من ألف",
+      "theory": "• EN: Standard Algorithm for Decimal Subtraction: 1) Line up decimal points. 2) Fill missing decimal places with zeros (e.g. 20.000 - 11.624). 3) Subtract right-to-left, regrouping across zeros when needed.\n• عربي: الخوارزمية المعيارية لطرح الأعداد العشرية: 1) اضبط العلامات العشرية رأسياً. 2) املا الخانات الناقصة بأصفار (مثل 20.000 - 11.624). 3) اطرح من اليمين لليسار مع إعادة التجميع والاستلاف عند الحاجة.",
+      "teacher": "🍏 TEACHER PREP NOTES | توجيهات للمعلم:\n• EN: Demonstrate regrouping across zeros explicitly on board: 20.000 becoming 19.9910 during subtraction.\n• عربي: وضح للطلاب خطوة الاستلاف عبر الأصفار بشكل صريح على السبورة لعدم حدوث أخطاء حسابية.",
+      "parent": "🏠 PARENT GUIDANCE | دليل ولي الأمر:\n• EN: Remind your child that adding zeros after the decimal point does not change the number's value but makes subtraction possible.\n• عربي: ذَكّر طفلك بأن إضافة أصفار على يمين العلامة العشرية يجعل عملية الطرح والاستلاف ممكنة وسهلة.",
+      "example": "📝 WORKED EXAMPLE 6: Decimal Subtraction with Regrouping Across Zeros\nQuestion: Evaluate: a) 8.6 - 6.51  b) 20 - 11.624\n\nStep-by-Step Explanation:\n  • a) Line up & Annex Zero: 8.60 - 6.51. Regroup 60 - 51 = 09; 8 - 6 = 2 -> Result = 2.09.\n  • b) Line up & Annex Zeros: 20.000 - 11.624.\n   Regrouping: 20.000 becomes 19.9910.\n   10 - 4 = 6 (Thousandths)\n   9 - 2 = 7 (Hundredths)\n   9 - 6 = 3 (Tenths)\n   19 - 11 = 8 (Ones/Tens)\n   Result = 8.376.\n\nFinal Solution: a) 2.09  |  b) 8.376\n💡 توضيح سريع: عند الطرح من عدد صحيح مثل 20 نضع علامة عشرية وثلاثة أصفار 20.000 لنتمكن من الاستلاف.",
+      "drills": "✏️ TRY IT YOURSELF | اختبر نفسك: Lessons 8 to 10 Drills\n  1. Evaluate: 5.43 - 2.21 = _______\n  2. Evaluate: 4.66 - 2.09 = _______\n  3. Evaluate: 63 - 12.3 = _______\n  4. Evaluate: 512 + 88.35 - 67.035 = _______"
+    },
+    {
+      "title": "LESSON 11: DECIMAL STORY PROBLEMS | الدرس 11: المسائل الكلامية الحياتية على الأعداد العشرية",
+      "theory": "• EN: Multi-Step Real-World Applications: Read the story carefully, identify keywords ('total', 'sum', 'altogether' -> Addition; 'difference', 'how much more', 'remains', 'left' -> Subtraction), write the equation, and solve.\n• عربي: تطبيقات كلامية متعددة الخطوات: اقرأ المسألة بدقة، حدد الكلمات المفتاحية ('المجموع'، 'إجمالي' -> جمع؛ 'الفرق'، 'كم يزيد'، 'المتبقي' -> طرح)، اكتب المعادلة ثم حل المسألة.",
+      "teacher": "🍏 TEACHER PREP NOTES | توجيهات للمعلم:\n• EN: Teach students to highlight given quantities with green and the required target with red before writing equations.\n• عربي: علم الطلاب تظليل المعطيات باللون الأخضر والمطلوب باللون الأحمر قبل كتابة المعادلة الرياضية.",
+      "parent": "🏠 PARENT GUIDANCE | دليل ولي الأمر:\n• EN: Encourage your child to write a complete sentence for the final answer including proper measurement units (e.g. kg, meters, L.E.).\n• عربي: شجع طفلك على كتابة جملة الإجابة الكاملة متضمنة وحدة القياس المظبوطة (مثل كجم، متر، جنيه).",
+      "example": "📝 WORKED EXAMPLE 7: Real-World Multi-Step Decimal Word Problem\nQuestion: Hatem climbed 5.6 meters and Nagy climbed 2.9 meters. What is the difference between their heights?\n\nStep-by-Step Explanation:\n  • Keywords identified: 'difference' -> Subtraction operation.\n  • Equation: Difference = 5.6 - 2.9\n  • Line up decimals: 5.6 - 2.9\n   Regroup 16 - 9 = 7 Tenths; 4 - 2 = 2 Ones -> 2.7 meters.\n\nFinal Solution: The difference between their heights is 2.7 meters.\n💡 توضيح سريع: كلمة Difference تعني الفرق وبالتالي نستخدم عملية الطرح 5.6 - 2.9.",
+      "drills": "✏️ TRY IT YOURSELF | اختبر نفسك: Lesson 11 Drills\n  1. Hanaa has 200 L.E. She wants to buy shoes for 99.8 L.E. and a dress for 70.25 L.E. Can she buy both? Explain.\n  2. Bassem bought two watermelons. The mass of the first is 2.62 kg and the second is 2.71 kg. What is their total mass?\n  3. A train travelled 16.7 kilometers. Salem rode his bike 3.25 kilometers along the same track. How many more kilometers does he need to travel?"
+    }
+  ],
+  "testIntro": "🏆 UNIT 1 MASTER TEST | FINAL COMPREHENSIVE EXAMINATION\nTotal Marks: 20 | Time Allowed: 45 Minutes | Score: [ ______ / 20 ]\n\n",
+  "tests": [
+    " CHOOSE THE CORRECT ANSWER (6 Marks - 1 Mark Each):\n1. In the number 85.324, which digit is in the Hundredths place?\n   (A) 8          (B) 3          (C) 2          (D) 4\n\n2. Rounding the number 56.284 to the nearest Hundredth is:\n   (A) 56.28      (B) 56.82      (C) 56.3       (D) 56.29\n\n3. Evaluate: 9.4 - 5.03 =\n   (A) 4.37       (B) 43.7       (C) 4.43       (D) 4.1\n\n4. Evaluate: 4.35 × 10 =\n   (A) 435        (B) 43.5       (C) 0.435      (D) 4350\n\n5. The benchmark of the decimal fraction 0.8 is:\n   (A) zero       (B) 0.25       (C) 0.5        (D) 1\n\n6. 3.6 + 5.411 =\n   (A) 8.1011     (B) 9.011      (C) 8.417      (D) 9.101\n\n",
+    " COMPLETE THE FOLLOWING (6 Marks - 1 Mark Each):\n7. 9.865 ≈ _______________ [rounded to the nearest Tenth]\n8. 8 + 0.2 + 0.03 + 0.006 = _______________ [in standard form]\n9. 39.543 = _______________ [rounded to the nearest one decimal place]\n10. 5 Tenths + 63 Thousandths = _______________ Thousandths.\n11. Thirty-seven and five tenths written as a decimal is _______________\n12. 56.98 ÷ 10 = _______________\n\n",
+    " SOLVE THE FOLLOWING PROBLEMS (8 Marks - 2 Marks Each):\n13. Decompose the number 78.096 in Expanded Form in two different ways.\n    Answer: __________________________________________________________________\n\n14. Aya saved 17.25 pounds. Her sister saved 8.75 pounds. Find the total amount saved.\n    Answer: __________________________________________________________________\n\n15. Arrange the following decimals in ascending order (from least to greatest):\n    0.58  ,  8.05  ,  C. 5.8  ,  D. 8.005\n    Answer: __________________________________________________________________\n\n16. A road of 6.975 km length, if the train travelled 2.939 km from this road, what is the remaining distance?\n    Answer: __________________________________________________________________"
+  ],
+  "feedback": "⭐ TEACHER & PARENT FEEDBACK & EVALUATION BOX | صندوق التقييم والدرجة النهائي:\n• Total Score: [ ______ / 20 Marks ]   |   Level: [  ] Outstanding (18-20)   [  ] Very Good (15-17)   [  ] Needs Practice (<15)\n• Teacher's Signature: _______________________   |   Parent's Signature: _______________________"
+}
