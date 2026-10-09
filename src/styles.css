@@ -963,9 +963,108 @@ body { font-family:'Nunito Sans',sans-serif; }
 @media print { .two-up-scale { zoom: 1 !important; } .page-slot:last-child { break-after: auto !important; page-break-after: auto !important; } body.print-mode-2up .two-up-half { flex: 0 0 137.5mm !important; width: 137.5mm !important; } body.print-mode-2up .two-up-pair-card .paper.is-mini { width: 137.5mm !important; } }
 
 /* Supplied October assessment styling, using notebook theme tokens. */
-.eval-tag-pill { background: var(--note-yellow); color: var(--ink-black); font-weight: 800; font-size: 11px; padding: 2px 8px; border-radius: 8px; display: inline-block; margin-bottom: 6px; border: 1px solid var(--marker); }
-.eval-sheet { border-left: 5px solid var(--primary); }
-.eval-sheet .worked-label { color: var(--ink-blue); }
-.eval-sheet .worked-answer { background: var(--note-green); border: 1.5px solid var(--success); }
-.eval-sheet .worked-question, .eval-sheet .worked-steps li, .eval-sheet .worked-answer p { white-space: pre-line; }
-.eval-sheet .worked-question, .eval-sheet .worked-steps li { overflow-wrap: anywhere; }
+.eval-tag-pill {
+  background: var(--note-yellow);
+  color: var(--ink-black);
+  font-weight: 800;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 6px;
+  border: 1px solid var(--marker);
+}
+
+.eval-sheet {
+  border-left: 5px solid var(--primary);
+  font-size: 17px !important;
+  line-height: 1.38 !important;
+}
+
+.eval-sheet .paper-content {
+  padding: 22px 75px 10px 36px !important;
+}
+
+.eval-sheet .paper-lesson-banner {
+  margin: 6px 0 4px !important;
+}
+
+.eval-sheet .paper-title {
+  font-size: 26px !important;
+  line-height: 1.25 !important;
+  margin: 8px 0 6px !important;
+}
+
+.eval-sheet .eval-tag-pill {
+  margin-bottom: 6px !important;
+}
+
+.eval-sheet .revision-rule {
+  margin-bottom: 9px !important;
+  padding: 3px 0 3px 12px !important;
+  font-size: 16.5px !important;
+  line-height: 1.32 !important;
+}
+
+.eval-sheet .rule-label {
+  font-size: 20px !important;
+}
+
+.eval-sheet .worked-label {
+  color: var(--ink-blue);
+  font-size: 18px !important;
+  margin: 0 0 3px !important;
+}
+
+.eval-sheet .worked-question {
+  margin: 0 0 8px !important;
+  font-size: 16.5px !important;
+  line-height: 1.35 !important;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.eval-sheet .worked-steps {
+  margin: 5px 0 8px !important;
+  padding-left: 26px !important;
+  font-size: 16px !important;
+  line-height: 1.32 !important;
+}
+
+.eval-sheet .worked-steps li {
+  margin: 3px 0 !important;
+  padding-left: 4px !important;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.eval-sheet .worked-answer {
+  background: var(--note-green);
+  border: 1.5px solid var(--success);
+  margin-top: 8px !important;
+  padding: 8px 14px !important;
+  border-radius: 8px !important;
+  font-size: 16.5px !important;
+}
+
+.eval-sheet .worked-answer p {
+  white-space: pre-line;
+  font-size: 16.5px !important;
+  line-height: 1.32 !important;
+}
+
+.eval-sheet .revision-note {
+  margin-top: 8px !important;
+  padding: 8px 14px !important;
+  font-size: 15.5px !important;
+  line-height: 1.3 !important;
+}
+
+.eval-sheet .revision-note strong {
+  font-size: 16px !important;
+}
+
+.eval-sheet .paper-footer {
+  margin: 0 75px 14px 36px !important;
+  padding-top: 6px !important;
+}
