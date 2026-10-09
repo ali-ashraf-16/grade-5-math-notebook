@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import { useEffect, useState } from 'react';
 import { BookOpen, Printer, ChevronLeft, ChevronRight, Check, List, Minus, Plus, PanelRightClose, PanelRightOpen, GraduationCap, AlertTriangle, Sparkles, Copy, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { OctoberCoverPage } from '@/components/OctoberCoverPage';
 import revision from '@/data/revision.json';
 import badge from '@/assets/prepared-badge-october.png.asset.json';
 
@@ -237,6 +238,7 @@ function Notebook() {
   const [twoUpIndex, setTwoUpIndex] = useState(0);
   const [zoom, setZoom] = useState(90);
   const [sidebar, setSidebar] = useState(true);
+  const [isCover, setIsCover] = useState(true);
 
   // Group sheets into pairs for 2-up printing/viewing
   const pairs: [Sheet, Sheet | null][] = [];
@@ -267,17 +269,20 @@ function Notebook() {
   }, [mode]);
 
   const go = (p: number) => {
+    setIsCover(false);
     setPage(Math.max(0, Math.min(sheets.length - 1, p)));
     setTwoUpIndex(Math.floor(p / 2));
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const goEval = (p: number) => {
+    setIsCover(false);
     setEvalPage(Math.max(0, Math.min(assessmentSheets.length - 1, p)));
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const goTwoUp = (pairIdx: number) => {
+    setIsCover(false);
     const safeIdx = Math.max(0, Math.min(pairs.length - 1, pairIdx));
     setTwoUpIndex(safeIdx);
     setPage(safeIdx * 2);
@@ -364,7 +369,9 @@ function Notebook() {
                 {sidebar ? <PanelRightClose/> : <PanelRightOpen/>}
               </Button>
               <span className="toolbar-title">
-                {mode === 'assessment'
+                {isCover
+                  ? 'Cover Page · Minia British International School (MBIS)'
+                  : mode === 'assessment'
                   ? assessmentSheets[evalPage]?.title
                   : mode === 'two-up'
                   ? `Sheets ${twoUpIndex * 2 + 1} & ${Math.min(sheets.length, twoUpIndex * 2 + 2)} · ${sheets[twoUpIndex * 2]?.title}`
@@ -385,17 +392,26 @@ function Notebook() {
             <>
               <div className="paper-stage">
                 <div className="paper-scale" style={{ zoom: zoom / 100 }}>
+                  <div className={`page-slot ${isCover ? 'active-page' : ''} cover-slot`}>
+                    <OctoberCoverPage />
+                  </div>
                   {sheets.map((s, i) => (
-                    <div key={s.id} className={`page-slot ${i === page ? 'active-page' : ''}`}>
+                    <div key={s.id} className={`page-slot ${!isCover && i === page ? 'active-page' : ''}`}>
                       <Paper sheet={s} index={i} />
                     </div>
                   ))}
                 </div>
               </div>
               <div className="page-navigation">
-                <Button variant="outline" size="icon" onClick={() => go(page - 1)} disabled={page === 0} aria-label="Previous page"><ChevronLeft/></Button>
-                <span>Page <b>{page + 1}</b> of {sheets.length}</span>
-                <Button variant="outline" size="icon" onClick={() => go(page + 1)} disabled={page === sheets.length - 1} aria-label="Next page"><ChevronRight/></Button>
+                <Button variant="outline" size="icon" onClick={() => {
+                  if (page === 0 && !isCover) setIsCover(true);
+                  else if (!isCover) go(page - 1);
+                }} disabled={isCover} aria-label="Previous page"><ChevronLeft/></Button>
+                <span>{isCover ? <b>Cover Page · غلاف المذكرة</b> : <>Page <b>{page + 1}</b> of {sheets.length}</>}</span>
+                <Button variant="outline" size="icon" onClick={() => {
+                  if (isCover) { setIsCover(false); setPage(0); }
+                  else go(page + 1);
+                }} disabled={!isCover && page === sheets.length - 1} aria-label="Next page"><ChevronRight/></Button>
               </div>
             </>
           )}
@@ -405,28 +421,40 @@ function Notebook() {
             <>
               <div className="paper-stage two-up-stage">
                 <div className="two-up-scale" style={{ zoom: zoom / 100 }}>
-                  {pairs.map(([leftSheet, rightSheet], idx) => (
-                    <div key={leftSheet.id} className={`two-up-slot ${idx === twoUpIndex ? 'active-two-up' : ''}`}>
-                      <div className="two-up-pair-card">
-                        <div className="two-up-half left-half">
-                          <Paper sheet={leftSheet} index={idx * 2} isMini />
-                        </div>
-                        {rightSheet ? (
-                          <div className="two-up-half right-half">
-                            <Paper sheet={rightSheet} index={idx * 2 + 1} isMini />
-                          </div>
-                        ) : (
-                          <div className="two-up-half empty-half" />
-                        )}
-                      </div>
+                  {isCover ? (
+                    <div className="page-slot active-page cover-slot" style={{ display: 'flex', justifyContent: 'center' }}>
+                      <OctoberCoverPage />
                     </div>
-                  ))}
+                  ) : (
+                    pairs.map(([leftSheet, rightSheet], idx) => (
+                      <div key={leftSheet.id} className={`two-up-slot ${idx === twoUpIndex ? 'active-two-up' : ''}`}>
+                        <div className="two-up-pair-card">
+                          <div className="two-up-half left-half">
+                            <Paper sheet={leftSheet} index={idx * 2} isMini />
+                          </div>
+                          {rightSheet ? (
+                            <div className="two-up-half right-half">
+                              <Paper sheet={rightSheet} index={idx * 2 + 1} isMini />
+                            </div>
+                          ) : (
+                            <div className="two-up-half empty-half" />
+                          )}
+                        </div>
+                      </div>
+                    ))
+                  )}
                 </div>
               </div>
               <div className="page-navigation">
-                <Button variant="outline" size="icon" onClick={() => goTwoUp(twoUpIndex - 1)} disabled={twoUpIndex === 0} aria-label="Previous sheet"><ChevronLeft/></Button>
-                <span>Sheet <b>{twoUpIndex + 1}</b> of {pairs.length} (Pages {twoUpIndex * 2 + 1}–{Math.min(sheets.length, twoUpIndex * 2 + 2)})</span>
-                <Button variant="outline" size="icon" onClick={() => goTwoUp(twoUpIndex + 1)} disabled={twoUpIndex === pairs.length - 1} aria-label="Next sheet"><ChevronRight/></Button>
+                <Button variant="outline" size="icon" onClick={() => {
+                  if (twoUpIndex === 0 && !isCover) setIsCover(true);
+                  else if (!isCover) goTwoUp(twoUpIndex - 1);
+                }} disabled={isCover} aria-label="Previous sheet"><ChevronLeft/></Button>
+                <span>{isCover ? <b>Cover Page · غلاف المذكرة</b> : <>Sheet <b>{twoUpIndex + 1}</b> of {pairs.length} (Pages {twoUpIndex * 2 + 1}–{Math.min(sheets.length, twoUpIndex * 2 + 2)})</>}</span>
+                <Button variant="outline" size="icon" onClick={() => {
+                  if (isCover) { setIsCover(false); setTwoUpIndex(0); }
+                  else goTwoUp(twoUpIndex + 1);
+                }} disabled={!isCover && twoUpIndex === pairs.length - 1} aria-label="Next sheet"><ChevronRight/></Button>
               </div>
             </>
           )}
@@ -436,17 +464,26 @@ function Notebook() {
             <>
               <div className="paper-stage">
                 <div className="paper-scale" style={{ zoom: zoom / 100 }}>
+                  <div className={`page-slot ${isCover ? 'active-page' : ''} cover-slot`}>
+                    <OctoberCoverPage />
+                  </div>
                   {assessmentSheets.map((s, i) => (
-                    <div key={s.id} className={`page-slot ${i === evalPage ? 'active-page' : ''}`}>
+                    <div key={s.id} className={`page-slot ${!isCover && i === evalPage ? 'active-page' : ''}`}>
                       <Paper sheet={s} index={i} />
                     </div>
                   ))}
                 </div>
               </div>
               <div className="page-navigation">
-                <Button variant="outline" size="icon" onClick={() => goEval(evalPage - 1)} disabled={evalPage === 0} aria-label="Previous assessment sheet"><ChevronLeft/></Button>
-                <span>Assessment Sheet <b>{evalPage + 1}</b> of {assessmentSheets.length}</span>
-                <Button variant="outline" size="icon" onClick={() => goEval(evalPage + 1)} disabled={evalPage === assessmentSheets.length - 1} aria-label="Next assessment sheet"><ChevronRight/></Button>
+                <Button variant="outline" size="icon" onClick={() => {
+                  if (evalPage === 0 && !isCover) setIsCover(true);
+                  else if (!isCover) goEval(evalPage - 1);
+                }} disabled={isCover} aria-label="Previous assessment sheet"><ChevronLeft/></Button>
+                <span>{isCover ? <b>Cover Page · غلاف المذكرة</b> : <>Assessment Sheet <b>{evalPage + 1}</b> of {assessmentSheets.length}</>}</span>
+                <Button variant="outline" size="icon" onClick={() => {
+                  if (isCover) { setIsCover(false); setEvalPage(0); }
+                  else goEval(evalPage + 1);
+                }} disabled={!isCover && evalPage === assessmentSheets.length - 1} aria-label="Next assessment sheet"><ChevronRight/></Button>
               </div>
             </>
           )}
@@ -458,6 +495,22 @@ function Notebook() {
               <List size={19}/>
               <h2>Notebook contents</h2>
               <span>{mode === 'assessment' ? `${assessmentSheets.length} assessment sheets` : `${sheets.length} pages`}</span>
+            </div>
+
+            <div className="cover-nav-section" style={{ padding: '6px 12px 12px', borderBottom: '1px solid rgba(0,0,0,0.08)', marginBottom: '10px' }}>
+              <Button
+                variant="ghost"
+                className={`contents-item cover-item ${isCover ? 'selected' : ''}`}
+                style={{ width: '100%', justifyContent: 'flex-start', textAlign: 'left' }}
+                onClick={() => { setIsCover(true); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              >
+                <Sparkles size={16} style={{ color: '#c8a251', flexShrink: 0 }} />
+                <span>
+                  Cover Page · غلاف المذكرة
+                  <small style={{ display: 'block', fontSize: '11px', color: '#64748b' }}>MBIS · October Revision · Grade 5</small>
+                </span>
+                {isCover && <span className="active-dot" />}
+              </Button>
             </div>
 
             {mode === 'assessment' ? (
