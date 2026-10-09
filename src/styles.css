@@ -1068,3 +1068,108 @@ body { font-family:'Nunito Sans',sans-serif; }
   margin: 0 75px 14px 36px !important;
   padding-top: 6px !important;
 }
+
+/* Sequential Multi-Question Layout (Question -> Steps -> Answer -> Question -> Steps -> Answer) */
+.worked-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 6px 0 10px;
+}
+
+.worked-item-card {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1.5px solid var(--border);
+  border-left: 4px solid var(--ink-blue);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.worked-item-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.worked-item-badge {
+  display: inline-block;
+  background: var(--ink-blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.worked-item-question {
+  margin: 0 !important;
+  font-weight: 600;
+  font-size: 16px !important;
+  color: var(--ink-black);
+  white-space: pre-line;
+}
+
+.worked-item-card .worked-steps {
+  margin: 4px 0 6px !important;
+  padding-left: 24px !important;
+  font-size: 15px !important;
+  line-height: 1.3 !important;
+}
+
+.worked-item-card .worked-steps li {
+  margin: 2px 0 !important;
+  padding-left: 4px !important;
+  white-space: pre-line;
+}
+
+.worked-item-card .worked-answer {
+  background: var(--note-green);
+  border: 1.5px solid var(--success);
+  margin-top: 6px !important;
+  padding: 6px 12px !important;
+  border-radius: 6px !important;
+  font-size: 15px !important;
+}
+
+.worked-item-card .worked-answer p {
+  white-space: pre-line;
+  font-size: 15px !important;
+  line-height: 1.25 !important;
+  margin: 0;
+}
+
+.eval-sheet .worked-items-container {
+  gap: 8px;
+  margin: 4px 0 8px;
+}
+
+.eval-sheet .worked-item-card {
+  padding: 6px 10px;
+}
+
+.paper.is-dense .worked-items-container {
+  gap: 6px;
+  margin: 4px 0 6px;
+}
+
+.paper.is-dense .worked-item-card {
+  padding: 5px 8px;
+}
+
+.paper.is-dense .worked-item-card .worked-steps {
+  font-size: 14px !important;
+  margin: 2px 0 4px !important;
+}
+
+.paper.is-dense .worked-item-card .worked-answer {
+  padding: 4px 8px !important;
+  font-size: 14px !important;
+}
+
+.paper.is-dense .worked-item-card .worked-answer p {
+  font-size: 14px !important;
+}
