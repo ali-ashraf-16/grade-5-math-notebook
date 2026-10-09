@@ -271,10 +271,10 @@ function Notebook() {
             className={`edition-tab ${mode === 'assessment' ? 'active' : ''}`}
             aria-pressed={mode === 'assessment'}
             onClick={() => setMode('assessment')}
-            title="أسئلة تقييمات أكتوبر المرفقة محلولة بالخطوات"
+            title="مذكرة شهر أكتوبر: حل تقييمات الوزارة وأصعب أسئلة البوكليت"
           >
             <Sparkles size={15} />
-            <span>تقييمات أكتوبر محلولة</span>
+            <span>مذكرة أكتوبر وأسئلة البوكليت</span>
           </Button>
         </div>
 
@@ -399,9 +399,9 @@ function Notebook() {
                 <div className="unit-summary">
                   <span className="unit-tag">OCTOBER ASSESSMENTS</span>
                   <h3>October Assessment<br/>Step-by-step Solutions</h3>
-                  <p>Units 1 & 2</p>
+                  <p>Ministry evaluation models · 30 sheets</p>
                 </div>
-                {assessmentSheets.map((cs, idx) => (
+                {assessmentSheets.slice(0, 30).map((cs, idx) => (
                   <Button
                     key={cs.id}
                     variant="ghost"
@@ -416,6 +416,34 @@ function Notebook() {
                     {evalPage === idx && <span className="active-dot"/>}
                   </Button>
                 ))}
+
+                {assessmentSheets.length > 30 && (
+                  <>
+                    <div className="unit-summary" style={{ marginTop: '16px' }}>
+                      <span className="unit-tag">HOMEWORK BOOKLET</span>
+                      <h3>Hardest Booklet Questions<br/>Step-by-step Solutions</h3>
+                      <p>Selected challenges · 14 sheets</p>
+                    </div>
+                    {assessmentSheets.slice(30).map((cs, i) => {
+                      const idx = 30 + i;
+                      return (
+                        <Button
+                          key={cs.id}
+                          variant="ghost"
+                          className={`contents-item ${evalPage === idx ? 'selected' : ''}`}
+                          onClick={() => goEval(idx)}
+                        >
+                          <BookOpen size={16} />
+                          <span>
+                            {cs.title}
+                            <small>{chapters.find(c => c.id === cs.chapter)?.title} · Sheet {idx + 1}</small>
+                          </span>
+                          {evalPage === idx && <span className="active-dot"/>}
+                        </Button>
+                      );
+                    })}
+                  </>
+                )}
               </div>
             ) : (
               <>
