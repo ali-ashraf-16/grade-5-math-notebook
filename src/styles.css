@@ -961,3 +961,11 @@ body { font-family:'Nunito Sans',sans-serif; }
 .footer-avatar-badge { border-radius: 0; }
 @media (max-width: 760px) { .edition-tabs { order: 3; width: 100%; } .edition-tab { flex: 1 1 140px; } .notebook-contents { top: auto; } }
 @media print { .two-up-scale { zoom: 1 !important; } .page-slot:last-child { break-after: auto !important; page-break-after: auto !important; } body.print-mode-2up .two-up-half { flex: 0 0 137.5mm !important; width: 137.5mm !important; } body.print-mode-2up .two-up-pair-card .paper.is-mini { width: 137.5mm !important; } }
+
+/* Supplied October assessment styling, using notebook theme tokens. */
+.eval-tag-pill { background: var(--note-yellow); color: var(--ink-black); font-weight: 800; font-size: 11px; padding: 2px 8px; border-radius: 8px; display: inline-block; margin-bottom: 6px; border: 1px solid var(--marker); }
+.eval-sheet { border-left: 5px solid var(--primary); }
+.eval-sheet .worked-label { color: var(--ink-blue); }
+.eval-sheet .worked-answer { background: var(--note-green); border: 1.5px solid var(--success); }
+.eval-sheet .worked-question, .eval-sheet .worked-steps li, .eval-sheet .worked-answer p { white-space: pre-line; }
+.eval-sheet .worked-question, .eval-sheet .worked-steps li { overflow-wrap: anywhere; }

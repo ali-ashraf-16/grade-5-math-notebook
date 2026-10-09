@@ -16,7 +16,7 @@ class NotebookPrintRules(unittest.TestCase):
         asyncio.run(self.check_edition('نسخة صفحتين جنب بعض (A4 أفقي)', 297, 210, paired=True))
 
     def test_focused_revision_is_a4_portrait(self):
-        asyncio.run(self.check_edition('المراجعة المركزة والأسئلة الصعبة', 210, 297))
+        asyncio.run(self.check_edition('تقييمات أكتوبر محلولة', 210, 297))
 
     async def check_edition(self, label, width_mm, height_mm, paired=False):
         async with async_playwright() as p:
