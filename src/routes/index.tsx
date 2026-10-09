@@ -137,7 +137,7 @@ function MathModel({ model }: { model: Model }) {
   return <table className="revision-place-table"><thead><tr>{['Thous.','Hund.','Tens','Ones','.','Tenths','Hundredths','Thousandths'].map(x => <th key={x}>{x}</th>)}</tr></thead><tbody><tr>{model.number?.split('').map((x,i) => <td key={i}>{x}</td>)}</tr></tbody></table>;
 }
 
-function Paper({ sheet, index, isMini = false }: { sheet: Sheet; index: number; isMini?: boolean }) {
+function Paper({ sheet, index, isMini = false, theme = 'royal' }: { sheet: Sheet; index: number; isMini?: boolean; theme?: 'royal' | 'classic' }) {
   const chapter = chapters.find(c => c.id === sheet.chapter);
   const isDense = Boolean(
     sheet.words ||
@@ -146,12 +146,24 @@ function Paper({ sheet, index, isMini = false }: { sheet: Sheet; index: number; 
     (sheet.shift && (sheet.steps?.length ?? 0) >= 4)
   );
 
-  return <article className={`paper ${isDense ? 'is-dense' : ''} ${sheet.tag ? 'eval-sheet' : ''} ${isMini ? 'is-mini' : ''}`} data-sheet-id={sheet.id} aria-label={`Page ${index+1}: ${sheet.title}`}>
+  const isRoyal = theme === 'royal';
+
+  return <article className={`paper ${isRoyal ? 'royal-edition' : ''} ${isDense ? 'is-dense' : ''} ${sheet.tag ? 'eval-sheet' : ''} ${isMini ? 'is-mini' : ''}`} data-sheet-id={sheet.id} aria-label={`Page ${index+1}: ${sheet.title}`}>
     <div className="binding" aria-hidden="true">{Array.from({length:18},(_,i) => <i key={i}/>)}</div>
+    {isRoyal && (
+      <>
+        <div className="royal-border-outer" aria-hidden="true" />
+        <div className="royal-border-inner" aria-hidden="true" />
+        <div className="royal-corner corner-tl" aria-hidden="true" />
+        <div className="royal-corner corner-tr" aria-hidden="true" />
+        <div className="royal-corner corner-bl" aria-hidden="true" />
+        <div className="royal-corner corner-br" aria-hidden="true" />
+      </>
+    )}
     <div className="paper-content">
       <div className="paper-running">
-        <span>GRADE 5 · MATHEMATICS</span>
-        <span>{chapter?.concept === 5 ? 'HOMEWORK BOOKLET · HARDEST QUESTIONS' : chapter?.concept && chapter.concept >= 3 ? `UNIT 2 · CONCEPT ${chapter.concept - 2}` : `UNIT 1 · CONCEPT ${chapter?.concept}`}</span>
+        <span>{isRoyal ? 'MINIA BRITISH INTERNATIONAL SCHOOL · GRADE 5' : 'GRADE 5 · MATHEMATICS'}</span>
+        <span>{chapter?.concept === 5 ? 'OCTOBER REVISION · HARDEST QUESTIONS' : chapter?.concept && chapter.concept >= 3 ? `OCTOBER REVISION · UNIT 2 · CONCEPT ${chapter.concept - 2}` : `OCTOBER REVISION · UNIT 1 · CONCEPT ${chapter?.concept}`}</span>
       </div>
       <div className="paper-lesson-banner">
         <span className="lesson-badge">{chapter?.lessons}</span>
@@ -221,8 +233,14 @@ function Paper({ sheet, index, isMini = false }: { sheet: Sheet; index: number; 
     </div>
     <footer className="paper-footer">
       <div className="footer-prepared">
-        <img src={badge.url} alt="Prepared by Mr. Ali Ashraf" className="footer-avatar-badge" />
-        <span className="footer-teacher-name">Prepared by Mr. Ali Ashraf</span>
+        <img src={isRoyal ? "/mbis_logo.png" : badge.url} alt="Prepared by Mr. Ali Ashraf" className="footer-avatar-badge" />
+        <span className="footer-teacher-name">
+          {isRoyal ? (
+            <>Prepared by <b>Mr. Ali Ashraf</b> <small>· Supervised by Ms. Hadeel & Ms. Christine</small></>
+          ) : (
+            'Prepared by Mr. Ali Ashraf'
+          )}
+        </span>
       </div>
       <span className="footer-page-num">{String(index+1).padStart(2,'0')}</span>
     </footer>
@@ -239,6 +257,7 @@ function Notebook() {
   const [zoom, setZoom] = useState(90);
   const [sidebar, setSidebar] = useState(true);
   const [isCover, setIsCover] = useState(true);
+  const [theme, setTheme] = useState<'royal' | 'classic'>('royal');
 
   // Group sheets into pairs for 2-up printing/viewing
   const pairs: [Sheet, Sheet | null][] = [];
@@ -264,7 +283,12 @@ function Notebook() {
   }, [mode, sidebar]);
 
   useEffect(() => {
-    document.body.classList.remove('print-mode-full', 'print-mode-2up', 'print-mode-chal');
+    document.body.classList.remove('print-mode-full', 'print-mode-2up', 'print-mode-chal', 'theme-royal', 'theme-classic');
+    if (theme === 'royal') {
+      document.body.classList.add('theme-royal');
+    } else {
+      document.body.classList.add('theme-classic');
+    }
     document.body.classList.add(mode === 'two-up' ? 'print-mode-2up' : mode === 'assessment' ? 'print-mode-chal' : 'print-mode-full');
   }, [mode]);
 
@@ -291,7 +315,12 @@ function Notebook() {
 
   const print = async () => {
     // Set class on body for accurate print styling
-    document.body.classList.remove('print-mode-full', 'print-mode-2up', 'print-mode-chal');
+    document.body.classList.remove('print-mode-full', 'print-mode-2up', 'print-mode-chal', 'theme-royal', 'theme-classic');
+    if (theme === 'royal') {
+      document.body.classList.add('theme-royal');
+    } else {
+      document.body.classList.add('theme-classic');
+    }
     if (mode === 'two-up') {
       document.body.classList.add('print-mode-2up');
     } else if (mode === 'assessment') {
@@ -313,6 +342,30 @@ function Notebook() {
             <h1>Math Notebook<span className="brand-dot">.</span></h1>
             <p>Grade 5 · Units 1–2 · Mr. Ali Ashraf</p>
           </div>
+        </div>
+
+        {/* Royal Edition vs Classic Switcher */}
+        <div className="theme-switcher-group" role="radiogroup" aria-label="Booklet Design Theme">
+          <Button
+            variant="ghost"
+            type="button"
+            className={`theme-switch-btn ${theme === 'royal' ? 'active-royal' : ''}`}
+            onClick={() => setTheme('royal')}
+            title="النسخة الملكية الفاخرة المعتمدة بشعار مدرسة MBIS والإطارات الذهبية والكحلية"
+          >
+            <Sparkles size={14} style={{ marginRight: '6px', color: theme === 'royal' ? '#f7d070' : '#c8a251' }} />
+            <span>النسخة الملكية (MBIS Royal)</span>
+          </Button>
+          <Button
+            variant="ghost"
+            type="button"
+            className={`theme-switch-btn ${theme === 'classic' ? 'active-classic' : ''}`}
+            onClick={() => setTheme('classic')}
+            title="النسخة الدفترية الأصلية بخط اليد"
+          >
+            <BookOpen size={14} style={{ marginRight: '6px' }} />
+            <span>النسخة الدفترية (Classic)</span>
+          </Button>
         </div>
 
         {/* Version / Edition Switcher */}
@@ -397,7 +450,7 @@ function Notebook() {
                   </div>
                   {sheets.map((s, i) => (
                     <div key={s.id} className={`page-slot ${!isCover && i === page ? 'active-page' : ''}`}>
-                      <Paper sheet={s} index={i} />
+                      <Paper sheet={s} index={i} theme={theme} />
                     </div>
                   ))}
                 </div>
@@ -430,11 +483,11 @@ function Notebook() {
                       <div key={leftSheet.id} className={`two-up-slot ${idx === twoUpIndex ? 'active-two-up' : ''}`}>
                         <div className="two-up-pair-card">
                           <div className="two-up-half left-half">
-                            <Paper sheet={leftSheet} index={idx * 2} isMini />
+                            <Paper sheet={leftSheet} index={idx * 2} isMini theme={theme} />
                           </div>
                           {rightSheet ? (
                             <div className="two-up-half right-half">
-                              <Paper sheet={rightSheet} index={idx * 2 + 1} isMini />
+                              <Paper sheet={rightSheet} index={idx * 2 + 1} isMini theme={theme} />
                             </div>
                           ) : (
                             <div className="two-up-half empty-half" />
@@ -469,7 +522,7 @@ function Notebook() {
                   </div>
                   {assessmentSheets.map((s, i) => (
                     <div key={s.id} className={`page-slot ${!isCover && i === evalPage ? 'active-page' : ''}`}>
-                      <Paper sheet={s} index={i} />
+                      <Paper sheet={s} index={i} theme={theme} />
                     </div>
                   ))}
                 </div>
