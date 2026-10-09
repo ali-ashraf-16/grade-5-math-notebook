@@ -614,7 +614,27 @@
         "Check: Multiplication increases value; division decreases value."
       ],
       "answer": "1) 0.459 × 100 = 45.9\n2) 7.23 ÷ 10 = 0.723",
-      "note": "× shifts right, ÷ shifts left."
+      "note": "× shifts right, ÷ shifts left.",
+      "items": [
+        {
+          "label": "Part 1 · Multiplication",
+          "question": "Find the result of: 0.459 × 100",
+          "steps": [
+            "Multiplying by 100 has 2 zeros, so shift decimal point 2 places to the right.",
+            "0.459 → 45.9."
+          ],
+          "answer": "0.459 × 100 = 45.9"
+        },
+        {
+          "label": "Part 2 · Division",
+          "question": "Find the result of: 7.23 ÷ 10",
+          "steps": [
+            "Dividing by 10 has 1 zero, so shift decimal point 1 place to the left.",
+            "7.23 → 0.723."
+          ],
+          "answer": "7.23 ÷ 10 = 0.723"
+        }
+      ]
     },
     {
       "id": "eval-shift-4",
@@ -630,7 +650,27 @@
         "Each digit moves one place to the left into a higher place value, and the value of each digit increases by 10 times."
       ],
       "answer": "1) Share of each worker = 956.8 pounds\n2) Digits shift 1 place to the left; each digit's value increases 10 times",
-      "note": "Whole numbers have an invisible decimal point at the far right."
+      "note": "Whole numbers have an invisible decimal point at the far right.",
+      "items": [
+        {
+          "label": "Part 1 · Division Problem",
+          "question": "A factory owner divides 9,568 pounds equally among 10 workers. Calculate the share of each worker.",
+          "steps": [
+            "Operation: 9,568 ÷ 10 = 9,568.0 ÷ 10.",
+            "Shift decimal point 1 place to the left: 956.8 pounds."
+          ],
+          "answer": "Share of each worker = 956.8 pounds"
+        },
+        {
+          "label": "Part 2 · Digit Shift",
+          "question": "Determine what happens to the digits in the number 3.675 when multiplied by 10.",
+          "steps": [
+            "Calculate: 3.675 × 10 = 36.75.",
+            "Each digit shifts 1 place to the left into a higher place value; its value increases 10 times."
+          ],
+          "answer": "Digits shift 1 place left; value increases 10 times"
+        }
+      ]
     },
     {
       "id": "compose-1",
@@ -761,7 +801,25 @@
         "For problem 2: 8 ones + 3 tenths (0.3) + 5 hundredths (0.05) + 7 thousandths (0.007) = 8.357."
       ],
       "answer": "1) (d) 6.274\n2) (c) 8.357",
-      "note": "5/100 is 0.05 (hundredths), and 7/1000 is 0.007 (thousandths)."
+      "note": "5/100 is 0.05 (hundredths), and 7/1000 is 0.007 (thousandths).",
+      "items": [
+        {
+          "label": "Problem 1 · Decimal Addition",
+          "question": "Choose: 6 + 0.2 + 0.07 + 0.004 = ......\n(a) 6.724   (b) 6.742   (c) 7.247   (d) 6.274",
+          "steps": [
+            "6 ones + 2 tenths + 7 hundredths + 4 thousandths = 6.274."
+          ],
+          "answer": "(d) 6.274"
+        },
+        {
+          "label": "Problem 2 · Fractions to Decimal",
+          "question": "Choose: 8 + 0.3 + 5/100 + 7/1000 = ......\n(a) 7.538   (b) 8.753   (c) 8.357   (d) 7.835",
+          "steps": [
+            "8 ones + 3 tenths (0.3) + 5 hundredths (0.05) + 7 thousandths (0.007) = 8.357."
+          ],
+          "answer": "(c) 8.357"
+        }
+      ]
     },
     {
       "id": "eval-compose-2",
@@ -779,7 +837,28 @@
         "Way 3 (hundredths + remaining): 0.24 + 0.007."
       ],
       "answer": "1) 9.358 = 9 + 0.3 + 0.05 + 0.008\n2) 0.247 = 0.2 + 0.04 + 0.007",
-      "note": "A number can be decomposed in multiple valid ways."
+      "note": "A number can be decomposed in multiple valid ways.",
+      "items": [
+        {
+          "label": "Part 1 · Expanded Form",
+          "question": "Write the decimal number 9.358 in expanded form.",
+          "steps": [
+            "9 is in ones (9), 3 is in tenths (0.3), 5 is in hundredths (0.05), 8 is in thousandths (0.008).",
+            "Expanded form: 9 + 0.3 + 0.05 + 0.008."
+          ],
+          "answer": "9.358 = 9 + 0.3 + 0.05 + 0.008"
+        },
+        {
+          "label": "Part 2 · Decomposing",
+          "question": "Decompose the number 0.247 in different ways.",
+          "steps": [
+            "Way 1 (place values): 0.2 + 0.04 + 0.007.",
+            "Way 2 (tenths + remaining): 0.2 + 0.047.",
+            "Way 3 (hundredths + remaining): 0.24 + 0.007."
+          ],
+          "answer": "0.247 = 0.2 + 0.04 + 0.007"
+        }
+      ]
     },
     {
       "id": "eval-compose-3",
@@ -798,7 +877,27 @@
         "Decomposition Way 3: 4.3 + 0.069."
       ],
       "answer": "1) 6.509\n2) Table: Ones=4, Tenths=3, Hundredths=6, Thousandths=9\nWays: 4 + 0.3 + 0.06 + 0.009 | 4 + 0.36 + 0.009 | 4.3 + 0.069",
-      "note": "Always check for missing places and fill them with 0."
+      "note": "Always check for missing places and fill them with 0.",
+      "items": [
+        {
+          "label": "Part 1 · Compose from Products",
+          "question": "Compose the number: (9 × 1/1000) + (5 × 1/10) + (6 × 1).",
+          "steps": [
+            "(6 × 1) = 6 ones. (5 × 1/10) = 0.5 (5 tenths). (9 × 1/1000) = 0.009 (9 thousandths).",
+            "Hundredths place is missing, so insert 0: 6.509."
+          ],
+          "answer": "6.509"
+        },
+        {
+          "label": "Part 2 · Place Value Table & Decomposing",
+          "question": "Express 4.369 in a place value table and decompose in 3 ways.",
+          "steps": [
+            "Table: Ones=4, Tenths=3, Hundredths=6, Thousandths=9.",
+            "Ways: (1) 4 + 0.3 + 0.06 + 0.009 | (2) 4 + 0.36 + 0.009 | (3) 4.3 + 0.069."
+          ],
+          "answer": "Table: Ones=4, Tenths=3, Hundredths=6, Thousandths=9"
+        }
+      ]
     },
     {
       "id": "compare-1",
@@ -931,7 +1030,33 @@
         "Problem 3: All have whole part 12. Compare tenths: 12.03 has 0 tenths; 12.13 has 1 tenth; 12.30 and 12.33 have 3 tenths. Smallest is 12.03."
       ],
       "answer": "1) (c) 3.240\n2) (d) 1.8\n3) (c) 12.03",
-      "note": "Compare from left to right: whole part, then tenths, then hundredths."
+      "note": "Compare from left to right: whole part, then tenths, then hundredths.",
+      "items": [
+        {
+          "label": "Problem 1 · Inequality",
+          "question": "Choose: 3.405 > ......\n(a) 3.504   (b) 5.240   (c) 3.240   (d) 4.530",
+          "steps": [
+            "5.240 and 4.530 are > 3.405. For 3.504: tenths 5 > 4. For 3.240: tenths 2 < 4, so 3.405 > 3.240."
+          ],
+          "answer": "(c) 3.240"
+        },
+        {
+          "label": "Problem 2 · Greatest",
+          "question": "Which of the following is the greatest?\n(a) 0.8   (b) 0.18   (c) 0.08   (d) 1.8",
+          "steps": [
+            "1.8 has whole part 1, while all others have 0. Greatest is 1.8."
+          ],
+          "answer": "(d) 1.8"
+        },
+        {
+          "label": "Problem 3 · Smallest",
+          "question": "Which of the following is the smallest?\n(a) 12.33   (b) 12.30   (c) 12.03   (d) 12.13",
+          "steps": [
+            "All have whole part 12. Compare tenths: 12.03 has 0 tenths (smallest)."
+          ],
+          "answer": "(c) 12.03"
+        }
+      ]
     },
     {
       "id": "eval-compare-2",
@@ -947,7 +1072,27 @@
         "Since 0 < 3, 0.372 < 3.217."
       ],
       "answer": "1) 4.895 > 4.598\n2) (3 tenths, 7 hundredths and 2 thousandths) < 3.217",
-      "note": "Whole number comparison comes before decimal comparison."
+      "note": "Whole number comparison comes before decimal comparison.",
+      "items": [
+        {
+          "label": "Problem 1 · Decimals",
+          "question": "Compare between the two decimal numbers: 4.895 and 4.598.",
+          "steps": [
+            "Both have whole part 4. Compare tenths: 8 tenths in 4.895 vs 5 tenths in 4.598.",
+            "Since 8 > 5: 4.895 > 4.598."
+          ],
+          "answer": "4.895 > 4.598"
+        },
+        {
+          "label": "Problem 2 · Unit Form vs Decimal",
+          "question": "Compare between: (3 tenths, 7 hundredths and 2 thousandths) and 3.217.",
+          "steps": [
+            "Convert to decimal: 3 tenths + 7 hundredths + 2 thousandths = 0.372.",
+            "Compare 0.372 (whole 0) with 3.217 (whole 3). Since 0 < 3: 0.372 < 3.217."
+          ],
+          "answer": "(3 tenths, 7 hundredths and 2 thousandths) < 3.217"
+        }
+      ]
     },
     {
       "id": "eval-compare-3",
@@ -964,7 +1109,26 @@
         "Problem 2: 6.324 has whole 6, tenths 3, hundredths 2. A decimal with only hundredths (2 decimal places) that is greater can be 6.33, 6.34, 6.35, or 6.40 (since 6.330 > 6.324)."
       ],
       "answer": "1) 3.408 , 3.804 , 6.097 , 6.907\n2) 6.33 (or 6.34, 6.35)",
-      "note": "6.330 is greater than 6.324."
+      "note": "6.330 is greater than 6.324.",
+      "items": [
+        {
+          "label": "Problem 1 · Ascending Order",
+          "question": "Arrange ascendingly: 3.408 , 6.097 , 3.804 and 6.907.",
+          "steps": [
+            "Compare 3s: 3.408 < 3.804. Compare 6s: 6.097 < 6.907.",
+            "Order from least to greatest: 3.408 , 3.804 , 6.097 , 6.907."
+          ],
+          "answer": "3.408 , 3.804 , 6.097 , 6.907"
+        },
+        {
+          "label": "Problem 2 · Decimal Precision",
+          "question": "Write a decimal number greater than 6.324 just in hundredths.",
+          "steps": [
+            "6.324 has whole 6, tenths 3, hundredths 2. In hundredths, 6.33 = 6.330 > 6.324."
+          ],
+          "answer": "6.33  (or 6.34, 6.35)"
+        }
+      ]
     },
     {
       "id": "round-1",
@@ -1181,7 +1345,25 @@
         "Since 2 < 5, keep the 6: 22.624 ≈ 22.6."
       ],
       "answer": "1) (c) 13.62\n2) 22.6",
-      "note": "Only the immediate next digit decides rounding."
+      "note": "Only the immediate next digit decides rounding.",
+      "items": [
+        {
+          "label": "Problem 1 · Nearest Hundredth",
+          "question": "Choose: 13.623 ≈ ...... (to the nearest hundredth)\n(a) 13.6   (b) 13.5   (c) 13.62   (d) 13",
+          "steps": [
+            "Target is hundredths (2). Next digit is thousandths 3 < 5 → keep 13.62."
+          ],
+          "answer": "(c) 13.62"
+        },
+        {
+          "label": "Problem 2 · Nearest Tenth",
+          "question": "Round the number 22.624 to the nearest tenth.",
+          "steps": [
+            "Target is tenths (6). Next digit is hundredths 2 < 5 → keep 22.6."
+          ],
+          "answer": "22.624 ≈ 22.6"
+        }
+      ]
     },
     {
       "id": "eval-round-2",
@@ -1196,7 +1378,33 @@
         "3) Nearest thousandth: Target is 3. Next digit is ten-thousandths 2. Since 2 < 5, keep 3 → 6.983."
       ],
       "answer": "1) 12.34 ≈ 12\n2) 7.346 ≈ 7.35\n3) 6.9832 ≈ 6.983",
-      "note": "Nearest unit means nearest whole number (no decimal part)."
+      "note": "Nearest unit means nearest whole number (no decimal part).",
+      "items": [
+        {
+          "label": "Problem 1 · Nearest Unit",
+          "question": "Round 12.34 to the nearest unit.",
+          "steps": [
+            "Target is ones (2). Next digit is tenths 3 < 5 → keep 12."
+          ],
+          "answer": "12.34 ≈ 12"
+        },
+        {
+          "label": "Problem 2 · Nearest Hundredth",
+          "question": "Round 7.346 to the nearest hundredth.",
+          "steps": [
+            "Target is hundredths (4). Next digit is thousandths 6 ≥ 5 → round up to 7.35."
+          ],
+          "answer": "7.346 ≈ 7.35"
+        },
+        {
+          "label": "Problem 3 · Nearest Thousandth",
+          "question": "Round 6.9832 to the nearest thousandth.",
+          "steps": [
+            "Target is thousandths (3). Next digit is ten-thousandths 2 < 5 → keep 6.983."
+          ],
+          "answer": "6.9832 ≈ 6.983"
+        }
+      ]
     },
     {
       "id": "eval-round-3",
@@ -1328,7 +1536,26 @@
         "Actual sum = 6.341 + 4.912 = 11.253."
       ],
       "answer": "1) (b) 10\n2) Estimated sum = 10 ; Actual sum = 11.253",
-      "note": "Front-end does not look at following digits; it never rounds up."
+      "note": "Front-end does not look at following digits; it never rounds up.",
+      "items": [
+        {
+          "label": "Problem 1 · Choose",
+          "question": "Choose: The result of estimating 3.08 + 7.324 using first digit on the left equals ......\n(a) 4   (b) 10   (c) 11   (d) 11.382",
+          "steps": [
+            "3.08 → 3 (leftmost). 7.324 → 7 (leftmost). Estimate: 3 + 7 = 10."
+          ],
+          "answer": "(b) 10"
+        },
+        {
+          "label": "Problem 2 · Estimate & Calculate",
+          "question": "Estimate 6.341 + 4.912 using first digit on the left, then find actual sum.",
+          "steps": [
+            "6.341 → 6; 4.912 → 4. Estimated sum = 6 + 4 = 10.",
+            "Actual sum: 6.341 + 4.912 = 11.253."
+          ],
+          "answer": "Estimated sum = 10  |  Actual sum = 11.253"
+        }
+      ]
     },
     {
       "id": "eval-estimate-2",
@@ -1342,7 +1569,27 @@
         "Problem 2 (Preferred strategy: rounding to nearest whole):\n- 3.452 ≈ 3 and 7.231 ≈ 7 → Estimated sum = 3 + 7 = 10.\n- Actual sum = 3.452 + 7.231 = 10.683."
       ],
       "answer": "1) Estimated sum = 8 ; Actual sum = 7.98\n2) Estimated sum = 10 ; Actual sum = 10.683",
-      "note": "Rounding to tenths provides a very close estimate to the actual sum."
+      "note": "Rounding to tenths provides a very close estimate to the actual sum.",
+      "items": [
+        {
+          "label": "Problem 1 · Rounding to Tenth",
+          "question": "Estimate 4.823 + 3.157 by rounding to the nearest tenth, then find actual sum.",
+          "steps": [
+            "4.823 rounds to 4.8; 3.157 rounds to 3.2. Estimated sum = 4.8 + 3.2 = 8.0 = 8.",
+            "Actual sum: 4.823 + 3.157 = 7.98."
+          ],
+          "answer": "Estimated sum = 8  |  Actual sum = 7.98"
+        },
+        {
+          "label": "Problem 2 · Preferred Strategy",
+          "question": "Estimate 3.452 + 7.231 using a preferred strategy, then find actual sum.",
+          "steps": [
+            "Rounding to nearest whole: 3.452 ≈ 3 and 7.231 ≈ 7. Estimated sum = 3 + 7 = 10.",
+            "Actual sum: 3.452 + 7.231 = 10.683."
+          ],
+          "answer": "Estimated sum = 10  |  Actual sum = 10.683"
+        }
+      ]
     },
     {
       "id": "add-1",
@@ -1583,7 +1830,27 @@
         "Problem 2: Align in table:\n- Thousandths: 5 + 4 = 9\n- Hundredths: 4 + 7 = 11 → write 1, carry 1 to tenths\n- Tenths: 3 + 2 + 1 = 6\n- Ones: 7 + 2 = 9\n- Result = 9.619."
       ],
       "answer": "1) 0.15 + 0.45 = 0.60 (or 0.6)\n2) 7.345 + 2.274 = 9.619",
-      "note": "Always regroup 10 hundredths into 1 tenth."
+      "note": "Always regroup 10 hundredths into 1 tenth.",
+      "items": [
+        {
+          "label": "Problem 1 · Hundredths Model",
+          "question": "Find the result of: 0.15 + 0.45 using the hundredths model.",
+          "steps": [
+            "Shade 15 squares for 0.15 and 45 squares for 0.45.",
+            "Total shaded squares = 15 + 45 = 60 squares out of 100 = 0.60 = 0.6."
+          ],
+          "answer": "0.15 + 0.45 = 0.60 (or 0.6)"
+        },
+        {
+          "label": "Problem 2 · Place Value Table",
+          "question": "Find the result of: 7.345 + 2.274 using the place value table.",
+          "steps": [
+            "Align: Thousandths: 5+4=9. Hundredths: 4+7=11 (1, carry 1). Tenths: 3+2+1=6. Ones: 7+2=9.",
+            "Result = 9.619."
+          ],
+          "answer": "7.345 + 2.274 = 9.619"
+        }
+      ]
     },
     {
       "id": "eval-add-2",
@@ -1598,7 +1865,27 @@
         "2b) 12.631 + 34.259: 1+9=10 (0, carry 1); 3+5+1=9; 6+2=8; 2+4=6; 1+3=4 → 46.890 = 46.89."
       ],
       "answer": "1) 8.956\n2a) 8.906\n2b) 46.89",
-      "note": "Keep decimal points aligned in a straight vertical line."
+      "note": "Keep decimal points aligned in a straight vertical line.",
+      "items": [
+        {
+          "label": "Problem 1 · Standard Algorithm",
+          "question": "Find using the standard algorithm: 6.372 + 2.584.",
+          "steps": [
+            "Thousandths: 2+4=6. Hundredths: 7+8=15 (5, carry 1). Tenths: 3+5+1=9. Ones: 6+2=8.",
+            "Result: 8.956."
+          ],
+          "answer": "8.956"
+        },
+        {
+          "label": "Problem 2 · Practice Cases",
+          "question": "Find: (a) 5.392 + 3.514   (b) 12.631 + 34.259.",
+          "steps": [
+            "(a) 2+4=6; 9+1=10 (0, carry 1); 3+5+1=9; 5+3=8 → 8.906.",
+            "(b) 1+9=10 (0, carry 1); 3+5+1=9; 6+2=8; 2+4=6; 1+3=4 → 46.89."
+          ],
+          "answer": "(a) 8.906   (b) 46.89"
+        }
+      ]
     },
     {
       "id": "subtract-1",
@@ -1913,7 +2200,27 @@
         "Count remaining shaded squares: 65 − 22 = 43 squares = 0.43."
       ],
       "answer": "1) 19 hundredths = 0.19\n2) 0.65 − 0.22 = 0.43",
-      "note": "19 hundredths is written as 0.19 in decimal standard form."
+      "note": "19 hundredths is written as 0.19 in decimal standard form.",
+      "items": [
+        {
+          "label": "Problem 1 · Unit Names",
+          "question": "Find: 34 hundredths − 15 hundredths = ......",
+          "steps": [
+            "Subtract whole units: 34 − 15 = 19 hundredths.",
+            "Write as decimal: 19 hundredths = 0.19."
+          ],
+          "answer": "19 hundredths = 0.19"
+        },
+        {
+          "label": "Problem 2 · Hundredths Model",
+          "question": "Find: 0.65 − 0.22 using the given model.",
+          "steps": [
+            "Shade 65 squares on a hundredths grid, then cross out 22 squares.",
+            "Count remaining shaded squares: 65 − 22 = 43 squares = 0.43."
+          ],
+          "answer": "0.65 − 0.22 = 0.43"
+        }
+      ]
     },
     {
       "id": "eval-subtract-2",
@@ -1927,7 +2234,27 @@
         "Part b: 34.259 − 12.137:\n- Thousandths: 9 − 7 = 2.\n- Hundredths: 5 − 3 = 2.\n- Tenths: 2 − 1 = 1.\n- Ones: 4 − 2 = 2. Tens: 3 − 1 = 2 → Result: 22.122."
       ],
       "answer": "a) 5.592 − 3.584 = 2.008\nb) 34.259 − 12.137 = 22.122",
-      "note": "Check by addition: 2.008 + 3.584 = 5.592."
+      "note": "Check by addition: 2.008 + 3.584 = 5.592.",
+      "items": [
+        {
+          "label": "Problem 1 · Regrouping",
+          "question": "Subtract using the standard algorithm: 5.592 − 3.584.",
+          "steps": [
+            "Thousandths: borrow from 9 (leaves 8, makes 12): 12 − 4 = 8.",
+            "Hundredths: 8 − 8 = 0. Tenths: 5 − 5 = 0. Ones: 5 − 3 = 2 → 2.008."
+          ],
+          "answer": "5.592 − 3.584 = 2.008"
+        },
+        {
+          "label": "Problem 2 · Multi-digit",
+          "question": "Subtract using the standard algorithm: 34.259 − 12.137.",
+          "steps": [
+            "Thousandths: 9 − 7 = 2. Hundredths: 5 − 3 = 2. Tenths: 2 − 1 = 1.",
+            "Ones: 4 − 2 = 2. Tens: 3 − 1 = 2 → 22.122."
+          ],
+          "answer": "34.259 − 12.137 = 22.122"
+        }
+      ]
     },
     {
       "id": "story-1",
@@ -2146,7 +2473,27 @@
         "Problem 2: Total pounds = 25.25 + 19.75.\n- Hundredths: 5 + 5 = 10 (0, carry 1)\n- Tenths: 2 + 7 + 1 = 10 (0, carry 1)\n- Ones: 5 + 9 + 1 = 15 (5, carry 1)\n- Tens: 2 + 1 + 1 = 4 → Total = 45.00 = 45 pounds."
       ],
       "answer": "1) Total mass = 10.241 kilograms\n2) Total money = 45 pounds",
-      "note": "Always write the correct unit (kg, pounds) after your answer."
+      "note": "Always write the correct unit (kg, pounds) after your answer.",
+      "items": [
+        {
+          "label": "Problem 1 · Total Mass",
+          "question": "Ahmed has a bag of oranges of mass 6.309 kg and a bag of apples of mass 3.932 kg. Find the total mass in kilograms.",
+          "steps": [
+            "Total mass = 6.309 + 3.932.",
+            "Add thousandths: 9+2=11 (carry 1); hundredths: 0+3+1=4; tenths: 3+9=12 (carry 1); ones: 6+3+1=10 → 10.241 kg."
+          ],
+          "answer": "Total mass = 10.241 kilograms"
+        },
+        {
+          "label": "Problem 2 · Total Money",
+          "question": "Seham has 25.25 pounds, and her sister Asma has 19.75 pounds. Find the total amount they both have.",
+          "steps": [
+            "Total = 25.25 + 19.75.",
+            "Hundredths: 5+5=10 (carry 1); tenths: 2+7+1=10 (carry 1); ones: 5+9+1=15 (carry 1); tens: 2+1+1=4 → 45.00 pounds."
+          ],
+          "answer": "Total money = 45 pounds"
+        }
+      ]
     },
     {
       "id": "eval-story-2",
@@ -2160,7 +2507,27 @@
         "Problem 2:\n- Remaining distance = 35.347 − 22.192.\n- Thousandths: 7 − 2 = 5.\n- Hundredths: 4 < 9, borrow: 14 − 9 = 5.\n- Tenths: 2 − 1 = 1.\n- Ones: 5 − 2 = 3. Tens: 3 − 2 = 1 → 13.155 km."
       ],
       "answer": "1) Estimated diff ≈ 2 g ; Actual diff = 2.073 grams\n2) Remaining distance = 13.155 kilometers",
-      "note": "Check remaining + covered: 13.155 + 22.192 = 35.347 km."
+      "note": "Check remaining + covered: 13.155 + 22.192 = 35.347 km.",
+      "items": [
+        {
+          "label": "Problem 1 · Mass Difference",
+          "question": "Huda bought a silver ring of mass 3.245 grams, and Mona bought a chain of mass 5.318 grams. Calculate the estimated difference, then find the actual difference.",
+          "steps": [
+            "Estimated difference (nearest whole): 5 − 3 = 2 grams.",
+            "Actual difference: 5.318 − 3.245 = 2.073 grams (8−5=3; 11−4=7; 2−2=0; 5−3=2)."
+          ],
+          "answer": "Estimated diff ≈ 2 g  |  Actual diff = 2.073 grams"
+        },
+        {
+          "label": "Problem 2 · Remaining Distance",
+          "question": "A road is 35.347 km long, and the train has covered 22.192 km. Calculate the remaining distance.",
+          "steps": [
+            "Remaining distance = 35.347 − 22.192.",
+            "Thousandths: 7−2=5; hundredths: 14−9=5; tenths: 2−1=1; ones: 5−2=3; tens: 3−2=1 → 13.155 km."
+          ],
+          "answer": "Remaining distance = 13.155 kilometers"
+        }
+      ]
     },
     {
       "id": "u2-1",
@@ -2487,7 +2854,27 @@
         "Problem 2b: 5.391 + N = 8.207.\n8.207 is the Whole (top of bar model). Parts are 5.391 and N.\nN = 8.207 − 5.391 = 2.816."
       ],
       "answer": "1) A = 3.172\n2a) D = 6.117\n2b) N = 2.816",
-      "note": "In subtraction (Whole − Part = Part), the first number is always the Whole."
+      "note": "In subtraction (Whole − Part = Part), the first number is always the Whole.",
+      "items": [
+        {
+          "label": "Problem 1 · Subtraction Equation",
+          "question": "Find the value of A in the equation: 5.402 − A = 2.230.",
+          "steps": [
+            "5.402 is the Whole, A is a missing Part: A = 5.402 − 2.230.",
+            "Calculate: 5.402 − 2.230 = 3.172. Check: 5.402 − 3.172 = 2.230."
+          ],
+          "answer": "A = 3.172"
+        },
+        {
+          "label": "Problem 2 · Bar Model Equations",
+          "question": "Find the unknown using the bar model:\n(a) D − 2.405 = 3.712\n(b) 5.391 + N = 8.207",
+          "steps": [
+            "(a) D is the Whole (top): D = 2.405 + 3.712 = 6.117.",
+            "(b) 8.207 is the Whole (top): N = 8.207 − 5.391 = 2.816."
+          ],
+          "answer": "(a) D = 6.117   (b) N = 2.816"
+        }
+      ]
     },
     {
       "id": "u2-15",
@@ -2588,7 +2975,28 @@
         "Problem 2: Look at the equation X = 1.367 + 1.529.\n1.367 kg is the mass of the first fish, and 1.529 kg is the mass of the second fish.\nAdding them gives the total mass of both fish.\nTherefore, X represents the total mass of the two fish in kilograms."
       ],
       "answer": "1) Equation: 15.06 + x = 28.73 (other number = 13.67)\n2) X represents the total mass of the two fish in kilograms",
-      "note": "A variable represents an unknown quantity described in the story."
+      "note": "A variable represents an unknown quantity described in the story.",
+      "items": [
+        {
+          "label": "Problem 1 · Write Equation",
+          "question": "Write the equation: The sum of two numbers is 28.73. If the first number is 15.06, what is the other number?",
+          "steps": [
+            "Let unknown number be x. Equation: 15.06 + x = 28.73.",
+            "Solve: x = 28.73 − 15.06 = 13.67."
+          ],
+          "answer": "Equation: 15.06 + x = 28.73  (x = 13.67)"
+        },
+        {
+          "label": "Problem 2 · Variable Meaning",
+          "question": "Mohamad caught fish of 1.367 kg and 1.529 kg. He wrote: X = 1.367 + 1.529. What does X represent?",
+          "steps": [
+            "1.367 kg is first fish; 1.529 kg is second fish.",
+            "Adding them gives the total combined mass.",
+            "X represents the total mass of the two fish in kilograms."
+          ],
+          "answer": "X represents total mass of the two fish in kilograms"
+        }
+      ]
     },
     {
       "id": "eval-factors-1",
@@ -2602,7 +3010,27 @@
         "Problem 2: Prime numbers are 2, 3, 5, 7, 11, ...\n- 2 is the smallest prime number, but 2 is EVEN.\n- The next prime number is 3, which is ODD.\n- Therefore, the smallest odd prime number is 3."
       ],
       "answer": "1) (c) 8 , 4\n2) 3",
-      "note": "2 is the ONLY even prime number; 3 is the smallest odd prime."
+      "note": "2 is the ONLY even prime number; 3 is the smallest odd prime.",
+      "items": [
+        {
+          "label": "Problem 1 · Common Multiple",
+          "question": "Choose: The number 40 is a common multiple for the two numbers ......\n(a) 4, 7   (b) 6, 5   (c) 8, 4   (d) 4, 6",
+          "steps": [
+            "40 is divisible by 4 (4 × 10 = 40) and by 8 (8 × 5 = 40).",
+            "40 is not divisible by 7 or 6. Thus, 40 is a common multiple of 8 and 4."
+          ],
+          "answer": "(c) 8 , 4"
+        },
+        {
+          "label": "Problem 2 · Prime Numbers",
+          "question": "Find the smallest odd prime number.",
+          "steps": [
+            "Prime numbers: 2, 3, 5, 7, 11...",
+            "2 is the smallest prime, but it is EVEN. The next prime is 3, which is ODD."
+          ],
+          "answer": "3"
+        }
+      ]
     },
     {
       "id": "eval-factors-2",
@@ -2616,7 +3044,26 @@
         "Problem 2: Find common prime factors between (2, 2, 3) and (2, 3, 3):\n- Common factor 1: both have one 2.\n- Common factor 2: both have one 3.\n- Product of common prime factors = 2 × 3 = 6.\n- Therefore, GCF = 6."
       ],
       "answer": "1) The number is 18\n2) GCF = 2 × 3 = 6",
-      "note": "First number is 12, second number is 18; their common factors are 1, 2, 3, 6."
+      "note": "First number is 12, second number is 18; their common factors are 1, 2, 3, 6.",
+      "items": [
+        {
+          "label": "Problem 1 · Identify Number",
+          "question": "What is the number whose prime factors are 2, 3 and 3?",
+          "steps": [
+            "Multiply the prime factors: Number = 2 × 3 × 3 = 6 × 3 = 18."
+          ],
+          "answer": "The number is 18"
+        },
+        {
+          "label": "Problem 2 · Greatest Common Factor (GCF)",
+          "question": "Two numbers have prime factors (2, 2, 3) and (2, 3, 3). Find their GCF.",
+          "steps": [
+            "Identify common prime factors: one 2 and one 3.",
+            "Product of common factors: GCF = 2 × 3 = 6."
+          ],
+          "answer": "GCF = 2 × 3 = 6"
+        }
+      ]
     },
     {
       "id": "eval-factors-3",
@@ -2630,7 +3077,29 @@
         "3a) 14 = 2 × 7, 21 = 3 × 7 → LCM = 2 × 3 × 7 = 42.\n3b) 42 = 2 × 3 × 7, 30 = 2 × 3 × 5 → LCM = 2 × 3 × 5 × 7 = 210.\n3c) 48 = 2^4 × 3, 36 = 2^2 × 3^2 → LCM = 16 × 9 = 144.\n3d) 5 and 11 are prime numbers → LCM = 5 × 11 = 55."
       ],
       "answer": "1) 3, 6, 9\n2) 7, 14, 21\n3a) LCM = 42   3b) LCM = 210   3c) LCM = 144   3d) LCM = 55",
-      "note": "For prime numbers with no common factor, LCM is simply their product."
+      "note": "For prime numbers with no common factor, LCM is simply their product.",
+      "items": [
+        {
+          "label": "Problem 1 & 2 · Multiples",
+          "question": "(1) Mention three multiples of 3. (2) Mention three multiples of 7.",
+          "steps": [
+            "Multiples of 3: 3, 6, 9.",
+            "Multiples of 7: 7, 14, 21."
+          ],
+          "answer": "(1) 3, 6, 9   (2) 7, 14, 21"
+        },
+        {
+          "label": "Problem 3 · Least Common Multiple (LCM)",
+          "question": "Find LCM of: (a) 14 & 21   (b) 42 & 30   (c) 48 & 36   (d) 5 & 11.",
+          "steps": [
+            "(a) 14 = 2×7, 21 = 3×7 → LCM = 2×3×7 = 42.",
+            "(b) 42 = 2×3×7, 30 = 2×3×5 → LCM = 2×3×5×7 = 210.",
+            "(c) 48 = 16×3, 36 = 4×9 → LCM = 16×9 = 144.",
+            "(d) 5 and 11 are primes → LCM = 5 × 11 = 55."
+          ],
+          "answer": "(a) 42   (b) 210   (c) 144   (d) 55"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l1",
@@ -2646,7 +3115,27 @@
         "Step 4: Combine places: 0.408 (Notice: 0.48 would be 48 hundredths, not thousandths)."
       ],
       "answer": "(1) 6.045  |  (2) 0.408",
-      "note": "Never skip missing place values! When tenths are missing between units and hundredths, always insert a 0 placeholder."
+      "note": "Never skip missing place values! When tenths are missing between units and hundredths, always insert a 0 placeholder.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 4 Q(3c)",
+          "question": "Write in standard form: \"6 units, 4 hundredths and 5 thousandths\".",
+          "steps": [
+            "Identify place values: Units (ones) = 6. Tenths place is omitted = 0. Hundredths = 4. Thousandths = 5.",
+            "Combine places: 6 ones + 0 tenths + 4 hundredths + 5 thousandths = 6.045."
+          ],
+          "answer": "6.045"
+        },
+        {
+          "label": "Question 2 · Booklet p. 4 Q(2b)",
+          "question": "Write standard form of: \"4 tenths and 8 thousandths\".",
+          "steps": [
+            "Identify place values: Ones = 0. Tenths = 4. Hundredths place is omitted = 0. Thousandths = 8.",
+            "Combine places: 0.408 (Notice: 0.48 would be 48 hundredths, not thousandths)."
+          ],
+          "answer": "0.408"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l2",
@@ -2678,7 +3167,28 @@
         "Step 4: Check 4.503: 4 ones + 5 tenths (0.5) + 3 thousandths (0.003) = 4 + 0.5 + 0.003."
       ],
       "answer": "(1) 12.408 = 10 + 2 + 0.4 + 0.008  |  (2) 4 + 0.5 + 0.003",
-      "note": "Distinguish 0.008 from 0.08! Thousandths have two zeros between the decimal point and the digit when tenths and hundredths are zero."
+      "note": "Distinguish 0.008 from 0.08! Thousandths have two zeros between the decimal point and the digit when tenths and hundredths are zero.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 6 Q(3a)",
+          "question": "Decompose 12.408 into expanded form and word units.",
+          "steps": [
+            "Determine digit values: 1 ten = 10, 2 ones = 2, 4 tenths = 0.4, 0 hundredths, 8 thousandths = 0.008.",
+            "Expanded Form: 12.408 = 10 + 2 + 0.4 + 0.008.",
+            "Unit Form: 1 ten, 2 ones, 4 tenths, 8 thousandths."
+          ],
+          "answer": "12.408 = 10 + 2 + 0.4 + 0.008"
+        },
+        {
+          "label": "Question 2 · Booklet p. 6 Q(2a)",
+          "question": "Identify the sum equivalent to 4.503.",
+          "steps": [
+            "Break down 4.503: 4 ones (4) + 5 tenths (0.5) + 3 thousandths (0.003).",
+            "Combine parts: 4 + 0.5 + 0.003."
+          ],
+          "answer": "4 + 0.5 + 0.003"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l4",
@@ -2694,7 +3204,29 @@
         "Step 4: Compare from greatest to least: 770 > 707 > 700 > 70. Order: 0.77 > 0.707 > 0.7 > 0.07."
       ],
       "answer": "(1) Least to greatest: 2.4 , 2.405 , 2.45 , 2.54  |  (2) Greatest to least: 0.77 , 0.707 , 0.7 , 0.07",
-      "note": "More digits does not mean greater value! 2.405 has 4 digits but is smaller than 2.45 (2.450). Always pad zeros first."
+      "note": "More digits does not mean greater value! 2.405 has 4 digits but is smaller than 2.45 (2.450). Always pad zeros first.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 7 Q(3a)",
+          "question": "Order from least to greatest: 2.45 , 2.4 , 2.405 , 2.54.",
+          "steps": [
+            "Equalize places to thousandths: 2.450 , 2.400 , 2.405 , 2.540.",
+            "Compare decimal parts: 400 < 405 < 450 < 540.",
+            "Ascending order: 2.4 < 2.405 < 2.45 < 2.54."
+          ],
+          "answer": "2.4 , 2.405 , 2.45 , 2.54"
+        },
+        {
+          "label": "Question 2 · Booklet p. 7 Q(3b)",
+          "question": "Order from greatest to least: 0.7 , 0.07 , 0.77 , 0.707.",
+          "steps": [
+            "Equalize places to thousandths: 0.700 , 0.070 , 0.770 , 0.707.",
+            "Compare decimal parts: 770 > 707 > 700 > 70.",
+            "Descending order: 0.77 > 0.707 > 0.7 > 0.07."
+          ],
+          "answer": "0.77 , 0.707 , 0.7 , 0.07"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l5",
@@ -2710,7 +3242,28 @@
         "Step 4: For 11.98 to tenths: Underline tenths: 11.9[8]. Hundredths digit is 8 ≥ 5 → round up: 9 + 1 = 10 tenths → 12.0."
       ],
       "answer": "(1) 0.999 ≈ 1.00 (nearest hundredth)  |  (2) 11.98 ≈ 12.0 (nearest tenth)",
-      "note": "Keep the trailing zeros! Writing 1 instead of 1.00 loses the specified hundredths precision required on exams."
+      "note": "Keep the trailing zeros! Writing 1 instead of 1.00 loses the specified hundredths precision required on exams.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 8 Q(3a)",
+          "question": "Round 0.999 to the nearest hundredth.",
+          "steps": [
+            "Underline hundredths digit: 0.99[9]. Look at thousandths digit (9).",
+            "9 ≥ 5 → round up: 9 hundredths + 1 = 10 (carry 1 to tenths) → 9 + 1 = 10 (carry 1 to ones) → 1.00.",
+            "Keep two decimal zeros to show hundredths precision."
+          ],
+          "answer": "0.999 ≈ 1.00"
+        },
+        {
+          "label": "Question 2 · Booklet p. 8 Q(3b)",
+          "question": "Round 11.98 to the nearest tenth.",
+          "steps": [
+            "Underline tenths digit: 11.9[8]. Hundredths digit is 8 ≥ 5.",
+            "Round up: 9 tenths + 1 = 10 tenths → carry 1 to ones: 11 + 1 = 12.0."
+          ],
+          "answer": "11.98 ≈ 12.0"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l6",
@@ -2726,7 +3279,27 @@
         "Step 4: Estimated total: 19 + 6 = 25 L.E (Actual total = 18.75 + 6.30 = 25.05 L.E; diff = only 0.05 L.E!)."
       ],
       "answer": "(1) Estimate ≈ 20 (Actual = 20.19)  |  (2) Estimated total ≈ 25 L.E (Actual = 25.05 L.E)",
-      "note": "Always compare your estimate with the exact sum to confirm that your calculated answer makes sense."
+      "note": "Always compare your estimate with the exact sum to confirm that your calculated answer makes sense.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 9 Q(3b)",
+          "question": "Estimate then add: 12.34 + 7.85.",
+          "steps": [
+            "Round to nearest whole: 12.34 rounds to 12; 7.85 rounds to 8.",
+            "Estimate: 12 + 8 = 20. Actual: 12.34 + 7.85 = 20.19 (Reasonable, diff = 0.19)."
+          ],
+          "answer": "Estimate ≈ 20  (Actual = 20.19)"
+        },
+        {
+          "label": "Question 2 · Booklet p. 9 Q(4a)",
+          "question": "Ahmed bought a book for 18.75 L.E and a pen for 6.30 L.E. Estimate the total cost.",
+          "steps": [
+            "Round purchases: 18.75 L.E rounds to 19 L.E; 6.30 L.E rounds to 6 L.E.",
+            "Estimated total: 19 + 6 = 25 L.E. (Actual: 18.75 + 6.30 = 25.05 L.E, diff = 0.05 L.E)."
+          ],
+          "answer": "Estimated total ≈ 25 L.E  (Actual = 25.05 L.E)"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l7",
@@ -2753,7 +3326,27 @@
         ]
       },
       "answer": "(1) 18.83  |  (2) 24.45",
-      "note": "Pad 12.4 with a zero so it becomes 12.40. Misaligning tenths with hundredths is the most frequent calculation error."
+      "note": "Pad 12.4 with a zero so it becomes 12.40. Misaligning tenths with hundredths is the most frequent calculation error.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 10 Q(3b)",
+          "question": "Find: 12.4 + 6.35 + 0.08.",
+          "steps": [
+            "Pad 12.4 to 12.40 and align: 12.40 + 6.35 + 0.08.",
+            "Hundredths: 0 + 5 + 8 = 13 (write 3, carry 1). Tenths: 1 + 4 + 3 + 0 = 8. Ones: 12 + 6 = 18."
+          ],
+          "answer": "18.83"
+        },
+        {
+          "label": "Question 2 · Booklet p. 10 Q(2a)",
+          "question": "Calculate: 14.56 + 9.89.",
+          "steps": [
+            "Align vertically: 14.56 + 9.89.",
+            "Hundredths: 6 + 9 = 15 (5, carry 1). Tenths: 1 + 5 + 8 = 14 (4, carry 1). Ones: 1 + 14 + 9 = 24."
+          ],
+          "answer": "24.45"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l8",
@@ -2778,7 +3371,29 @@
         ]
       },
       "answer": "(1) 12 − 5.47 = 6.53  |  (2) 1 − 0.001 = 0.999",
-      "note": "Check by adding back: 6.53 + 5.47 = 12.00 and 0.999 + 0.001 = 1.000. Inverse addition verifies subtraction instantly."
+      "note": "Check by adding back: 6.53 + 5.47 = 12.00 and 0.999 + 0.001 = 1.000. Inverse addition verifies subtraction instantly.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 11 Q(3b)",
+          "question": "Find: 12 − 5.47.",
+          "steps": [
+            "Rewrite 12 as 12.00 to match decimal places of 5.47.",
+            "Regroup: 12.00 becomes 11 ones, 9 tenths, 10 hundredths.",
+            "Subtract: 10 − 7 = 3 (hundredths); 9 − 4 = 5 (tenths); 11 − 5 = 6 (ones) → 6.53."
+          ],
+          "answer": "12 − 5.47 = 6.53"
+        },
+        {
+          "label": "Question 2 · Booklet p. 11 Q(2b)",
+          "question": "Calculate: 1 − 0.001.",
+          "steps": [
+            "Rewrite 1 as 1.000 to match thousandths.",
+            "Regroup 1 one into 9 tenths, 9 hundredths, 10 thousandths.",
+            "Subtract: 10 − 1 = 9 (thousandths); 9 − 0 = 9; 9 − 0 = 9 → 0.999."
+          ],
+          "answer": "1 − 0.001 = 0.999"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l9",
@@ -2794,7 +3409,27 @@
         "Step 4: Calculate exact change: 50.00 − 27.65 = 22.35 L.E (Estimate 22 L.E is within 0.35 L.E)."
       ],
       "answer": "(1) Estimate ≈ 12 (Actual = 12.67)  |  (2) Estimated change ≈ 22 L.E (Actual = 22.35 L.E)",
-      "note": "Because 27.65 is closer to 28 than 27, rounding up to 28 gives an estimate of 22, very close to the exact 22.35 L.E."
+      "note": "Because 27.65 is closer to 28 than 27, rounding up to 28 gives an estimate of 22, very close to the exact 22.35 L.E.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 12 Q(3b)",
+          "question": "Estimate then subtract: 24.35 − 11.68.",
+          "steps": [
+            "Round to whole: 24.35 → 24; 11.68 → 12. Estimated difference: 24 − 12 = 12.",
+            "Calculate actual difference: 24.35 − 11.68 = 12.67 (Difference = 0.67)."
+          ],
+          "answer": "Estimate ≈ 12  (Actual = 12.67)"
+        },
+        {
+          "label": "Question 2 · Booklet p. 12 Q(4a)",
+          "question": "A shopper had 50 L.E and spent 27.65 L.E. Estimate the change and calculate actual.",
+          "steps": [
+            "Estimate: 50 − 28 = 22 L.E (rounding 27.65 to 28).",
+            "Actual change: 50.00 − 27.65 = 22.35 L.E (Estimate 22 L.E is within 0.35 L.E)."
+          ],
+          "answer": "Estimated change ≈ 22 L.E  (Actual = 22.35 L.E)"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l10",
@@ -2819,7 +3454,29 @@
         ]
       },
       "answer": "(1) 20 − 13.256 = 6.744  |  (2) Remaining wire = 3.225 m",
-      "note": "Remember to pad 4.5 m with two zeros to make 4.500 m before subtracting 1.275 m!"
+      "note": "Remember to pad 4.5 m with two zeros to make 4.500 m before subtracting 1.275 m!",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 13 Q(3b)",
+          "question": "Find: 20 − 13.256.",
+          "steps": [
+            "Set up 20 as 20.000: Align 20.000 − 13.256.",
+            "Regroup 20 ones → leaves 19 ones, 9 tenths, 9 hundredths, 10 thousandths.",
+            "Subtract: 10 − 6 = 4; 9 − 5 = 4; 9 − 2 = 7; 19 − 13 = 6 → 6.744."
+          ],
+          "answer": "20 − 13.256 = 6.744"
+        },
+        {
+          "label": "Question 2 · Booklet p. 13 Q(4a)",
+          "question": "A wire was 4.5 m long. A piece of 1.275 m was cut. How long is the remaining wire?",
+          "steps": [
+            "Pad to thousandths: 4.500 − 1.275.",
+            "Regroup: 4.500 becomes 4.4(9)(10).",
+            "Subtract: 10 − 5 = 5; 9 − 7 = 2; 4 − 2 = 2; 4 − 1 = 3 → 3.225 m."
+          ],
+          "answer": "Remaining wire = 3.225 m"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l11",
@@ -2835,7 +3492,27 @@
         "Step 4: For (2): a + 3.45 = 7.2 → a = 7.20 − 3.45 = 3.75."
       ],
       "answer": "(1) Total spent = 235.25 L.E | Change = 64.75 L.E  |  (2) a = 3.75",
-      "note": "Break word problems into clearly labeled steps: Step 1 = Total purchases, Step 2 = Change. Check: 235.25 + 64.75 = 300.00 L.E."
+      "note": "Break word problems into clearly labeled steps: Step 1 = Total purchases, Step 2 = Change. Check: 235.25 + 64.75 = 300.00 L.E.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 14 Q(4a)",
+          "question": "Sara bought a bag for 145.75 L.E and shoes for 89.5 L.E. She paid with 300 L.E. How much change did she receive?",
+          "steps": [
+            "Step 1 (Total spent): Add purchases: 145.75 + 89.50 = 235.25 L.E.",
+            "Step 2 (Change received): Subtract total from 300: 300.00 − 235.25 = 64.75 L.E."
+          ],
+          "answer": "Total spent = 235.25 L.E  |  Change = 64.75 L.E"
+        },
+        {
+          "label": "Question 2 · Booklet p. 14 Q(1a)",
+          "question": "If a + 3.45 = 7.2, find the value of a.",
+          "steps": [
+            "Use inverse operation: a = 7.20 − 3.45.",
+            "Regroup and subtract: 7.20 − 3.45 = 3.75."
+          ],
+          "answer": "a = 3.75"
+        }
+      ]
     },
     {
       "id": "booklet-u2-l1",
@@ -2851,7 +3528,28 @@
         "Step 4: m + 6 = 9 (equation), 1.2 − m = 0.2 (equation). Only \"m + 44\" has no equals sign, so it is an algebraic expression."
       ],
       "answer": "(1) Equation: x − 5.23 = 9.42  |  (2) Expression: m + 44 (Equations: m + 6 = 9, 1.2 − m = 0.2)",
-      "note": "Remember the phrase \"subtract from\": the number following \"from\" is always written first in the subtraction expression!"
+      "note": "Remember the phrase \"subtract from\": the number following \"from\" is always written first in the subtraction expression!",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 15 Q(2b)",
+          "question": "Write an equation: \"We subtract 5.23 from a number to get a result of 9.42\".",
+          "steps": [
+            "Let unknown number be x. Subtracting 5.23 from x means x is the minuend.",
+            "Write equation: x − 5.23 = 9.42 (Caution: 5.23 − x is incorrect)."
+          ],
+          "answer": "Equation: x − 5.23 = 9.42"
+        },
+        {
+          "label": "Question 2 · Booklet p. 15 Q(1)",
+          "question": "Distinguish: Which of m + 6 = 9, 1.2 − m = 0.2, m + 44 is an expression?",
+          "steps": [
+            "Look for an equals sign '='.",
+            "m + 6 = 9 and 1.2 − m = 0.2 have '=' so they are equations.",
+            "m + 44 has no equals sign, so it is an algebraic expression."
+          ],
+          "answer": "Expression: m + 44  (m + 6 = 9 and 1.2 − m = 0.2 are equations)"
+        }
+      ]
     },
     {
       "id": "booklet-u2-l2",
@@ -2867,7 +3565,27 @@
         "Step 4: Calculate: 3.245 − 1.265: 5−5=0; 14−6=8; 11−2=9; 2−1=1 → z = 1.980 = 1.98."
       ],
       "answer": "(1) A = 44.89  |  (2) z = 1.98",
-      "note": "Use a Bar Model to check! In A − 32.61 = 12.28, A sits at the top (whole). In 3.245 − z = 1.265, 3.245 sits at the top, so z = 3.245 − 1.265."
+      "note": "Use a Bar Model to check! In A − 32.61 = 12.28, A sits at the top (whole). In 3.245 − z = 1.265, 3.245 sits at the top, so z = 3.245 − 1.265.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 16 Q(3a)",
+          "question": "Solve for the variable: A − 32.61 = 12.28.",
+          "steps": [
+            "A is the total (whole). Add the parts: A = 12.28 + 32.61.",
+            "Calculate: 12.28 + 32.61 = 44.89. Check: 44.89 − 32.61 = 12.28."
+          ],
+          "answer": "A = 44.89"
+        },
+        {
+          "label": "Question 2 · Booklet p. 16 Q(3b)",
+          "question": "Solve for the variable: 3.245 − z = 1.265.",
+          "steps": [
+            "3.245 is the whole; z is a missing part. Subtract: z = 3.245 − 1.265.",
+            "Calculate: 3.245 − 1.265: 5−5=0; 14−6=8; 11−2=9; 2−1=1 → z = 1.98."
+          ],
+          "answer": "z = 1.98"
+        }
+      ]
     },
     {
       "id": "booklet-u2-l3",
@@ -2883,7 +3601,36 @@
         "Step 4: Solve for brother age: b = 12 − 3 = 9 years old."
       ],
       "answer": "(1) x − 5  |  (2) Equation: n − 7 = 15 ⇒ n = 22  |  (3) Equation: b + 3 = 12 ⇒ Brother is 9 years old",
-      "note": "Beware the \"less than\" trap: 5 less than 10 is 10 − 5 = 5, not 5 − 10. So \"5 less than x\" is ALWAYS x − 5."
+      "note": "Beware the \"less than\" trap: 5 less than 10 is 10 − 5 = 5, not 5 − 10. So \"5 less than x\" is ALWAYS x − 5.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 17 Q(2a)",
+          "question": "Write expression: \"5 less than x\".",
+          "steps": [
+            "\"5 less than x\" means subtracting 5 from x.",
+            "Expression: x − 5."
+          ],
+          "answer": "x − 5"
+        },
+        {
+          "label": "Question 2 · Booklet p. 17 Q(3b)",
+          "question": "Write & solve: \"When 7 is subtracted from a number, the result is 15\".",
+          "steps": [
+            "Let the number be n. Equation: n − 7 = 15.",
+            "Solve: n = 15 + 7 = 22."
+          ],
+          "answer": "Equation: n − 7 = 15  ⇒  n = 22"
+        },
+        {
+          "label": "Question 3 · Booklet p. 17 Q(4a)",
+          "question": "Mona is 3 years older than her brother. If Mona is 12, how old is her brother?",
+          "steps": [
+            "Let brother's age be b. Equation: b + 3 = 12.",
+            "Solve: b = 12 − 3 = 9 years old."
+          ],
+          "answer": "Brother is 9 years old"
+        }
+      ]
     }
   ],
   "name": "Mr. Ali Ashraf",
@@ -2982,7 +3729,27 @@
         "Check: Multiplication increases value; division decreases value."
       ],
       "answer": "1) 0.459 × 100 = 45.9\n2) 7.23 ÷ 10 = 0.723",
-      "note": "× shifts right, ÷ shifts left."
+      "note": "× shifts right, ÷ shifts left.",
+      "items": [
+        {
+          "label": "Part 1 · Multiplication",
+          "question": "Find the result of: 0.459 × 100",
+          "steps": [
+            "Multiplying by 100 has 2 zeros, so shift decimal point 2 places to the right.",
+            "0.459 → 45.9."
+          ],
+          "answer": "0.459 × 100 = 45.9"
+        },
+        {
+          "label": "Part 2 · Division",
+          "question": "Find the result of: 7.23 ÷ 10",
+          "steps": [
+            "Dividing by 10 has 1 zero, so shift decimal point 1 place to the left.",
+            "7.23 → 0.723."
+          ],
+          "answer": "7.23 ÷ 10 = 0.723"
+        }
+      ]
     },
     {
       "id": "eval-shift-4",
@@ -2998,7 +3765,27 @@
         "Each digit moves one place to the left into a higher place value, and the value of each digit increases by 10 times."
       ],
       "answer": "1) Share of each worker = 956.8 pounds\n2) Digits shift 1 place to the left; each digit's value increases 10 times",
-      "note": "Whole numbers have an invisible decimal point at the far right."
+      "note": "Whole numbers have an invisible decimal point at the far right.",
+      "items": [
+        {
+          "label": "Part 1 · Division Problem",
+          "question": "A factory owner divides 9,568 pounds equally among 10 workers. Calculate the share of each worker.",
+          "steps": [
+            "Operation: 9,568 ÷ 10 = 9,568.0 ÷ 10.",
+            "Shift decimal point 1 place to the left: 956.8 pounds."
+          ],
+          "answer": "Share of each worker = 956.8 pounds"
+        },
+        {
+          "label": "Part 2 · Digit Shift",
+          "question": "Determine what happens to the digits in the number 3.675 when multiplied by 10.",
+          "steps": [
+            "Calculate: 3.675 × 10 = 36.75.",
+            "Each digit shifts 1 place to the left into a higher place value; its value increases 10 times."
+          ],
+          "answer": "Digits shift 1 place left; value increases 10 times"
+        }
+      ]
     },
     {
       "id": "eval-compose-1",
@@ -3012,7 +3799,25 @@
         "For problem 2: 8 ones + 3 tenths (0.3) + 5 hundredths (0.05) + 7 thousandths (0.007) = 8.357."
       ],
       "answer": "1) (d) 6.274\n2) (c) 8.357",
-      "note": "5/100 is 0.05 (hundredths), and 7/1000 is 0.007 (thousandths)."
+      "note": "5/100 is 0.05 (hundredths), and 7/1000 is 0.007 (thousandths).",
+      "items": [
+        {
+          "label": "Problem 1 · Decimal Addition",
+          "question": "Choose: 6 + 0.2 + 0.07 + 0.004 = ......\n(a) 6.724   (b) 6.742   (c) 7.247   (d) 6.274",
+          "steps": [
+            "6 ones + 2 tenths + 7 hundredths + 4 thousandths = 6.274."
+          ],
+          "answer": "(d) 6.274"
+        },
+        {
+          "label": "Problem 2 · Fractions to Decimal",
+          "question": "Choose: 8 + 0.3 + 5/100 + 7/1000 = ......\n(a) 7.538   (b) 8.753   (c) 8.357   (d) 7.835",
+          "steps": [
+            "8 ones + 3 tenths (0.3) + 5 hundredths (0.05) + 7 thousandths (0.007) = 8.357."
+          ],
+          "answer": "(c) 8.357"
+        }
+      ]
     },
     {
       "id": "eval-compose-2",
@@ -3030,7 +3835,28 @@
         "Way 3 (hundredths + remaining): 0.24 + 0.007."
       ],
       "answer": "1) 9.358 = 9 + 0.3 + 0.05 + 0.008\n2) 0.247 = 0.2 + 0.04 + 0.007",
-      "note": "A number can be decomposed in multiple valid ways."
+      "note": "A number can be decomposed in multiple valid ways.",
+      "items": [
+        {
+          "label": "Part 1 · Expanded Form",
+          "question": "Write the decimal number 9.358 in expanded form.",
+          "steps": [
+            "9 is in ones (9), 3 is in tenths (0.3), 5 is in hundredths (0.05), 8 is in thousandths (0.008).",
+            "Expanded form: 9 + 0.3 + 0.05 + 0.008."
+          ],
+          "answer": "9.358 = 9 + 0.3 + 0.05 + 0.008"
+        },
+        {
+          "label": "Part 2 · Decomposing",
+          "question": "Decompose the number 0.247 in different ways.",
+          "steps": [
+            "Way 1 (place values): 0.2 + 0.04 + 0.007.",
+            "Way 2 (tenths + remaining): 0.2 + 0.047.",
+            "Way 3 (hundredths + remaining): 0.24 + 0.007."
+          ],
+          "answer": "0.247 = 0.2 + 0.04 + 0.007"
+        }
+      ]
     },
     {
       "id": "eval-compose-3",
@@ -3049,7 +3875,27 @@
         "Decomposition Way 3: 4.3 + 0.069."
       ],
       "answer": "1) 6.509\n2) Table: Ones=4, Tenths=3, Hundredths=6, Thousandths=9\nWays: 4 + 0.3 + 0.06 + 0.009 | 4 + 0.36 + 0.009 | 4.3 + 0.069",
-      "note": "Always check for missing places and fill them with 0."
+      "note": "Always check for missing places and fill them with 0.",
+      "items": [
+        {
+          "label": "Part 1 · Compose from Products",
+          "question": "Compose the number: (9 × 1/1000) + (5 × 1/10) + (6 × 1).",
+          "steps": [
+            "(6 × 1) = 6 ones. (5 × 1/10) = 0.5 (5 tenths). (9 × 1/1000) = 0.009 (9 thousandths).",
+            "Hundredths place is missing, so insert 0: 6.509."
+          ],
+          "answer": "6.509"
+        },
+        {
+          "label": "Part 2 · Place Value Table & Decomposing",
+          "question": "Express 4.369 in a place value table and decompose in 3 ways.",
+          "steps": [
+            "Table: Ones=4, Tenths=3, Hundredths=6, Thousandths=9.",
+            "Ways: (1) 4 + 0.3 + 0.06 + 0.009 | (2) 4 + 0.36 + 0.009 | (3) 4.3 + 0.069."
+          ],
+          "answer": "Table: Ones=4, Tenths=3, Hundredths=6, Thousandths=9"
+        }
+      ]
     },
     {
       "id": "eval-compare-1",
@@ -3064,7 +3910,33 @@
         "Problem 3: All have whole part 12. Compare tenths: 12.03 has 0 tenths; 12.13 has 1 tenth; 12.30 and 12.33 have 3 tenths. Smallest is 12.03."
       ],
       "answer": "1) (c) 3.240\n2) (d) 1.8\n3) (c) 12.03",
-      "note": "Compare from left to right: whole part, then tenths, then hundredths."
+      "note": "Compare from left to right: whole part, then tenths, then hundredths.",
+      "items": [
+        {
+          "label": "Problem 1 · Inequality",
+          "question": "Choose: 3.405 > ......\n(a) 3.504   (b) 5.240   (c) 3.240   (d) 4.530",
+          "steps": [
+            "5.240 and 4.530 are > 3.405. For 3.504: tenths 5 > 4. For 3.240: tenths 2 < 4, so 3.405 > 3.240."
+          ],
+          "answer": "(c) 3.240"
+        },
+        {
+          "label": "Problem 2 · Greatest",
+          "question": "Which of the following is the greatest?\n(a) 0.8   (b) 0.18   (c) 0.08   (d) 1.8",
+          "steps": [
+            "1.8 has whole part 1, while all others have 0. Greatest is 1.8."
+          ],
+          "answer": "(d) 1.8"
+        },
+        {
+          "label": "Problem 3 · Smallest",
+          "question": "Which of the following is the smallest?\n(a) 12.33   (b) 12.30   (c) 12.03   (d) 12.13",
+          "steps": [
+            "All have whole part 12. Compare tenths: 12.03 has 0 tenths (smallest)."
+          ],
+          "answer": "(c) 12.03"
+        }
+      ]
     },
     {
       "id": "eval-compare-2",
@@ -3080,7 +3952,27 @@
         "Since 0 < 3, 0.372 < 3.217."
       ],
       "answer": "1) 4.895 > 4.598\n2) (3 tenths, 7 hundredths and 2 thousandths) < 3.217",
-      "note": "Whole number comparison comes before decimal comparison."
+      "note": "Whole number comparison comes before decimal comparison.",
+      "items": [
+        {
+          "label": "Problem 1 · Decimals",
+          "question": "Compare between the two decimal numbers: 4.895 and 4.598.",
+          "steps": [
+            "Both have whole part 4. Compare tenths: 8 tenths in 4.895 vs 5 tenths in 4.598.",
+            "Since 8 > 5: 4.895 > 4.598."
+          ],
+          "answer": "4.895 > 4.598"
+        },
+        {
+          "label": "Problem 2 · Unit Form vs Decimal",
+          "question": "Compare between: (3 tenths, 7 hundredths and 2 thousandths) and 3.217.",
+          "steps": [
+            "Convert to decimal: 3 tenths + 7 hundredths + 2 thousandths = 0.372.",
+            "Compare 0.372 (whole 0) with 3.217 (whole 3). Since 0 < 3: 0.372 < 3.217."
+          ],
+          "answer": "(3 tenths, 7 hundredths and 2 thousandths) < 3.217"
+        }
+      ]
     },
     {
       "id": "eval-compare-3",
@@ -3097,7 +3989,26 @@
         "Problem 2: 6.324 has whole 6, tenths 3, hundredths 2. A decimal with only hundredths (2 decimal places) that is greater can be 6.33, 6.34, 6.35, or 6.40 (since 6.330 > 6.324)."
       ],
       "answer": "1) 3.408 , 3.804 , 6.097 , 6.907\n2) 6.33 (or 6.34, 6.35)",
-      "note": "6.330 is greater than 6.324."
+      "note": "6.330 is greater than 6.324.",
+      "items": [
+        {
+          "label": "Problem 1 · Ascending Order",
+          "question": "Arrange ascendingly: 3.408 , 6.097 , 3.804 and 6.907.",
+          "steps": [
+            "Compare 3s: 3.408 < 3.804. Compare 6s: 6.097 < 6.907.",
+            "Order from least to greatest: 3.408 , 3.804 , 6.097 , 6.907."
+          ],
+          "answer": "3.408 , 3.804 , 6.097 , 6.907"
+        },
+        {
+          "label": "Problem 2 · Decimal Precision",
+          "question": "Write a decimal number greater than 6.324 just in hundredths.",
+          "steps": [
+            "6.324 has whole 6, tenths 3, hundredths 2. In hundredths, 6.33 = 6.330 > 6.324."
+          ],
+          "answer": "6.33  (or 6.34, 6.35)"
+        }
+      ]
     },
     {
       "id": "eval-round-1",
@@ -3113,7 +4024,25 @@
         "Since 2 < 5, keep the 6: 22.624 ≈ 22.6."
       ],
       "answer": "1) (c) 13.62\n2) 22.6",
-      "note": "Only the immediate next digit decides rounding."
+      "note": "Only the immediate next digit decides rounding.",
+      "items": [
+        {
+          "label": "Problem 1 · Nearest Hundredth",
+          "question": "Choose: 13.623 ≈ ...... (to the nearest hundredth)\n(a) 13.6   (b) 13.5   (c) 13.62   (d) 13",
+          "steps": [
+            "Target is hundredths (2). Next digit is thousandths 3 < 5 → keep 13.62."
+          ],
+          "answer": "(c) 13.62"
+        },
+        {
+          "label": "Problem 2 · Nearest Tenth",
+          "question": "Round the number 22.624 to the nearest tenth.",
+          "steps": [
+            "Target is tenths (6). Next digit is hundredths 2 < 5 → keep 22.6."
+          ],
+          "answer": "22.624 ≈ 22.6"
+        }
+      ]
     },
     {
       "id": "eval-round-2",
@@ -3128,7 +4057,33 @@
         "3) Nearest thousandth: Target is 3. Next digit is ten-thousandths 2. Since 2 < 5, keep 3 → 6.983."
       ],
       "answer": "1) 12.34 ≈ 12\n2) 7.346 ≈ 7.35\n3) 6.9832 ≈ 6.983",
-      "note": "Nearest unit means nearest whole number (no decimal part)."
+      "note": "Nearest unit means nearest whole number (no decimal part).",
+      "items": [
+        {
+          "label": "Problem 1 · Nearest Unit",
+          "question": "Round 12.34 to the nearest unit.",
+          "steps": [
+            "Target is ones (2). Next digit is tenths 3 < 5 → keep 12."
+          ],
+          "answer": "12.34 ≈ 12"
+        },
+        {
+          "label": "Problem 2 · Nearest Hundredth",
+          "question": "Round 7.346 to the nearest hundredth.",
+          "steps": [
+            "Target is hundredths (4). Next digit is thousandths 6 ≥ 5 → round up to 7.35."
+          ],
+          "answer": "7.346 ≈ 7.35"
+        },
+        {
+          "label": "Problem 3 · Nearest Thousandth",
+          "question": "Round 6.9832 to the nearest thousandth.",
+          "steps": [
+            "Target is thousandths (3). Next digit is ten-thousandths 2 < 5 → keep 6.983."
+          ],
+          "answer": "6.9832 ≈ 6.983"
+        }
+      ]
     },
     {
       "id": "eval-round-3",
@@ -3162,7 +4117,26 @@
         "Actual sum = 6.341 + 4.912 = 11.253."
       ],
       "answer": "1) (b) 10\n2) Estimated sum = 10 ; Actual sum = 11.253",
-      "note": "Front-end does not look at following digits; it never rounds up."
+      "note": "Front-end does not look at following digits; it never rounds up.",
+      "items": [
+        {
+          "label": "Problem 1 · Choose",
+          "question": "Choose: The result of estimating 3.08 + 7.324 using first digit on the left equals ......\n(a) 4   (b) 10   (c) 11   (d) 11.382",
+          "steps": [
+            "3.08 → 3 (leftmost). 7.324 → 7 (leftmost). Estimate: 3 + 7 = 10."
+          ],
+          "answer": "(b) 10"
+        },
+        {
+          "label": "Problem 2 · Estimate & Calculate",
+          "question": "Estimate 6.341 + 4.912 using first digit on the left, then find actual sum.",
+          "steps": [
+            "6.341 → 6; 4.912 → 4. Estimated sum = 6 + 4 = 10.",
+            "Actual sum: 6.341 + 4.912 = 11.253."
+          ],
+          "answer": "Estimated sum = 10  |  Actual sum = 11.253"
+        }
+      ]
     },
     {
       "id": "eval-estimate-2",
@@ -3176,7 +4150,27 @@
         "Problem 2 (Preferred strategy: rounding to nearest whole):\n- 3.452 ≈ 3 and 7.231 ≈ 7 → Estimated sum = 3 + 7 = 10.\n- Actual sum = 3.452 + 7.231 = 10.683."
       ],
       "answer": "1) Estimated sum = 8 ; Actual sum = 7.98\n2) Estimated sum = 10 ; Actual sum = 10.683",
-      "note": "Rounding to tenths provides a very close estimate to the actual sum."
+      "note": "Rounding to tenths provides a very close estimate to the actual sum.",
+      "items": [
+        {
+          "label": "Problem 1 · Rounding to Tenth",
+          "question": "Estimate 4.823 + 3.157 by rounding to the nearest tenth, then find actual sum.",
+          "steps": [
+            "4.823 rounds to 4.8; 3.157 rounds to 3.2. Estimated sum = 4.8 + 3.2 = 8.0 = 8.",
+            "Actual sum: 4.823 + 3.157 = 7.98."
+          ],
+          "answer": "Estimated sum = 8  |  Actual sum = 7.98"
+        },
+        {
+          "label": "Problem 2 · Preferred Strategy",
+          "question": "Estimate 3.452 + 7.231 using a preferred strategy, then find actual sum.",
+          "steps": [
+            "Rounding to nearest whole: 3.452 ≈ 3 and 7.231 ≈ 7. Estimated sum = 3 + 7 = 10.",
+            "Actual sum: 3.452 + 7.231 = 10.683."
+          ],
+          "answer": "Estimated sum = 10  |  Actual sum = 10.683"
+        }
+      ]
     },
     {
       "id": "eval-add-1",
@@ -3191,7 +4185,27 @@
         "Problem 2: Align in table:\n- Thousandths: 5 + 4 = 9\n- Hundredths: 4 + 7 = 11 → write 1, carry 1 to tenths\n- Tenths: 3 + 2 + 1 = 6\n- Ones: 7 + 2 = 9\n- Result = 9.619."
       ],
       "answer": "1) 0.15 + 0.45 = 0.60 (or 0.6)\n2) 7.345 + 2.274 = 9.619",
-      "note": "Always regroup 10 hundredths into 1 tenth."
+      "note": "Always regroup 10 hundredths into 1 tenth.",
+      "items": [
+        {
+          "label": "Problem 1 · Hundredths Model",
+          "question": "Find the result of: 0.15 + 0.45 using the hundredths model.",
+          "steps": [
+            "Shade 15 squares for 0.15 and 45 squares for 0.45.",
+            "Total shaded squares = 15 + 45 = 60 squares out of 100 = 0.60 = 0.6."
+          ],
+          "answer": "0.15 + 0.45 = 0.60 (or 0.6)"
+        },
+        {
+          "label": "Problem 2 · Place Value Table",
+          "question": "Find the result of: 7.345 + 2.274 using the place value table.",
+          "steps": [
+            "Align: Thousandths: 5+4=9. Hundredths: 4+7=11 (1, carry 1). Tenths: 3+2+1=6. Ones: 7+2=9.",
+            "Result = 9.619."
+          ],
+          "answer": "7.345 + 2.274 = 9.619"
+        }
+      ]
     },
     {
       "id": "eval-add-2",
@@ -3206,7 +4220,27 @@
         "2b) 12.631 + 34.259: 1+9=10 (0, carry 1); 3+5+1=9; 6+2=8; 2+4=6; 1+3=4 → 46.890 = 46.89."
       ],
       "answer": "1) 8.956\n2a) 8.906\n2b) 46.89",
-      "note": "Keep decimal points aligned in a straight vertical line."
+      "note": "Keep decimal points aligned in a straight vertical line.",
+      "items": [
+        {
+          "label": "Problem 1 · Standard Algorithm",
+          "question": "Find using the standard algorithm: 6.372 + 2.584.",
+          "steps": [
+            "Thousandths: 2+4=6. Hundredths: 7+8=15 (5, carry 1). Tenths: 3+5+1=9. Ones: 6+2=8.",
+            "Result: 8.956."
+          ],
+          "answer": "8.956"
+        },
+        {
+          "label": "Problem 2 · Practice Cases",
+          "question": "Find: (a) 5.392 + 3.514   (b) 12.631 + 34.259.",
+          "steps": [
+            "(a) 2+4=6; 9+1=10 (0, carry 1); 3+5+1=9; 5+3=8 → 8.906.",
+            "(b) 1+9=10 (0, carry 1); 3+5+1=9; 6+2=8; 2+4=6; 1+3=4 → 46.89."
+          ],
+          "answer": "(a) 8.906   (b) 46.89"
+        }
+      ]
     },
     {
       "id": "eval-subtract-1",
@@ -3223,7 +4257,27 @@
         "Count remaining shaded squares: 65 − 22 = 43 squares = 0.43."
       ],
       "answer": "1) 19 hundredths = 0.19\n2) 0.65 − 0.22 = 0.43",
-      "note": "19 hundredths is written as 0.19 in decimal standard form."
+      "note": "19 hundredths is written as 0.19 in decimal standard form.",
+      "items": [
+        {
+          "label": "Problem 1 · Unit Names",
+          "question": "Find: 34 hundredths − 15 hundredths = ......",
+          "steps": [
+            "Subtract whole units: 34 − 15 = 19 hundredths.",
+            "Write as decimal: 19 hundredths = 0.19."
+          ],
+          "answer": "19 hundredths = 0.19"
+        },
+        {
+          "label": "Problem 2 · Hundredths Model",
+          "question": "Find: 0.65 − 0.22 using the given model.",
+          "steps": [
+            "Shade 65 squares on a hundredths grid, then cross out 22 squares.",
+            "Count remaining shaded squares: 65 − 22 = 43 squares = 0.43."
+          ],
+          "answer": "0.65 − 0.22 = 0.43"
+        }
+      ]
     },
     {
       "id": "eval-subtract-2",
@@ -3237,7 +4291,27 @@
         "Part b: 34.259 − 12.137:\n- Thousandths: 9 − 7 = 2.\n- Hundredths: 5 − 3 = 2.\n- Tenths: 2 − 1 = 1.\n- Ones: 4 − 2 = 2. Tens: 3 − 1 = 2 → Result: 22.122."
       ],
       "answer": "a) 5.592 − 3.584 = 2.008\nb) 34.259 − 12.137 = 22.122",
-      "note": "Check by addition: 2.008 + 3.584 = 5.592."
+      "note": "Check by addition: 2.008 + 3.584 = 5.592.",
+      "items": [
+        {
+          "label": "Problem 1 · Regrouping",
+          "question": "Subtract using the standard algorithm: 5.592 − 3.584.",
+          "steps": [
+            "Thousandths: borrow from 9 (leaves 8, makes 12): 12 − 4 = 8.",
+            "Hundredths: 8 − 8 = 0. Tenths: 5 − 5 = 0. Ones: 5 − 3 = 2 → 2.008."
+          ],
+          "answer": "5.592 − 3.584 = 2.008"
+        },
+        {
+          "label": "Problem 2 · Multi-digit",
+          "question": "Subtract using the standard algorithm: 34.259 − 12.137.",
+          "steps": [
+            "Thousandths: 9 − 7 = 2. Hundredths: 5 − 3 = 2. Tenths: 2 − 1 = 1.",
+            "Ones: 4 − 2 = 2. Tens: 3 − 1 = 2 → 22.122."
+          ],
+          "answer": "34.259 − 12.137 = 22.122"
+        }
+      ]
     },
     {
       "id": "eval-story-1",
@@ -3251,7 +4325,27 @@
         "Problem 2: Total pounds = 25.25 + 19.75.\n- Hundredths: 5 + 5 = 10 (0, carry 1)\n- Tenths: 2 + 7 + 1 = 10 (0, carry 1)\n- Ones: 5 + 9 + 1 = 15 (5, carry 1)\n- Tens: 2 + 1 + 1 = 4 → Total = 45.00 = 45 pounds."
       ],
       "answer": "1) Total mass = 10.241 kilograms\n2) Total money = 45 pounds",
-      "note": "Always write the correct unit (kg, pounds) after your answer."
+      "note": "Always write the correct unit (kg, pounds) after your answer.",
+      "items": [
+        {
+          "label": "Problem 1 · Total Mass",
+          "question": "Ahmed has a bag of oranges of mass 6.309 kg and a bag of apples of mass 3.932 kg. Find the total mass in kilograms.",
+          "steps": [
+            "Total mass = 6.309 + 3.932.",
+            "Add thousandths: 9+2=11 (carry 1); hundredths: 0+3+1=4; tenths: 3+9=12 (carry 1); ones: 6+3+1=10 → 10.241 kg."
+          ],
+          "answer": "Total mass = 10.241 kilograms"
+        },
+        {
+          "label": "Problem 2 · Total Money",
+          "question": "Seham has 25.25 pounds, and her sister Asma has 19.75 pounds. Find the total amount they both have.",
+          "steps": [
+            "Total = 25.25 + 19.75.",
+            "Hundredths: 5+5=10 (carry 1); tenths: 2+7+1=10 (carry 1); ones: 5+9+1=15 (carry 1); tens: 2+1+1=4 → 45.00 pounds."
+          ],
+          "answer": "Total money = 45 pounds"
+        }
+      ]
     },
     {
       "id": "eval-story-2",
@@ -3265,7 +4359,27 @@
         "Problem 2:\n- Remaining distance = 35.347 − 22.192.\n- Thousandths: 7 − 2 = 5.\n- Hundredths: 4 < 9, borrow: 14 − 9 = 5.\n- Tenths: 2 − 1 = 1.\n- Ones: 5 − 2 = 3. Tens: 3 − 2 = 1 → 13.155 km."
       ],
       "answer": "1) Estimated diff ≈ 2 g ; Actual diff = 2.073 grams\n2) Remaining distance = 13.155 kilometers",
-      "note": "Check remaining + covered: 13.155 + 22.192 = 35.347 km."
+      "note": "Check remaining + covered: 13.155 + 22.192 = 35.347 km.",
+      "items": [
+        {
+          "label": "Problem 1 · Mass Difference",
+          "question": "Huda bought a silver ring of mass 3.245 grams, and Mona bought a chain of mass 5.318 grams. Calculate the estimated difference, then find the actual difference.",
+          "steps": [
+            "Estimated difference (nearest whole): 5 − 3 = 2 grams.",
+            "Actual difference: 5.318 − 3.245 = 2.073 grams (8−5=3; 11−4=7; 2−2=0; 5−3=2)."
+          ],
+          "answer": "Estimated diff ≈ 2 g  |  Actual diff = 2.073 grams"
+        },
+        {
+          "label": "Problem 2 · Remaining Distance",
+          "question": "A road is 35.347 km long, and the train has covered 22.192 km. Calculate the remaining distance.",
+          "steps": [
+            "Remaining distance = 35.347 − 22.192.",
+            "Thousandths: 7−2=5; hundredths: 14−9=5; tenths: 2−1=1; ones: 5−2=3; tens: 3−2=1 → 13.155 km."
+          ],
+          "answer": "Remaining distance = 13.155 kilometers"
+        }
+      ]
     },
     {
       "id": "eval-u2-words-1",
@@ -3295,7 +4409,27 @@
         "Problem 2b: 5.391 + N = 8.207.\n8.207 is the Whole (top of bar model). Parts are 5.391 and N.\nN = 8.207 − 5.391 = 2.816."
       ],
       "answer": "1) A = 3.172\n2a) D = 6.117\n2b) N = 2.816",
-      "note": "In subtraction (Whole − Part = Part), the first number is always the Whole."
+      "note": "In subtraction (Whole − Part = Part), the first number is always the Whole.",
+      "items": [
+        {
+          "label": "Problem 1 · Subtraction Equation",
+          "question": "Find the value of A in the equation: 5.402 − A = 2.230.",
+          "steps": [
+            "5.402 is the Whole, A is a missing Part: A = 5.402 − 2.230.",
+            "Calculate: 5.402 − 2.230 = 3.172. Check: 5.402 − 3.172 = 2.230."
+          ],
+          "answer": "A = 3.172"
+        },
+        {
+          "label": "Problem 2 · Bar Model Equations",
+          "question": "Find the unknown using the bar model:\n(a) D − 2.405 = 3.712\n(b) 5.391 + N = 8.207",
+          "steps": [
+            "(a) D is the Whole (top): D = 2.405 + 3.712 = 6.117.",
+            "(b) 8.207 is the Whole (top): N = 8.207 − 5.391 = 2.816."
+          ],
+          "answer": "(a) D = 6.117   (b) N = 2.816"
+        }
+      ]
     },
     {
       "id": "eval-u2-story-1",
@@ -3309,7 +4443,28 @@
         "Problem 2: Look at the equation X = 1.367 + 1.529.\n1.367 kg is the mass of the first fish, and 1.529 kg is the mass of the second fish.\nAdding them gives the total mass of both fish.\nTherefore, X represents the total mass of the two fish in kilograms."
       ],
       "answer": "1) Equation: 15.06 + x = 28.73 (other number = 13.67)\n2) X represents the total mass of the two fish in kilograms",
-      "note": "A variable represents an unknown quantity described in the story."
+      "note": "A variable represents an unknown quantity described in the story.",
+      "items": [
+        {
+          "label": "Problem 1 · Write Equation",
+          "question": "Write the equation: The sum of two numbers is 28.73. If the first number is 15.06, what is the other number?",
+          "steps": [
+            "Let unknown number be x. Equation: 15.06 + x = 28.73.",
+            "Solve: x = 28.73 − 15.06 = 13.67."
+          ],
+          "answer": "Equation: 15.06 + x = 28.73  (x = 13.67)"
+        },
+        {
+          "label": "Problem 2 · Variable Meaning",
+          "question": "Mohamad caught fish of 1.367 kg and 1.529 kg. He wrote: X = 1.367 + 1.529. What does X represent?",
+          "steps": [
+            "1.367 kg is first fish; 1.529 kg is second fish.",
+            "Adding them gives the total combined mass.",
+            "X represents the total mass of the two fish in kilograms."
+          ],
+          "answer": "X represents total mass of the two fish in kilograms"
+        }
+      ]
     },
     {
       "id": "eval-factors-1",
@@ -3323,7 +4478,27 @@
         "Problem 2: Prime numbers are 2, 3, 5, 7, 11, ...\n- 2 is the smallest prime number, but 2 is EVEN.\n- The next prime number is 3, which is ODD.\n- Therefore, the smallest odd prime number is 3."
       ],
       "answer": "1) (c) 8 , 4\n2) 3",
-      "note": "2 is the ONLY even prime number; 3 is the smallest odd prime."
+      "note": "2 is the ONLY even prime number; 3 is the smallest odd prime.",
+      "items": [
+        {
+          "label": "Problem 1 · Common Multiple",
+          "question": "Choose: The number 40 is a common multiple for the two numbers ......\n(a) 4, 7   (b) 6, 5   (c) 8, 4   (d) 4, 6",
+          "steps": [
+            "40 is divisible by 4 (4 × 10 = 40) and by 8 (8 × 5 = 40).",
+            "40 is not divisible by 7 or 6. Thus, 40 is a common multiple of 8 and 4."
+          ],
+          "answer": "(c) 8 , 4"
+        },
+        {
+          "label": "Problem 2 · Prime Numbers",
+          "question": "Find the smallest odd prime number.",
+          "steps": [
+            "Prime numbers: 2, 3, 5, 7, 11...",
+            "2 is the smallest prime, but it is EVEN. The next prime is 3, which is ODD."
+          ],
+          "answer": "3"
+        }
+      ]
     },
     {
       "id": "eval-factors-2",
@@ -3337,7 +4512,26 @@
         "Problem 2: Find common prime factors between (2, 2, 3) and (2, 3, 3):\n- Common factor 1: both have one 2.\n- Common factor 2: both have one 3.\n- Product of common prime factors = 2 × 3 = 6.\n- Therefore, GCF = 6."
       ],
       "answer": "1) The number is 18\n2) GCF = 2 × 3 = 6",
-      "note": "First number is 12, second number is 18; their common factors are 1, 2, 3, 6."
+      "note": "First number is 12, second number is 18; their common factors are 1, 2, 3, 6.",
+      "items": [
+        {
+          "label": "Problem 1 · Identify Number",
+          "question": "What is the number whose prime factors are 2, 3 and 3?",
+          "steps": [
+            "Multiply the prime factors: Number = 2 × 3 × 3 = 6 × 3 = 18."
+          ],
+          "answer": "The number is 18"
+        },
+        {
+          "label": "Problem 2 · Greatest Common Factor (GCF)",
+          "question": "Two numbers have prime factors (2, 2, 3) and (2, 3, 3). Find their GCF.",
+          "steps": [
+            "Identify common prime factors: one 2 and one 3.",
+            "Product of common factors: GCF = 2 × 3 = 6."
+          ],
+          "answer": "GCF = 2 × 3 = 6"
+        }
+      ]
     },
     {
       "id": "eval-factors-3",
@@ -3351,7 +4545,29 @@
         "3a) 14 = 2 × 7, 21 = 3 × 7 → LCM = 2 × 3 × 7 = 42.\n3b) 42 = 2 × 3 × 7, 30 = 2 × 3 × 5 → LCM = 2 × 3 × 5 × 7 = 210.\n3c) 48 = 2^4 × 3, 36 = 2^2 × 3^2 → LCM = 16 × 9 = 144.\n3d) 5 and 11 are prime numbers → LCM = 5 × 11 = 55."
       ],
       "answer": "1) 3, 6, 9\n2) 7, 14, 21\n3a) LCM = 42   3b) LCM = 210   3c) LCM = 144   3d) LCM = 55",
-      "note": "For prime numbers with no common factor, LCM is simply their product."
+      "note": "For prime numbers with no common factor, LCM is simply their product.",
+      "items": [
+        {
+          "label": "Problem 1 & 2 · Multiples",
+          "question": "(1) Mention three multiples of 3. (2) Mention three multiples of 7.",
+          "steps": [
+            "Multiples of 3: 3, 6, 9.",
+            "Multiples of 7: 7, 14, 21."
+          ],
+          "answer": "(1) 3, 6, 9   (2) 7, 14, 21"
+        },
+        {
+          "label": "Problem 3 · Least Common Multiple (LCM)",
+          "question": "Find LCM of: (a) 14 & 21   (b) 42 & 30   (c) 48 & 36   (d) 5 & 11.",
+          "steps": [
+            "(a) 14 = 2×7, 21 = 3×7 → LCM = 2×3×7 = 42.",
+            "(b) 42 = 2×3×7, 30 = 2×3×5 → LCM = 2×3×5×7 = 210.",
+            "(c) 48 = 16×3, 36 = 4×9 → LCM = 16×9 = 144.",
+            "(d) 5 and 11 are primes → LCM = 5 × 11 = 55."
+          ],
+          "answer": "(a) 42   (b) 210   (c) 144   (d) 55"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l1",
@@ -3367,7 +4583,27 @@
         "Step 4: Combine places: 0.408 (Notice: 0.48 would be 48 hundredths, not thousandths)."
       ],
       "answer": "(1) 6.045  |  (2) 0.408",
-      "note": "Never skip missing place values! When tenths are missing between units and hundredths, always insert a 0 placeholder."
+      "note": "Never skip missing place values! When tenths are missing between units and hundredths, always insert a 0 placeholder.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 4 Q(3c)",
+          "question": "Write in standard form: \"6 units, 4 hundredths and 5 thousandths\".",
+          "steps": [
+            "Identify place values: Units (ones) = 6. Tenths place is omitted = 0. Hundredths = 4. Thousandths = 5.",
+            "Combine places: 6 ones + 0 tenths + 4 hundredths + 5 thousandths = 6.045."
+          ],
+          "answer": "6.045"
+        },
+        {
+          "label": "Question 2 · Booklet p. 4 Q(2b)",
+          "question": "Write standard form of: \"4 tenths and 8 thousandths\".",
+          "steps": [
+            "Identify place values: Ones = 0. Tenths = 4. Hundredths place is omitted = 0. Thousandths = 8.",
+            "Combine places: 0.408 (Notice: 0.48 would be 48 hundredths, not thousandths)."
+          ],
+          "answer": "0.408"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l2",
@@ -3399,7 +4635,28 @@
         "Step 4: Check 4.503: 4 ones + 5 tenths (0.5) + 3 thousandths (0.003) = 4 + 0.5 + 0.003."
       ],
       "answer": "(1) 12.408 = 10 + 2 + 0.4 + 0.008  |  (2) 4 + 0.5 + 0.003",
-      "note": "Distinguish 0.008 from 0.08! Thousandths have two zeros between the decimal point and the digit when tenths and hundredths are zero."
+      "note": "Distinguish 0.008 from 0.08! Thousandths have two zeros between the decimal point and the digit when tenths and hundredths are zero.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 6 Q(3a)",
+          "question": "Decompose 12.408 into expanded form and word units.",
+          "steps": [
+            "Determine digit values: 1 ten = 10, 2 ones = 2, 4 tenths = 0.4, 0 hundredths, 8 thousandths = 0.008.",
+            "Expanded Form: 12.408 = 10 + 2 + 0.4 + 0.008.",
+            "Unit Form: 1 ten, 2 ones, 4 tenths, 8 thousandths."
+          ],
+          "answer": "12.408 = 10 + 2 + 0.4 + 0.008"
+        },
+        {
+          "label": "Question 2 · Booklet p. 6 Q(2a)",
+          "question": "Identify the sum equivalent to 4.503.",
+          "steps": [
+            "Break down 4.503: 4 ones (4) + 5 tenths (0.5) + 3 thousandths (0.003).",
+            "Combine parts: 4 + 0.5 + 0.003."
+          ],
+          "answer": "4 + 0.5 + 0.003"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l4",
@@ -3415,7 +4672,29 @@
         "Step 4: Compare from greatest to least: 770 > 707 > 700 > 70. Order: 0.77 > 0.707 > 0.7 > 0.07."
       ],
       "answer": "(1) Least to greatest: 2.4 , 2.405 , 2.45 , 2.54  |  (2) Greatest to least: 0.77 , 0.707 , 0.7 , 0.07",
-      "note": "More digits does not mean greater value! 2.405 has 4 digits but is smaller than 2.45 (2.450). Always pad zeros first."
+      "note": "More digits does not mean greater value! 2.405 has 4 digits but is smaller than 2.45 (2.450). Always pad zeros first.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 7 Q(3a)",
+          "question": "Order from least to greatest: 2.45 , 2.4 , 2.405 , 2.54.",
+          "steps": [
+            "Equalize places to thousandths: 2.450 , 2.400 , 2.405 , 2.540.",
+            "Compare decimal parts: 400 < 405 < 450 < 540.",
+            "Ascending order: 2.4 < 2.405 < 2.45 < 2.54."
+          ],
+          "answer": "2.4 , 2.405 , 2.45 , 2.54"
+        },
+        {
+          "label": "Question 2 · Booklet p. 7 Q(3b)",
+          "question": "Order from greatest to least: 0.7 , 0.07 , 0.77 , 0.707.",
+          "steps": [
+            "Equalize places to thousandths: 0.700 , 0.070 , 0.770 , 0.707.",
+            "Compare decimal parts: 770 > 707 > 700 > 70.",
+            "Descending order: 0.77 > 0.707 > 0.7 > 0.07."
+          ],
+          "answer": "0.77 , 0.707 , 0.7 , 0.07"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l5",
@@ -3431,7 +4710,28 @@
         "Step 4: For 11.98 to tenths: Underline tenths: 11.9[8]. Hundredths digit is 8 ≥ 5 → round up: 9 + 1 = 10 tenths → 12.0."
       ],
       "answer": "(1) 0.999 ≈ 1.00 (nearest hundredth)  |  (2) 11.98 ≈ 12.0 (nearest tenth)",
-      "note": "Keep the trailing zeros! Writing 1 instead of 1.00 loses the specified hundredths precision required on exams."
+      "note": "Keep the trailing zeros! Writing 1 instead of 1.00 loses the specified hundredths precision required on exams.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 8 Q(3a)",
+          "question": "Round 0.999 to the nearest hundredth.",
+          "steps": [
+            "Underline hundredths digit: 0.99[9]. Look at thousandths digit (9).",
+            "9 ≥ 5 → round up: 9 hundredths + 1 = 10 (carry 1 to tenths) → 9 + 1 = 10 (carry 1 to ones) → 1.00.",
+            "Keep two decimal zeros to show hundredths precision."
+          ],
+          "answer": "0.999 ≈ 1.00"
+        },
+        {
+          "label": "Question 2 · Booklet p. 8 Q(3b)",
+          "question": "Round 11.98 to the nearest tenth.",
+          "steps": [
+            "Underline tenths digit: 11.9[8]. Hundredths digit is 8 ≥ 5.",
+            "Round up: 9 tenths + 1 = 10 tenths → carry 1 to ones: 11 + 1 = 12.0."
+          ],
+          "answer": "11.98 ≈ 12.0"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l6",
@@ -3447,7 +4747,27 @@
         "Step 4: Estimated total: 19 + 6 = 25 L.E (Actual total = 18.75 + 6.30 = 25.05 L.E; diff = only 0.05 L.E!)."
       ],
       "answer": "(1) Estimate ≈ 20 (Actual = 20.19)  |  (2) Estimated total ≈ 25 L.E (Actual = 25.05 L.E)",
-      "note": "Always compare your estimate with the exact sum to confirm that your calculated answer makes sense."
+      "note": "Always compare your estimate with the exact sum to confirm that your calculated answer makes sense.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 9 Q(3b)",
+          "question": "Estimate then add: 12.34 + 7.85.",
+          "steps": [
+            "Round to nearest whole: 12.34 rounds to 12; 7.85 rounds to 8.",
+            "Estimate: 12 + 8 = 20. Actual: 12.34 + 7.85 = 20.19 (Reasonable, diff = 0.19)."
+          ],
+          "answer": "Estimate ≈ 20  (Actual = 20.19)"
+        },
+        {
+          "label": "Question 2 · Booklet p. 9 Q(4a)",
+          "question": "Ahmed bought a book for 18.75 L.E and a pen for 6.30 L.E. Estimate the total cost.",
+          "steps": [
+            "Round purchases: 18.75 L.E rounds to 19 L.E; 6.30 L.E rounds to 6 L.E.",
+            "Estimated total: 19 + 6 = 25 L.E. (Actual: 18.75 + 6.30 = 25.05 L.E, diff = 0.05 L.E)."
+          ],
+          "answer": "Estimated total ≈ 25 L.E  (Actual = 25.05 L.E)"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l7",
@@ -3474,7 +4794,27 @@
         ]
       },
       "answer": "(1) 18.83  |  (2) 24.45",
-      "note": "Pad 12.4 with a zero so it becomes 12.40. Misaligning tenths with hundredths is the most frequent calculation error."
+      "note": "Pad 12.4 with a zero so it becomes 12.40. Misaligning tenths with hundredths is the most frequent calculation error.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 10 Q(3b)",
+          "question": "Find: 12.4 + 6.35 + 0.08.",
+          "steps": [
+            "Pad 12.4 to 12.40 and align: 12.40 + 6.35 + 0.08.",
+            "Hundredths: 0 + 5 + 8 = 13 (write 3, carry 1). Tenths: 1 + 4 + 3 + 0 = 8. Ones: 12 + 6 = 18."
+          ],
+          "answer": "18.83"
+        },
+        {
+          "label": "Question 2 · Booklet p. 10 Q(2a)",
+          "question": "Calculate: 14.56 + 9.89.",
+          "steps": [
+            "Align vertically: 14.56 + 9.89.",
+            "Hundredths: 6 + 9 = 15 (5, carry 1). Tenths: 1 + 5 + 8 = 14 (4, carry 1). Ones: 1 + 14 + 9 = 24."
+          ],
+          "answer": "24.45"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l8",
@@ -3499,7 +4839,29 @@
         ]
       },
       "answer": "(1) 12 − 5.47 = 6.53  |  (2) 1 − 0.001 = 0.999",
-      "note": "Check by adding back: 6.53 + 5.47 = 12.00 and 0.999 + 0.001 = 1.000. Inverse addition verifies subtraction instantly."
+      "note": "Check by adding back: 6.53 + 5.47 = 12.00 and 0.999 + 0.001 = 1.000. Inverse addition verifies subtraction instantly.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 11 Q(3b)",
+          "question": "Find: 12 − 5.47.",
+          "steps": [
+            "Rewrite 12 as 12.00 to match decimal places of 5.47.",
+            "Regroup: 12.00 becomes 11 ones, 9 tenths, 10 hundredths.",
+            "Subtract: 10 − 7 = 3 (hundredths); 9 − 4 = 5 (tenths); 11 − 5 = 6 (ones) → 6.53."
+          ],
+          "answer": "12 − 5.47 = 6.53"
+        },
+        {
+          "label": "Question 2 · Booklet p. 11 Q(2b)",
+          "question": "Calculate: 1 − 0.001.",
+          "steps": [
+            "Rewrite 1 as 1.000 to match thousandths.",
+            "Regroup 1 one into 9 tenths, 9 hundredths, 10 thousandths.",
+            "Subtract: 10 − 1 = 9 (thousandths); 9 − 0 = 9; 9 − 0 = 9 → 0.999."
+          ],
+          "answer": "1 − 0.001 = 0.999"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l9",
@@ -3515,7 +4877,27 @@
         "Step 4: Calculate exact change: 50.00 − 27.65 = 22.35 L.E (Estimate 22 L.E is within 0.35 L.E)."
       ],
       "answer": "(1) Estimate ≈ 12 (Actual = 12.67)  |  (2) Estimated change ≈ 22 L.E (Actual = 22.35 L.E)",
-      "note": "Because 27.65 is closer to 28 than 27, rounding up to 28 gives an estimate of 22, very close to the exact 22.35 L.E."
+      "note": "Because 27.65 is closer to 28 than 27, rounding up to 28 gives an estimate of 22, very close to the exact 22.35 L.E.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 12 Q(3b)",
+          "question": "Estimate then subtract: 24.35 − 11.68.",
+          "steps": [
+            "Round to whole: 24.35 → 24; 11.68 → 12. Estimated difference: 24 − 12 = 12.",
+            "Calculate actual difference: 24.35 − 11.68 = 12.67 (Difference = 0.67)."
+          ],
+          "answer": "Estimate ≈ 12  (Actual = 12.67)"
+        },
+        {
+          "label": "Question 2 · Booklet p. 12 Q(4a)",
+          "question": "A shopper had 50 L.E and spent 27.65 L.E. Estimate the change and calculate actual.",
+          "steps": [
+            "Estimate: 50 − 28 = 22 L.E (rounding 27.65 to 28).",
+            "Actual change: 50.00 − 27.65 = 22.35 L.E (Estimate 22 L.E is within 0.35 L.E)."
+          ],
+          "answer": "Estimated change ≈ 22 L.E  (Actual = 22.35 L.E)"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l10",
@@ -3540,7 +4922,29 @@
         ]
       },
       "answer": "(1) 20 − 13.256 = 6.744  |  (2) Remaining wire = 3.225 m",
-      "note": "Remember to pad 4.5 m with two zeros to make 4.500 m before subtracting 1.275 m!"
+      "note": "Remember to pad 4.5 m with two zeros to make 4.500 m before subtracting 1.275 m!",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 13 Q(3b)",
+          "question": "Find: 20 − 13.256.",
+          "steps": [
+            "Set up 20 as 20.000: Align 20.000 − 13.256.",
+            "Regroup 20 ones → leaves 19 ones, 9 tenths, 9 hundredths, 10 thousandths.",
+            "Subtract: 10 − 6 = 4; 9 − 5 = 4; 9 − 2 = 7; 19 − 13 = 6 → 6.744."
+          ],
+          "answer": "20 − 13.256 = 6.744"
+        },
+        {
+          "label": "Question 2 · Booklet p. 13 Q(4a)",
+          "question": "A wire was 4.5 m long. A piece of 1.275 m was cut. How long is the remaining wire?",
+          "steps": [
+            "Pad to thousandths: 4.500 − 1.275.",
+            "Regroup: 4.500 becomes 4.4(9)(10).",
+            "Subtract: 10 − 5 = 5; 9 − 7 = 2; 4 − 2 = 2; 4 − 1 = 3 → 3.225 m."
+          ],
+          "answer": "Remaining wire = 3.225 m"
+        }
+      ]
     },
     {
       "id": "booklet-u1-l11",
@@ -3556,7 +4960,27 @@
         "Step 4: For (2): a + 3.45 = 7.2 → a = 7.20 − 3.45 = 3.75."
       ],
       "answer": "(1) Total spent = 235.25 L.E | Change = 64.75 L.E  |  (2) a = 3.75",
-      "note": "Break word problems into clearly labeled steps: Step 1 = Total purchases, Step 2 = Change. Check: 235.25 + 64.75 = 300.00 L.E."
+      "note": "Break word problems into clearly labeled steps: Step 1 = Total purchases, Step 2 = Change. Check: 235.25 + 64.75 = 300.00 L.E.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 14 Q(4a)",
+          "question": "Sara bought a bag for 145.75 L.E and shoes for 89.5 L.E. She paid with 300 L.E. How much change did she receive?",
+          "steps": [
+            "Step 1 (Total spent): Add purchases: 145.75 + 89.50 = 235.25 L.E.",
+            "Step 2 (Change received): Subtract total from 300: 300.00 − 235.25 = 64.75 L.E."
+          ],
+          "answer": "Total spent = 235.25 L.E  |  Change = 64.75 L.E"
+        },
+        {
+          "label": "Question 2 · Booklet p. 14 Q(1a)",
+          "question": "If a + 3.45 = 7.2, find the value of a.",
+          "steps": [
+            "Use inverse operation: a = 7.20 − 3.45.",
+            "Regroup and subtract: 7.20 − 3.45 = 3.75."
+          ],
+          "answer": "a = 3.75"
+        }
+      ]
     },
     {
       "id": "booklet-u2-l1",
@@ -3572,7 +4996,28 @@
         "Step 4: m + 6 = 9 (equation), 1.2 − m = 0.2 (equation). Only \"m + 44\" has no equals sign, so it is an algebraic expression."
       ],
       "answer": "(1) Equation: x − 5.23 = 9.42  |  (2) Expression: m + 44 (Equations: m + 6 = 9, 1.2 − m = 0.2)",
-      "note": "Remember the phrase \"subtract from\": the number following \"from\" is always written first in the subtraction expression!"
+      "note": "Remember the phrase \"subtract from\": the number following \"from\" is always written first in the subtraction expression!",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 15 Q(2b)",
+          "question": "Write an equation: \"We subtract 5.23 from a number to get a result of 9.42\".",
+          "steps": [
+            "Let unknown number be x. Subtracting 5.23 from x means x is the minuend.",
+            "Write equation: x − 5.23 = 9.42 (Caution: 5.23 − x is incorrect)."
+          ],
+          "answer": "Equation: x − 5.23 = 9.42"
+        },
+        {
+          "label": "Question 2 · Booklet p. 15 Q(1)",
+          "question": "Distinguish: Which of m + 6 = 9, 1.2 − m = 0.2, m + 44 is an expression?",
+          "steps": [
+            "Look for an equals sign '='.",
+            "m + 6 = 9 and 1.2 − m = 0.2 have '=' so they are equations.",
+            "m + 44 has no equals sign, so it is an algebraic expression."
+          ],
+          "answer": "Expression: m + 44  (m + 6 = 9 and 1.2 − m = 0.2 are equations)"
+        }
+      ]
     },
     {
       "id": "booklet-u2-l2",
@@ -3588,7 +5033,27 @@
         "Step 4: Calculate: 3.245 − 1.265: 5−5=0; 14−6=8; 11−2=9; 2−1=1 → z = 1.980 = 1.98."
       ],
       "answer": "(1) A = 44.89  |  (2) z = 1.98",
-      "note": "Use a Bar Model to check! In A − 32.61 = 12.28, A sits at the top (whole). In 3.245 − z = 1.265, 3.245 sits at the top, so z = 3.245 − 1.265."
+      "note": "Use a Bar Model to check! In A − 32.61 = 12.28, A sits at the top (whole). In 3.245 − z = 1.265, 3.245 sits at the top, so z = 3.245 − 1.265.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 16 Q(3a)",
+          "question": "Solve for the variable: A − 32.61 = 12.28.",
+          "steps": [
+            "A is the total (whole). Add the parts: A = 12.28 + 32.61.",
+            "Calculate: 12.28 + 32.61 = 44.89. Check: 44.89 − 32.61 = 12.28."
+          ],
+          "answer": "A = 44.89"
+        },
+        {
+          "label": "Question 2 · Booklet p. 16 Q(3b)",
+          "question": "Solve for the variable: 3.245 − z = 1.265.",
+          "steps": [
+            "3.245 is the whole; z is a missing part. Subtract: z = 3.245 − 1.265.",
+            "Calculate: 3.245 − 1.265: 5−5=0; 14−6=8; 11−2=9; 2−1=1 → z = 1.98."
+          ],
+          "answer": "z = 1.98"
+        }
+      ]
     },
     {
       "id": "booklet-u2-l3",
@@ -3604,7 +5069,36 @@
         "Step 4: Solve for brother age: b = 12 − 3 = 9 years old."
       ],
       "answer": "(1) x − 5  |  (2) Equation: n − 7 = 15 ⇒ n = 22  |  (3) Equation: b + 3 = 12 ⇒ Brother is 9 years old",
-      "note": "Beware the \"less than\" trap: 5 less than 10 is 10 − 5 = 5, not 5 − 10. So \"5 less than x\" is ALWAYS x − 5."
+      "note": "Beware the \"less than\" trap: 5 less than 10 is 10 − 5 = 5, not 5 − 10. So \"5 less than x\" is ALWAYS x − 5.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 17 Q(2a)",
+          "question": "Write expression: \"5 less than x\".",
+          "steps": [
+            "\"5 less than x\" means subtracting 5 from x.",
+            "Expression: x − 5."
+          ],
+          "answer": "x − 5"
+        },
+        {
+          "label": "Question 2 · Booklet p. 17 Q(3b)",
+          "question": "Write & solve: \"When 7 is subtracted from a number, the result is 15\".",
+          "steps": [
+            "Let the number be n. Equation: n − 7 = 15.",
+            "Solve: n = 15 + 7 = 22."
+          ],
+          "answer": "Equation: n − 7 = 15  ⇒  n = 22"
+        },
+        {
+          "label": "Question 3 · Booklet p. 17 Q(4a)",
+          "question": "Mona is 3 years older than her brother. If Mona is 12, how old is her brother?",
+          "steps": [
+            "Let brother's age be b. Equation: b + 3 = 12.",
+            "Solve: b = 12 − 3 = 9 years old."
+          ],
+          "answer": "Brother is 9 years old"
+        }
+      ]
     }
   ]
 }
