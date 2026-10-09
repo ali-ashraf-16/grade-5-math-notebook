@@ -278,10 +278,25 @@ function Notebook() {
   }
 
   useEffect(() => {
-    const mobile = window.innerWidth <= 760;
-    if (mobile) setSidebar(false);
-    setZoom(Math.max(30, Math.min(90, Math.floor((window.innerWidth - (mobile ? 32 : 348)) / 794 * 100))));
+    if (window.innerWidth <= 760) setSidebar(false);
   }, []);
+
+  useEffect(() => {
+    const fit = () => {
+      const mobile = window.innerWidth <= 760;
+      const available = Math.min(window.innerWidth, 1600) - (!mobile && sidebar ? 300 : 0) - 48;
+      const paperWidth = mode === 'two-up' ? 1118 : 794;
+      setZoom(Math.max(30, Math.min(90, Math.floor(available / paperWidth * 100))));
+    };
+    fit();
+    window.addEventListener('resize', fit);
+    return () => window.removeEventListener('resize', fit);
+  }, [mode, sidebar]);
+
+  useEffect(() => {
+    document.body.classList.remove('print-mode-full', 'print-mode-2up', 'print-mode-chal');
+    document.body.classList.add(mode === 'two-up' ? 'print-mode-2up' : mode === 'challenging' ? 'print-mode-chal' : 'print-mode-full');
+  }, [mode]);
 
   const go = (p: number) => {
     setPage(Math.max(0, Math.min(sheets.length - 1, p)));
