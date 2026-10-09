@@ -3,44 +3,23 @@ import { useEffect, useState } from 'react';
 import { BookOpen, Printer, ChevronLeft, ChevronRight, Check, List, Minus, Plus, PanelRightClose, PanelRightOpen, GraduationCap, AlertTriangle, Sparkles, Copy, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import revision from '@/data/revision.json';
-import badge from '@/assets/prepared-badge.png.asset.json';
+import badge from '@/assets/prepared-badge-october.png.asset.json';
 
 export const Route = createFileRoute('/')({
   head: () => ({ meta: [
     { title: 'Math Notebook | Grade 5 · Units 1 & 2 Revision' },
-    { name: 'description', content: 'Simple English decimal rules, worked cases, 2-up print booklet, and challenging revision sheets for Grade 5 Units 1 & 2. Prepared by Mr. Ali Ashraf.' },
+    { name: 'description', content: 'Original Grade 5 Units 1 & 2 explanations with supplied October assessment questions solved step by step after each lesson. Prepared by Mr. Ali Ashraf.' },
     { property: 'og:title', content: 'Math Notebook · Grade 5 Revision' },
-    { property: 'og:description', content: 'Decimal place value, equations, 2-up printing, and high-yield challenging problems.' },
+    { property: 'og:description', content: 'Original lesson explanations and step-by-step October assessments with A4 and two-up printing.' },
     { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' },
   ] }), component: Notebook,
 });
 
 type Model = { type: string; parts?: number[]; removed?: number; caption?: string; number?: string; labels?: string[] };
-type Sheet = { id: string; chapter: string; title: string; sourcePages: number[]; vocabulary?: string[][]; rule?: string; question?: string; steps?: string[]; answer?: string; note?: string; words?: string[][]; model?: Model; column?: { lines: string[] }; shift?: { direction: string; places: number; input: string; output: string; operation: string; factor: number } };
-
-type ChallengingProblem = {
-  tag: string;
-  question: string;
-  trap: string;
-  steps: string[];
-  answer: string;
-};
-
-type ChallengingSheet = {
-  id: string;
-  chapter: string;
-  unit: number;
-  concept: number;
-  title: string;
-  topic: string;
-  quickSummary: string[];
-  examTrap: string;
-  problems: ChallengingProblem[];
-  remember: string;
-};
+type Sheet = { id: string; chapter: string; title: string; sourcePages?: number[]; tag?: string; vocabulary?: string[][]; rule?: string; question?: string; steps?: string[]; answer?: string; note?: string; words?: string[][]; model?: Model; column?: { lines: string[] }; shift?: { direction: string; places: number; input: string; output: string; operation: string; factor: number } };
 
 const sheets: Sheet[] = revision.sheets;
-const challengingSheets: ChallengingSheet[] = revision.challengingSheets ?? [];
+const assessmentSheets: Sheet[] = revision.assessmentSheets;
 const chapters = revision.chapters.map(ch => ({ ...ch, start: sheets.findIndex(s => s.chapter === ch.id), count: sheets.filter(s => s.chapter === ch.id).length }));
 
 function NumberLineModel({ model }: { model: Model }) {
@@ -139,18 +118,19 @@ function Paper({ sheet, index, isMini = false }: { sheet: Sheet; index: number; 
     (sheet.shift && (sheet.steps?.length ?? 0) >= 4)
   );
 
-  return <article className={`paper ${isDense ? 'is-dense' : ''} ${isMini ? 'is-mini' : ''}`} aria-label={`Page ${index+1}: ${sheet.title}`}>
+  return <article className={`paper ${isDense ? 'is-dense' : ''} ${sheet.tag ? 'eval-sheet' : ''} ${isMini ? 'is-mini' : ''}`} data-sheet-id={sheet.id} aria-label={`Page ${index+1}: ${sheet.title}`}>
     <div className="binding" aria-hidden="true">{Array.from({length:18},(_,i) => <i key={i}/>)}</div>
     <div className="paper-content">
       <div className="paper-running">
         <span>GRADE 5 · MATHEMATICS</span>
-        <span>{chapter?.concept===3 ? 'UNIT 2 · CONCEPT 1' : `UNIT 1 · ${`CONCEPT ${chapter?.concept}`}`}</span>
+        <span>{chapter?.concept && chapter.concept >= 3 ? `UNIT 2 · CONCEPT ${chapter.concept - 2}` : `UNIT 1 · CONCEPT ${chapter?.concept}`}</span>
       </div>
       <div className="paper-lesson-banner">
         <span className="lesson-badge">{chapter?.lessons}</span>
         <span className="lesson-topic">{chapter?.title}</span>
       </div>
       <h2 className="paper-title">{sheet.title}</h2>
+      {sheet.tag && <span className="eval-tag-pill">{sheet.tag}</span>}
       {sheet.vocabulary ? <>
         <table className="revision-vocab"><thead><tr><th>Math word</th><th>Simple meaning & example</th></tr></thead><tbody>{sheet.vocabulary.map(([term,definition]) => <tr key={term}><td>{term}</td><td>{definition}</td></tr>)}</tbody></table>
       </> : <>
@@ -182,90 +162,12 @@ function Paper({ sheet, index, isMini = false }: { sheet: Sheet; index: number; 
   </article>;
 }
 
-function ChallengingPaper({ sheet, index }: { sheet: ChallengingSheet; index: number }) {
-  return (
-    <article className="paper paper-challenging is-dense" aria-label={`Revision Page ${index+1}: ${sheet.title}`}>
-      <div className="binding" aria-hidden="true">{Array.from({length:18},(_,i) => <i key={i}/>)}</div>
-      <div className="paper-content">
-        <div className="paper-running">
-          <span>GRADE 5 · MATHEMATICS</span>
-          <span className="high-yield-badge">⚡ HIGH-YIELD REVISION · {sheet.unit === 1 ? `UNIT 1 · CONCEPT ${sheet.concept}` : 'UNIT 2 · CONCEPT 1'}</span>
-        </div>
-        <div className="paper-lesson-banner challenging-banner">
-          <span className="lesson-badge exam-badge">TOP EXAM FOCUS</span>
-          <span className="lesson-topic">{sheet.topic}</span>
-        </div>
-        <h2 className="paper-title challenging-title">{sheet.title}</h2>
-
-        {/* Quick Lesson Capsule */}
-        <div className="quick-capsule-box">
-          <div className="capsule-header">
-            <Sparkles size={16} />
-            <span>Quick Memory Capsule & Golden Rule</span>
-          </div>
-          <ul className="capsule-list">
-            {sheet.quickSummary.map((item, idx) => (
-              <li key={idx}>{item}</li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Exam Trap Alert */}
-        <div className="exam-trap-box">
-          <AlertTriangle size={18} className="text-warning flex-shrink-0" />
-          <p><strong>⚠️ Exam Trap:</strong> {sheet.examTrap}</p>
-        </div>
-
-        {/* Challenging Questions */}
-        <div className="challenging-problems-wrapper">
-          {sheet.problems.map((p, idx) => (
-            <div key={idx} className="challenging-problem-card">
-              <div className="problem-tag-bar">
-                <span className="problem-tag">{p.tag}</span>
-              </div>
-              <p className="problem-question">{p.question}</p>
-              <div className="problem-trap-hint">
-                <small>⚠️ Common Trap: {p.trap}</small>
-              </div>
-              <div className="problem-steps">
-                <strong>Smart Steps:</strong>
-                <ol>
-                  {p.steps.map((step, sIdx) => (
-                    <li key={sIdx}>{step}</li>
-                  ))}
-                </ol>
-              </div>
-              <div className="problem-answer">
-                <Check size={16} />
-                <span><b>Answer:</b> {p.answer}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="revision-note yellow challenging-remember">
-          <strong>Golden Rule:</strong>
-          <p>{sheet.remember}</p>
-        </div>
-      </div>
-
-      <footer className="paper-footer">
-        <div className="footer-prepared">
-          <img src={badge.url} alt="Prepared by Mr. Ali Ashraf" className="footer-avatar-badge" />
-          <span className="footer-teacher-name">Prepared by Mr. Ali Ashraf</span>
-        </div>
-        <span className="footer-page-num">Rev-{String(index+1).padStart(2,'0')}</span>
-      </footer>
-    </article>
-  );
-}
-
-type NotebookMode = 'full' | 'two-up' | 'challenging';
+type NotebookMode = 'full' | 'two-up' | 'assessment';
 
 function Notebook() {
   const [mode, setMode] = useState<NotebookMode>('full');
   const [page, setPage] = useState(0);
-  const [chalPage, setChalPage] = useState(0);
+  const [evalPage, setEvalPage] = useState(0);
   const [twoUpIndex, setTwoUpIndex] = useState(0);
   const [zoom, setZoom] = useState(90);
   const [sidebar, setSidebar] = useState(true);
@@ -295,7 +197,7 @@ function Notebook() {
 
   useEffect(() => {
     document.body.classList.remove('print-mode-full', 'print-mode-2up', 'print-mode-chal');
-    document.body.classList.add(mode === 'two-up' ? 'print-mode-2up' : mode === 'challenging' ? 'print-mode-chal' : 'print-mode-full');
+    document.body.classList.add(mode === 'two-up' ? 'print-mode-2up' : mode === 'assessment' ? 'print-mode-chal' : 'print-mode-full');
   }, [mode]);
 
   const go = (p: number) => {
@@ -304,8 +206,8 @@ function Notebook() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const goChal = (p: number) => {
-    setChalPage(Math.max(0, Math.min(challengingSheets.length - 1, p)));
+  const goEval = (p: number) => {
+    setEvalPage(Math.max(0, Math.min(assessmentSheets.length - 1, p)));
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -321,7 +223,7 @@ function Notebook() {
     document.body.classList.remove('print-mode-full', 'print-mode-2up', 'print-mode-chal');
     if (mode === 'two-up') {
       document.body.classList.add('print-mode-2up');
-    } else if (mode === 'challenging') {
+    } else if (mode === 'assessment') {
       document.body.classList.add('print-mode-chal');
     } else {
       document.body.classList.add('print-mode-full');
@@ -366,13 +268,13 @@ function Notebook() {
           </Button>
           <Button variant="ghost"
             type="button"
-            className={`edition-tab ${mode === 'challenging' ? 'active' : ''}`}
-            aria-pressed={mode === 'challenging'}
-            onClick={() => setMode('challenging')}
-            title="نسخة المراجعة السريعة وأهم الأسئلة الصعبة للأوائل"
+            className={`edition-tab ${mode === 'assessment' ? 'active' : ''}`}
+            aria-pressed={mode === 'assessment'}
+            onClick={() => setMode('assessment')}
+            title="أسئلة تقييمات أكتوبر المرفقة محلولة بالخطوات"
           >
             <Sparkles size={15} />
-            <span>المراجعة المركزة والأسئلة الصعبة</span>
+            <span>تقييمات أكتوبر محلولة</span>
           </Button>
         </div>
 
@@ -381,7 +283,7 @@ function Notebook() {
           <Button onClick={print} className="print-button">
             <Printer/>
             <span>
-              {mode === 'two-up' ? 'Print 2-Up Booklet' : mode === 'challenging' ? 'Print Revision' : 'Print Notebook'}
+              {mode === 'two-up' ? 'Print 2-Up Booklet' : mode === 'assessment' ? 'Print Assessments' : 'Print Notebook'}
               <small> / PDF</small>
             </span>
           </Button>
@@ -396,8 +298,8 @@ function Notebook() {
                 {sidebar ? <PanelRightClose/> : <PanelRightOpen/>}
               </Button>
               <span className="toolbar-title">
-                {mode === 'challenging'
-                  ? challengingSheets[chalPage]?.title
+                {mode === 'assessment'
+                  ? assessmentSheets[evalPage]?.title
                   : mode === 'two-up'
                   ? `Sheets ${twoUpIndex * 2 + 1} & ${Math.min(sheets.length, twoUpIndex * 2 + 2)} · ${sheets[twoUpIndex * 2]?.title}`
                   : sheets[page]?.title}
@@ -464,21 +366,21 @@ function Notebook() {
           )}
 
           {/* VIEW MODE 3: HIGH-YIELD CHALLENGING REVISION NOTEBOOK */}
-          {mode === 'challenging' && (
+          {mode === 'assessment' && (
             <>
               <div className="paper-stage">
                 <div className="paper-scale" style={{ zoom: zoom / 100 }}>
-                  {challengingSheets.map((s, i) => (
-                    <div key={s.id} className={`page-slot ${i === chalPage ? 'active-page' : ''}`}>
-                      <ChallengingPaper sheet={s} index={i} />
+                  {assessmentSheets.map((s, i) => (
+                    <div key={s.id} className={`page-slot ${i === evalPage ? 'active-page' : ''}`}>
+                      <Paper sheet={s} index={i} />
                     </div>
                   ))}
                 </div>
               </div>
               <div className="page-navigation">
-                <Button variant="outline" size="icon" onClick={() => goChal(chalPage - 1)} disabled={chalPage === 0} aria-label="Previous revision sheet"><ChevronLeft/></Button>
-                <span>Revision Sheet <b>{chalPage + 1}</b> of {challengingSheets.length}</span>
-                <Button variant="outline" size="icon" onClick={() => goChal(chalPage + 1)} disabled={chalPage === challengingSheets.length - 1} aria-label="Next revision sheet"><ChevronRight/></Button>
+                <Button variant="outline" size="icon" onClick={() => goEval(evalPage - 1)} disabled={evalPage === 0} aria-label="Previous assessment sheet"><ChevronLeft/></Button>
+                <span>Assessment Sheet <b>{evalPage + 1}</b> of {assessmentSheets.length}</span>
+                <Button variant="outline" size="icon" onClick={() => goEval(evalPage + 1)} disabled={evalPage === assessmentSheets.length - 1} aria-label="Next assessment sheet"><ChevronRight/></Button>
               </div>
             </>
           )}
@@ -489,29 +391,29 @@ function Notebook() {
             <div className="contents-title">
               <List size={19}/>
               <h2>Notebook contents</h2>
-              <span>{mode === 'challenging' ? `${challengingSheets.length} rev sheets` : `${sheets.length} pages`}</span>
+              <span>{mode === 'assessment' ? `${assessmentSheets.length} assessment sheets` : `${sheets.length} pages`}</span>
             </div>
 
-            {mode === 'challenging' ? (
+            {mode === 'assessment' ? (
               <div className="challenging-nav-list">
                 <div className="unit-summary">
-                  <span className="unit-tag">HIGH-YIELD REVISION</span>
-                  <h3>Quick Refresher &<br/>Challenging Problems</h3>
-                  <p>Exam focus for top students</p>
+                  <span className="unit-tag">OCTOBER ASSESSMENTS</span>
+                  <h3>October Assessment<br/>Step-by-step Solutions</h3>
+                  <p>Units 1 & 2</p>
                 </div>
-                {challengingSheets.map((cs, idx) => (
+                {assessmentSheets.map((cs, idx) => (
                   <Button
                     key={cs.id}
                     variant="ghost"
-                    className={`contents-item ${chalPage === idx ? 'selected' : ''}`}
-                    onClick={() => goChal(idx)}
+                    className={`contents-item ${evalPage === idx ? 'selected' : ''}`}
+                    onClick={() => goEval(idx)}
                   >
                     <Sparkles size={16} />
                     <span>
                       {cs.title}
-                      <small>{cs.topic} · Sheet {idx + 1}</small>
+                      <small>{chapters.find(c => c.id === cs.chapter)?.title} · Sheet {idx + 1}</small>
                     </span>
-                    {chalPage === idx && <span className="active-dot"/>}
+                    {evalPage === idx && <span className="active-dot"/>}
                   </Button>
                 ))}
               </div>
@@ -522,11 +424,11 @@ function Notebook() {
                   <h3>Decimal Place Value & Equations</h3>
                   <p>Rules, models & worked cases</p>
                 </div>
-                {[1, 2, 3].map(concept => (
+                {[1, 2, 3, 4].map(concept => (
                   <div className="concept-group" key={concept}>
                     <h4>
-                      {concept === 3 ? 'Unit 2 · Concept 1' : `Concept ${concept}`}
-                      <small>{concept === 1 ? 'Decimal place value' : concept === 2 ? 'Addition & subtraction' : 'Expressions & equations'}</small>
+                      {concept >= 3 ? `Unit 2 · Concept ${concept - 2}` : `Concept ${concept}`}
+                      <small>{concept === 1 ? 'Decimal place value' : concept === 2 ? 'Addition & subtraction' : concept === 3 ? 'Expressions & equations' : 'Factors & multiples'}</small>
                     </h4>
                     {chapters.filter(c => c.concept === concept).map(c => (
                       <Button
