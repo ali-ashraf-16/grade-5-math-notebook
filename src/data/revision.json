@@ -84,6 +84,18 @@
       "title": "Factors, Multiples, Primes & GCF / LCM",
       "lessons": "Unit 2 · Concept 2",
       "concept": 4
+    },
+    {
+      "id": "booklet-u1",
+      "title": "Homework Booklet · Unit 1 Challenges",
+      "lessons": "Lessons 1–11",
+      "concept": 5
+    },
+    {
+      "id": "booklet-u2",
+      "title": "Homework Booklet · Unit 2 Challenges",
+      "lessons": "Lessons 1–3",
+      "concept": 5
     }
   ],
   "sheets": [
@@ -2619,6 +2631,259 @@
       ],
       "answer": "1) 3, 6, 9\n2) 7, 14, 21\n3a) LCM = 42   3b) LCM = 210   3c) LCM = 144   3d) LCM = 55",
       "note": "For prime numbers with no common factor, LCM is simply their product."
+    },
+    {
+      "id": "booklet-u1-l1",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Decimals to Thousandths",
+      "tag": "Minia British School · Homework Booklet · U1 L1",
+      "rule": "In standard decimal form, every place right of the decimal point must be accounted for. If a place has no value, insert a zero placeholder (0 tenths = .0). \"Thousandths\" means exactly 3 decimal places.",
+      "question": "From Booklet p. 4, Q(3c) & Q(2b): (1) Write in standard form: \"6 units, 4 hundredths and 5 thousandths\". (2) Write standard form of \"4 tenths and 8 thousandths\".",
+      "steps": [
+        "Step 1: Identify place values for (1): Units (ones) = 6. Tenths place is omitted, so tenths = 0. Hundredths = 4. Thousandths = 5.",
+        "Step 2: Combine places: 6 ones + 0 tenths + 4 hundredths + 5 thousandths = 6.045.",
+        "Step 3: Identify place values for (2): Ones = 0. Tenths = 4. Hundredths place is omitted = 0. Thousandths = 8.",
+        "Step 4: Combine places: 0.408 (Notice: 0.48 would be 48 hundredths, not thousandths)."
+      ],
+      "answer": "(1) 6.045  |  (2) 0.408",
+      "note": "Never skip missing place values! When tenths are missing between units and hundredths, always insert a 0 placeholder."
+    },
+    {
+      "id": "booklet-u1-l2",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Place Value Shuffle",
+      "tag": "Minia British School · Homework Booklet · U1 L2",
+      "rule": "To make the greatest decimal less than 10 from given digits, the whole number (ones) part must be the greatest single digit available under 10. Then place remaining digits in descending order after the decimal point.",
+      "question": "From Booklet p. 5, Q(3b): Rearrange the digits 3, 5, 1, 8 (with a decimal point) to form the greatest decimal less than 10.",
+      "steps": [
+        "Step 1: Understand the constraint \"less than 10\": The number can only have a single whole number digit (ones place), because two whole digits would be ≥ 10.",
+        "Step 2: Pick the greatest available digit for the ones place: The digits are {1, 3, 5, 8}. The greatest is 8, so ones = 8 (giving 8.xxx < 10).",
+        "Step 3: Arrange remaining digits {5, 3, 1} descending to maximize value: Tenths = 5, Hundredths = 3, Thousandths = 1.",
+        "Step 4: Verify: 8.531 is less than 10 and greater than all other combinations (8.513, 8.351, 8.315, etc.)."
+      ],
+      "answer": "8.531",
+      "note": "The ones place has the largest impact on value. Setting 8 as the whole number ensures the maximum decimal value under 10."
+    },
+    {
+      "id": "booklet-u1-l3",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Composing & Decomposing",
+      "tag": "Minia British School · Homework Booklet · U1 L3",
+      "rule": "A decimal is decomposed into Expanded Form by writing the sum of the values of each non-zero digit. Zero digits indicate empty places and are omitted in standard expanded addition.",
+      "question": "From Booklet p. 6, Q(3a) & Q(2a): (1) Decompose 12.408 into expanded form and word units. (2) Identify the sum equivalent to 4.503.",
+      "steps": [
+        "Step 1: Determine the value of each digit in 12.408: 1 ten = 10, 2 ones = 2, 4 tenths = 0.4, 0 hundredths (omitted), 8 thousandths = 0.008.",
+        "Step 2: Write Expanded Form: 12.408 = 10 + 2 + 0.4 + 0.008.",
+        "Step 3: Write Unit Form: 1 ten, 2 ones, 4 tenths, 8 thousandths (or 12 ones and 408 thousandths).",
+        "Step 4: Check 4.503: 4 ones + 5 tenths (0.5) + 3 thousandths (0.003) = 4 + 0.5 + 0.003."
+      ],
+      "answer": "(1) 12.408 = 10 + 2 + 0.4 + 0.008  |  (2) 4 + 0.5 + 0.003",
+      "note": "Distinguish 0.008 from 0.08! Thousandths have two zeros between the decimal point and the digit when tenths and hundredths are zero."
+    },
+    {
+      "id": "booklet-u1-l4",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Comparing Decimals",
+      "tag": "Minia British School · Homework Booklet · U1 L4",
+      "rule": "To compare or order decimals with different numbers of decimal digits, pad shorter decimals with trailing zeros until all numbers have equal decimal places (thousandths).",
+      "question": "From Booklet p. 7, Q(3a) & Q(3b): (1) Order from least to greatest: 2.45 , 2.4 , 2.405 , 2.54. (2) Order from greatest to least: 0.7 , 0.07 , 0.77 , 0.707.",
+      "steps": [
+        "Step 1: Equalize places for set (1) to thousandths: 2.450 , 2.400 , 2.405 , 2.540.",
+        "Step 2: Compare decimal parts: 400 < 405 < 450 < 540. Order: 2.4 < 2.405 < 2.45 < 2.54.",
+        "Step 3: Equalize places for set (2) to thousandths: 0.700 , 0.070 , 0.770 , 0.707.",
+        "Step 4: Compare from greatest to least: 770 > 707 > 700 > 70. Order: 0.77 > 0.707 > 0.7 > 0.07."
+      ],
+      "answer": "(1) Least to greatest: 2.4 , 2.405 , 2.45 , 2.54  |  (2) Greatest to least: 0.77 , 0.707 , 0.7 , 0.07",
+      "note": "More digits does not mean greater value! 2.405 has 4 digits but is smaller than 2.45 (2.450). Always pad zeros first."
+    },
+    {
+      "id": "booklet-u1-l5",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Rounding Decimals",
+      "tag": "Minia British School · Homework Booklet · U1 L5",
+      "rule": "When rounding to the nearest hundredth, inspect the thousandths digit. If the rounding place is 9 and we round up, the carry cascades to tenths and ones places.",
+      "question": "From Booklet p. 8, Q(3a) & Q(3b): (1) Round 0.999 to the nearest hundredth. (2) Round 11.98 to the nearest tenth.",
+      "steps": [
+        "Step 1: For 0.999 to hundredths: Underline hundredths: 0.99[9]. Look at thousandths digit (9).",
+        "Step 2: Since 9 ≥ 5, round up: 9 hundredths + 1 = 10 (write 0, carry 1 to tenths) → 9 tenths + 1 = 10 (write 0, carry 1 to ones) → 0 + 1 = 1.",
+        "Step 3: Result: 1.00 (Must keep two decimal zeros to show hundredths precision!).",
+        "Step 4: For 11.98 to tenths: Underline tenths: 11.9[8]. Hundredths digit is 8 ≥ 5 → round up: 9 + 1 = 10 tenths → 12.0."
+      ],
+      "answer": "(1) 0.999 ≈ 1.00 (nearest hundredth)  |  (2) 11.98 ≈ 12.0 (nearest tenth)",
+      "note": "Keep the trailing zeros! Writing 1 instead of 1.00 loses the specified hundredths precision required on exams."
+    },
+    {
+      "id": "booklet-u1-l6",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Estimating Sums",
+      "tag": "Minia British School · Homework Booklet · U1 L6",
+      "rule": "To estimate decimal sums, rounding to the nearest whole number gives a very practical and accurate benchmark for everyday money and measurements.",
+      "question": "From Booklet p. 9, Q(3b) & Q(4a): (1) Estimate then add: 12.34 + 7.85. (2) Ahmed bought a book for 18.75 L.E and a pen for 6.30 L.E. Estimate the total cost.",
+      "steps": [
+        "Step 1: Estimate 12.34 + 7.85 by rounding to nearest whole: 12.34 rounds to 12; 7.85 rounds to 8. Estimate: 12 + 8 = 20.",
+        "Step 2: Calculate actual sum: 12.34 + 7.85 = 20.19. The estimate 20 is close and reasonable (diff = 0.19).",
+        "Step 3: Estimate Ahmed purchases: 18.75 L.E rounds to 19 L.E; 6.30 L.E rounds to 6 L.E.",
+        "Step 4: Estimated total: 19 + 6 = 25 L.E (Actual total = 18.75 + 6.30 = 25.05 L.E; diff = only 0.05 L.E!)."
+      ],
+      "answer": "(1) Estimate ≈ 20 (Actual = 20.19)  |  (2) Estimated total ≈ 25 L.E (Actual = 25.05 L.E)",
+      "note": "Always compare your estimate with the exact sum to confirm that your calculated answer makes sense."
+    },
+    {
+      "id": "booklet-u1-l7",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Adding Decimals",
+      "tag": "Minia British School · Homework Booklet · U1 L7",
+      "rule": "To add three decimals with varying lengths, align every decimal point vertically, pad missing places with zeros, and add from right to left with regrouping.",
+      "question": "From Booklet p. 10, Q(3b) & Q(2a): (1) Find: 12.4 + 6.35 + 0.08. (2) Calculate 14.56 + 9.89.",
+      "steps": [
+        "Step 1: Align vertically and pad 12.4 to 12.40: 12.40 + 6.35 + 0.08.",
+        "Step 2: Add hundredths column: 0 + 5 + 8 = 13 hundredths → write 3, carry 1 to tenths.",
+        "Step 3: Add tenths column: 1 (carried) + 4 + 3 + 0 = 8 tenths.",
+        "Step 4: Add whole numbers: 12 + 6 + 0 = 18 ones → Result = 18.83.",
+        "Step 5: For (2): 14.56 + 9.89: 6 + 9 = 15 (5, carry 1); 1 + 5 + 8 = 14 (4, carry 1); 1 + 14 + 9 = 24 → 24.45."
+      ],
+      "column": {
+        "lines": [
+          "   1     (carried)",
+          "  12.40",
+          "+  6.35",
+          "+  0.08",
+          "-------",
+          "  18.83"
+        ]
+      },
+      "answer": "(1) 18.83  |  (2) 24.45",
+      "note": "Pad 12.4 with a zero so it becomes 12.40. Misaligning tenths with hundredths is the most frequent calculation error."
+    },
+    {
+      "id": "booklet-u1-l8",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Modeling Subtraction",
+      "tag": "Minia British School · Homework Booklet · U1 L8",
+      "rule": "When subtracting a decimal from a whole number, rewrite the whole number with a decimal point and zeros (12 = 12.00, 1 = 1.000). Regroup across zeros from left to right.",
+      "question": "From Booklet p. 11, Q(3b) & Q(2b): (1) Find: 12 − 5.47. (2) Calculate: 1 − 0.001.",
+      "steps": [
+        "Step 1: Rewrite 12 as 12.00 to match the 2 decimal places of 5.47.",
+        "Step 2: Regroup from ones across tenths into hundredths: 12.00 becomes 11 ones, 9 tenths, and 10 hundredths.",
+        "Step 3: Subtract: 10 − 7 = 3 (hundredths); 9 − 4 = 5 (tenths); 11 − 5 = 6 (ones) → 6.53.",
+        "Step 4: For (2): 1.000 − 0.001: 1 one regrouped gives 9 tenths, 9 hundredths, 10 thousandths. 10 − 1 = 9 → 0.999."
+      ],
+      "column": {
+        "lines": [
+          "  1 1 9 10 (regrouped)",
+          "  1 2 . 0  0",
+          "-   5 . 4  7",
+          "------------",
+          "    6 . 5  3"
+        ]
+      },
+      "answer": "(1) 12 − 5.47 = 6.53  |  (2) 1 − 0.001 = 0.999",
+      "note": "Check by adding back: 6.53 + 5.47 = 12.00 and 0.999 + 0.001 = 1.000. Inverse addition verifies subtraction instantly."
+    },
+    {
+      "id": "booklet-u1-l9",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Estimating Differences",
+      "tag": "Minia British School · Homework Booklet · U1 L9",
+      "rule": "To estimate decimal differences, round each number to the nearest whole before subtracting. Compare with the exact difference to verify reasonability.",
+      "question": "From Booklet p. 12, Q(3b) & Q(4a): (1) Estimate then subtract: 24.35 − 11.68. (2) A shopper had 50 L.E and spent 27.65 L.E. Estimate the change and calculate actual.",
+      "steps": [
+        "Step 1: Estimate 24.35 − 11.68: 24.35 rounds to 24; 11.68 rounds to 12. Estimated difference: 24 − 12 = 12.",
+        "Step 2: Calculate actual difference: 24.35 − 11.68 = 12.67 (Difference between estimate and actual is only 0.67).",
+        "Step 3: Estimate shopper change: 50 − 28 = 22 L.E (rounding 27.65 to 28).",
+        "Step 4: Calculate exact change: 50.00 − 27.65 = 22.35 L.E (Estimate 22 L.E is within 0.35 L.E)."
+      ],
+      "answer": "(1) Estimate ≈ 12 (Actual = 12.67)  |  (2) Estimated change ≈ 22 L.E (Actual = 22.35 L.E)",
+      "note": "Because 27.65 is closer to 28 than 27, rounding up to 28 gives an estimate of 22, very close to the exact 22.35 L.E."
+    },
+    {
+      "id": "booklet-u1-l10",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Subtracting to Thousandths",
+      "tag": "Minia British School · Homework Booklet · U1 L10",
+      "rule": "Subtracting across three decimal zeros requires cascade regrouping from the whole number through tenths and hundredths into thousandths.",
+      "question": "From Booklet p. 13, Q(3b) & Q(4a): (1) Find: 20 − 13.256. (2) A wire was 4.5 m long. A piece of 1.275 m was cut. How long is the remaining wire?",
+      "steps": [
+        "Step 1: Set up 20 as 20.000: Align 20.000 − 13.256.",
+        "Step 2: Regroup from 20 ones → leaves 19 ones, 9 tenths, 9 hundredths, and 10 thousandths.",
+        "Step 3: Subtract: 10 − 6 = 4 (thous.); 9 − 5 = 4 (hund.); 9 − 2 = 7 (tenths); 19 − 13 = 6 (ones) → 6.744.",
+        "Step 4: For wire: 4.500 − 1.275: 4.500 becomes 4.4(9)(10). 10 − 5 = 5; 9 − 7 = 2; 4 − 2 = 2; 4 − 1 = 3 → 3.225 m."
+      ],
+      "column": {
+        "lines": [
+          "  1 9 . 9  9 10 (regrouped)",
+          "  2 0 . 0  0  0",
+          "- 1 3 . 2  5  6",
+          "----------------",
+          "    6 . 7  4  4"
+        ]
+      },
+      "answer": "(1) 20 − 13.256 = 6.744  |  (2) Remaining wire = 3.225 m",
+      "note": "Remember to pad 4.5 m with two zeros to make 4.500 m before subtracting 1.275 m!"
+    },
+    {
+      "id": "booklet-u1-l11",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Decimal Story Problems",
+      "tag": "Minia British School · Homework Booklet · U1 L11",
+      "rule": "Multi-step story problems require identifying intermediate totals first (addition) before finding the final unknown (subtraction).",
+      "question": "From Booklet p. 14, Q(4a) & Q(1a): (1) Sara bought a bag for 145.75 L.E and shoes for 89.5 L.E. She paid with 300 L.E. How much change did she receive? (2) If a + 3.45 = 7.2, find a.",
+      "steps": [
+        "Step 1: Step 1 (Total spent): Add bag and shoes: 145.75 + 89.50 = 235.25 L.E.",
+        "Step 2: Step 2 (Change received): Subtract total spent from 300 L.E: 300.00 − 235.25.",
+        "Step 3: Regroup 300.00: 300 becomes 299 and 100 hundredths. 300.00 − 235.25 = 64.75 L.E.",
+        "Step 4: For (2): a + 3.45 = 7.2 → a = 7.20 − 3.45 = 3.75."
+      ],
+      "answer": "(1) Total spent = 235.25 L.E | Change = 64.75 L.E  |  (2) a = 3.75",
+      "note": "Break word problems into clearly labeled steps: Step 1 = Total purchases, Step 2 = Change. Check: 235.25 + 64.75 = 300.00 L.E."
+    },
+    {
+      "id": "booklet-u2-l1",
+      "chapter": "booklet-u2",
+      "title": "Booklet Challenge · Expressions vs Equations",
+      "tag": "Minia British School · Homework Booklet · U2 L1",
+      "rule": "An Expression has no equals sign (e.g. x − 5.23). An Equation equates two expressions with \"=\" (e.g. x − 5.23 = 9.42). In \"subtract A from B\", B comes FIRST: B − A.",
+      "question": "From Booklet p. 15, Q(2b) & Q(1): (1) Write an equation: \"We subtract 5.23 from a number to get a result of 9.42\". (2) Distinguish: Which of m + 6 = 9, 1.2 − m = 0.2, m + 44 is an expression?",
+      "steps": [
+        "Step 1: Analyze English phrasing \"subtract 5.23 from a number\": Let the unknown number be x. Subtracting 5.23 from x means x is the starting amount (minuend).",
+        "Step 2: Formulate the equation: x − 5.23 = 9.42. (Common error: writing 5.23 − x = 9.42 which is incorrect!).",
+        "Step 3: For part (2): Look for the presence of an equals sign \"=\".",
+        "Step 4: m + 6 = 9 (equation), 1.2 − m = 0.2 (equation). Only \"m + 44\" has no equals sign, so it is an algebraic expression."
+      ],
+      "answer": "(1) Equation: x − 5.23 = 9.42  |  (2) Expression: m + 44 (Equations: m + 6 = 9, 1.2 − m = 0.2)",
+      "note": "Remember the phrase \"subtract from\": the number following \"from\" is always written first in the subtraction expression!"
+    },
+    {
+      "id": "booklet-u2-l2",
+      "chapter": "booklet-u2",
+      "title": "Booklet Challenge · Variables in Equations",
+      "tag": "Minia British School · Homework Booklet · U2 L2",
+      "rule": "When solving subtraction equations: If variable is minuend (A − b = c), add: A = c + b. If variable is subtrahend (a − z = c), subtract: z = a − c.",
+      "question": "From Booklet p. 16, Q(3a) & Q(3b): Solve for the variable: (1) A − 32.61 = 12.28  |  (2) 3.245 − z = 1.265.",
+      "steps": [
+        "Step 1: Analyze (1) A − 32.61 = 12.28: A is the total (whole). To find the whole, add the parts: A = 12.28 + 32.61.",
+        "Step 2: Calculate: 12.28 + 32.61 = 44.89. Check: 44.89 − 32.61 = 12.28 (True).",
+        "Step 3: Analyze (2) 3.245 − z = 1.265: 3.245 is the whole; z and 1.265 are the parts. To find the missing part z, subtract: z = 3.245 − 1.265.",
+        "Step 4: Calculate: 3.245 − 1.265: 5−5=0; 14−6=8; 11−2=9; 2−1=1 → z = 1.980 = 1.98."
+      ],
+      "answer": "(1) A = 44.89  |  (2) z = 1.98",
+      "note": "Use a Bar Model to check! In A − 32.61 = 12.28, A sits at the top (whole). In 3.245 − z = 1.265, 3.245 sits at the top, so z = 3.245 − 1.265."
+    },
+    {
+      "id": "booklet-u2-l3",
+      "chapter": "booklet-u2",
+      "title": "Booklet Challenge · Stories with Numbers",
+      "tag": "Minia British School · Homework Booklet · U2 L3",
+      "rule": "\"less than\" reverses word order: \"5 less than x\" means x − 5 (NOT 5 − x). In age word problems, set up an equation with a variable before solving.",
+      "question": "From Booklet p. 17, Q(2a), Q(3b) & Q(4a): (1) Write expression: \"5 less than x\". (2) Write & solve: \"When 7 is subtracted from a number, the result is 15\". (3) Mona is 3 years older than brother. If Mona is 12, how old is her brother?",
+      "steps": [
+        "Step 1: For (1): \"5 less than x\" translates to x − 5.",
+        "Step 2: For (2): Let the number be n. \"7 is subtracted from n\" gives n − 7. \"Result is 15\" gives equation: n − 7 = 15. Solve: n = 15 + 7 = 22.",
+        "Step 3: For (3): Let brother age be b. Mona is 3 years older → b + 3 = 12 (or 12 − b = 3).",
+        "Step 4: Solve for brother age: b = 12 − 3 = 9 years old."
+      ],
+      "answer": "(1) x − 5  |  (2) Equation: n − 7 = 15 ⇒ n = 22  |  (3) Equation: b + 3 = 12 ⇒ Brother is 9 years old",
+      "note": "Beware the \"less than\" trap: 5 less than 10 is 10 − 5 = 5, not 5 − 10. So \"5 less than x\" is ALWAYS x − 5."
     }
   ],
   "name": "Mr. Ali Ashraf",
