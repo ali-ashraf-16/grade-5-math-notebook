@@ -1982,3 +1982,138 @@ body { font-family:'Nunito Sans',sans-serif; }
     print-color-adjust: exact !important;
   }
 }
+
+/* =========================================================================
+   TWO-UP SPREAD FIXES & REMOVAL OF RED MARGIN LINE (USER REFINEMENTS)
+   ========================================================================= */
+
+/* 1. Eliminate the red notebook margin line completely */
+.paper::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* 2. Remove wire rings from Royal Edition and 2-Up mode */
+.paper.royal-edition .binding,
+.two-up-pair-card .paper .binding {
+  display: none !important;
+}
+
+/* 3. Luxury Two-Up Spread styling */
+.two-up-pair-card {
+  background: #f8fafc !important;
+  border: 1.5px solid rgba(11, 47, 92, 0.25) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(11, 47, 92, 0.1) !important;
+  padding: 16px !important;
+  gap: 16px !important;
+}
+
+.two-up-pair-card .paper.is-mini {
+  width: 535px !important;
+  height: 757px !important;
+  max-height: 757px !important;
+  font-size: 13.5px !important;
+  box-shadow: 0 4px 16px rgba(11, 47, 92, 0.12) !important;
+  border: 1px solid rgba(200, 162, 81, 0.45) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.two-up-pair-card .paper.royal-edition.is-mini .royal-border-outer {
+  top: 9px !important;
+  left: 9px !important;
+  right: 9px !important;
+  bottom: 9px !important;
+  border-width: 1.5px !important;
+}
+
+.two-up-pair-card .paper.royal-edition.is-mini .royal-border-inner {
+  top: 13px !important;
+  left: 13px !important;
+  right: 13px !important;
+  bottom: 13px !important;
+  border-width: 1px !important;
+}
+
+.two-up-pair-card .paper.royal-edition.is-mini .royal-corner {
+  width: 13px !important;
+  height: 13px !important;
+}
+
+.two-up-pair-card .paper.royal-edition.is-mini .royal-corner.corner-tl {
+  top: 8px !important; left: 8px !important;
+  border-width: 2.5px 0 0 2.5px !important;
+}
+.two-up-pair-card .paper.royal-edition.is-mini .royal-corner.corner-tr {
+  top: 8px !important; right: 8px !important;
+  border-width: 2.5px 2.5px 0 0 !important;
+}
+.two-up-pair-card .paper.royal-edition.is-mini .royal-corner.corner-bl {
+  bottom: 8px !important; left: 8px !important;
+  border-width: 0 0 2.5px 2.5px !important;
+}
+.two-up-pair-card .paper.royal-edition.is-mini .royal-corner.corner-br {
+  bottom: 8px !important; right: 8px !important;
+  border-width: 0 2.5px 2.5px 0 !important;
+}
+
+.two-up-pair-card .paper.is-mini .paper-content {
+  padding: 22px 24px 12px 24px !important;
+}
+
+.two-up-pair-card .paper.is-mini .paper-footer {
+  margin: 0 24px 10px 24px !important;
+  padding-top: 5px !important;
+}
+
+/* Multi-question cards in dense / grouped layout */
+.paper.royal-edition .worked-items-container {
+  gap: 8px !important;
+  margin: 6px 0 8px !important;
+}
+
+.paper.royal-edition .worked-item-card {
+  padding: 8px 12px !important;
+  margin-bottom: 6px !important;
+}
+
+.paper.royal-edition .worked-item-card .worked-question {
+  font-size: 14.5px !important;
+  line-height: 1.35 !important;
+  margin-bottom: 4px !important;
+}
+
+.paper.royal-edition .worked-item-card .worked-steps {
+  font-size: 13.5px !important;
+  line-height: 1.3 !important;
+  margin: 3px 0 5px !important;
+}
+
+.paper.royal-edition .worked-item-card .worked-answer {
+  padding: 4px 10px !important;
+  font-size: 14px !important;
+  margin-top: 4px !important;
+}
+
+.paper.royal-edition .worked-item-card .worked-answer p {
+  font-size: 14px !important;
+}
+
+/* Print 2-Up overrides */
+@media print {
+  body.print-mode-2up .two-up-pair-card {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 6mm 8mm !important;
+    gap: 6mm !important;
+  }
+  body.print-mode-2up .two-up-pair-card .paper.is-mini {
+    width: 138mm !important;
+    height: 198mm !important;
+    max-height: 198mm !important;
+    border: 1px solid rgba(200, 162, 81, 0.45) !important;
+    box-shadow: none !important;
+  }
+}
