@@ -7,7 +7,8 @@
 - [x] Preserve original explanation wording and import supplied October assessment solutions after each lesson.
 - [x] Remove external challenging revision questions and update page display, styles, and teacher badge.
 - [x] Verify lesson ordering, all supplied assessment inclusion, navigation, and print editions.
-- [ ] Verify completeness against month10.pdf (blocked: PDF not supplied).
+- [ ] Verify completeness against the newly supplied month10.pdf.
 
 # October source-order solutions edition
-- [ ] Add a separate solutions edition following the original October question order, then append booklet questions unchanged (blocked: month10.pdf not supplied; existing solutions combine nonconsecutive questions).
+- [ ] Add a separate solutions edition: 12 MCQs, then 43 written questions in source order, then unchanged booklet questions.
+- [ ] Verify source ordering, booklet preservation, navigation, and portrait printing.

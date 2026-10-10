@@ -10,6 +10,6 @@
 <!-- LOVABLE:END -->
 
 - Keep notebook lesson content in the supplied JSON data files and render all editions from the same content so preview and print remain consistent.
-- Use revision.sheets as the canonical lesson-plus-assessment sequence and revision.assessmentSheets for assessment-only viewing; both use the same Paper renderer to prevent print and preview divergence.
+- Use revision.sheets for lesson-plus-assessment viewing, revision.assessmentSheets for grouped assessments, and revision.octoberSourceOrderSheets for source-order solutions followed by unchanged booklet sheets; all use Paper so print and preview stay consistent.
 - Reference uploaded teacher artwork through a Lovable Assets pointer rather than bundling the binary so the supplied image stays available without repository media overhead.
 - Use named CSS print pages for portrait and landscape editions because @page rules cannot be conditional descendants of body selectors.

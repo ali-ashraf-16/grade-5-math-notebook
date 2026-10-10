@@ -9,14 +9,14 @@ import badge from '@/assets/prepared-badge-october.png.asset.json';
 export const Route = createFileRoute('/')({
   head: () => ({ meta: [
     { title: 'Math Notebook | Grade 5 · Units 1 & 2 Revision' },
-    { name: 'description', content: 'Original Grade 5 Units 1 & 2 explanations with supplied October assessment questions solved step by step after each lesson. Prepared by Mr. Ali Ashraf.' },
+    { name: 'description', content: 'Grade 5 lessons and October solutions: 12 multiple-choice and 43 written questions in original order, followed by homework booklet solutions. Prepared by Mr. Ali Ashraf.' },
     { property: 'og:title', content: 'Math Notebook · Grade 5 Revision' },
     { property: 'og:description', content: 'Original lesson explanations and step-by-step October assessments with A4 and two-up printing.' },
     { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' },
   ] }), component: Notebook,
 });
 
-type Model = { type: string; parts?: number[]; removed?: number; caption?: string; number?: string; labels?: string[] };
+type Model = { type: string; parts?: number[]; removed?: number; caption?: string; number?: string; rows?: string[]; labels?: string[] };
 type SheetItem = {
   label?: string;
   question: string;
@@ -32,6 +32,8 @@ type Sheet = {
   chapter: string;
   title: string;
   sourcePages?: number[];
+  sourceSection?: string;
+  sourceNumber?: number;
   tag?: string;
   vocabulary?: string[][];
   rule?: string;
@@ -47,7 +49,8 @@ type Sheet = {
 };
 
 const sheets: Sheet[] = revision.sheets;
-const assessmentSheets: Sheet[] = revision.assessmentSheets;
+const lessonAssessmentSheets: Sheet[] = revision.assessmentSheets;
+const sourceOrderSheets: Sheet[] = revision.octoberSourceOrderSheets;
 const chapters = revision.chapters.map(ch => ({ ...ch, start: sheets.findIndex(s => s.chapter === ch.id), count: sheets.filter(s => s.chapter === ch.id).length }));
 
 function NumberLineModel({ model }: { model: Model }) {
@@ -124,6 +127,7 @@ function NumberLineModel({ model }: { model: Model }) {
 }
 
 function MathModel({ model }: { model: Model }) {
+  if (model.type === 'bar') return <figure className="math-model"><div className="part-whole-model"><div className="bar-whole">{model.labels?.[0]}</div><div className="bar-parts"><span>{model.labels?.[1]}</span><span>{model.labels?.[2]}</span></div></div></figure>;
   if (model.type === 'grid') {
     const parts = model.parts ?? [];
     const total = parts.reduce((a,b) => a+b,0);
@@ -134,7 +138,7 @@ function MathModel({ model }: { model: Model }) {
   }
   if (model.type === 'line') return <NumberLineModel model={model} />;
 
-  return <table className="revision-place-table"><thead><tr>{['Thous.','Hund.','Tens','Ones','.','Tenths','Hundredths','Thousandths'].map(x => <th key={x}>{x}</th>)}</tr></thead><tbody><tr>{model.number?.split('').map((x,i) => <td key={i}>{x}</td>)}</tr></tbody></table>;
+  return <table className="revision-place-table"><thead><tr>{['Thous.','Hund.','Tens','Ones','.','Tenths','Hundredths','Thousandths'].map(x => <th key={x}>{x}</th>)}</tr></thead><tbody>{(model.rows ?? [model.number ?? '']).map((row, idx) => <tr key={idx}>{row.split('').map((x,i) => <td key={i}>{x}</td>)}</tr>)}</tbody></table>;
 }
 
 function Paper({ sheet, index, isMini = false, theme = 'royal' }: { sheet: Sheet; index: number; isMini?: boolean; theme?: 'royal' | 'classic' }) {
@@ -163,11 +167,11 @@ function Paper({ sheet, index, isMini = false, theme = 'royal' }: { sheet: Sheet
     <div className="paper-content">
       <div className="paper-running">
         <span>{isRoyal ? 'MINIA BRITISH INTERNATIONAL SCHOOL · GRADE 5' : 'GRADE 5 · MATHEMATICS'}</span>
-        <span>{chapter?.concept === 5 ? 'OCTOBER REVISION · HARDEST QUESTIONS' : chapter?.concept && chapter.concept >= 3 ? `OCTOBER REVISION · UNIT 2 · CONCEPT ${chapter.concept - 2}` : `OCTOBER REVISION · UNIT 1 · CONCEPT ${chapter?.concept}`}</span>
+        <span>{sheet.sourceSection ? `OCTOBER · SOURCE PAGE ${sheet.sourcePages?.[0]}` : chapter?.concept === 5 ? 'OCTOBER REVISION · HARDEST QUESTIONS' : chapter?.concept && chapter.concept >= 3 ? `OCTOBER REVISION · UNIT 2 · CONCEPT ${chapter.concept - 2}` : `OCTOBER REVISION · UNIT 1 · CONCEPT ${chapter?.concept}`}</span>
       </div>
       <div className="paper-lesson-banner">
-        <span className="lesson-badge">{chapter?.lessons}</span>
-        <span className="lesson-topic">{chapter?.title}</span>
+        <span className="lesson-badge">{sheet.sourceSection ? `(${sheet.sourceNumber})` : chapter?.lessons}</span>
+        <span className="lesson-topic">{sheet.sourceSection ? sheet.sourceSection === 'mcq' ? 'First: Choose the correct answer' : 'Second: Answer each of the following' : chapter?.title}</span>
       </div>
       <h2 className="paper-title">{sheet.title}</h2>
       {sheet.tag && <span className="eval-tag-pill">{sheet.tag}</span>}
@@ -247,7 +251,7 @@ function Paper({ sheet, index, isMini = false, theme = 'royal' }: { sheet: Sheet
   </article>;
 }
 
-type NotebookMode = 'full' | 'two-up' | 'assessment';
+type NotebookMode = 'full' | 'two-up' | 'assessment' | 'source-order';
 
 function Notebook() {
   const [mode, setMode] = useState<NotebookMode>('full');
@@ -258,6 +262,10 @@ function Notebook() {
   const [sidebar, setSidebar] = useState(true);
   const [isCover, setIsCover] = useState(true);
   const [theme, setTheme] = useState<'royal' | 'classic'>('royal');
+  const isAssessment = mode === 'assessment' || mode === 'source-order';
+  const assessmentSheets = mode === 'source-order' ? sourceOrderSheets : lessonAssessmentSheets;
+  const octoberCount = assessmentSheets.findIndex(s => s.id.startsWith('booklet-'));
+  const assessmentCount = octoberCount < 0 ? assessmentSheets.length : octoberCount;
 
   // Group sheets into pairs for 2-up printing/viewing
   const pairs: [Sheet, Sheet | null][] = [];
@@ -289,8 +297,8 @@ function Notebook() {
     } else {
       document.body.classList.add('theme-classic');
     }
-    document.body.classList.add(mode === 'two-up' ? 'print-mode-2up' : mode === 'assessment' ? 'print-mode-chal' : 'print-mode-full');
-  }, [mode]);
+    document.body.classList.add(mode === 'two-up' ? 'print-mode-2up' : isAssessment ? 'print-mode-chal' : 'print-mode-full');
+  }, [mode, theme, isAssessment]);
 
   const go = (p: number) => {
     setIsCover(false);
@@ -323,7 +331,7 @@ function Notebook() {
     }
     if (mode === 'two-up') {
       document.body.classList.add('print-mode-2up');
-    } else if (mode === 'assessment') {
+    } else if (isAssessment) {
       document.body.classList.add('print-mode-chal');
     } else {
       document.body.classList.add('print-mode-full');
@@ -366,6 +374,15 @@ function Notebook() {
             <BookOpen size={14} style={{ marginRight: '6px' }} />
             <span>النسخة الدفترية (Classic)</span>
           </Button>
+          <Button variant="ghost"
+            type="button"
+            className={`edition-tab ${mode === 'source-order' ? 'active' : ''}`}
+            aria-pressed={mode === 'source-order'}
+            onClick={() => { setMode('source-order'); setEvalPage(0); setIsCover(true); }}
+          >
+            <List size={15} />
+            <span>حل أكتوبر بالترتيب الأصلي + البوكليت</span>
+          </Button>
         </div>
 
         {/* Version / Edition Switcher */}
@@ -407,7 +424,7 @@ function Notebook() {
           <Button onClick={print} className="print-button">
             <Printer/>
             <span>
-              {mode === 'two-up' ? 'Print 2-Up Booklet' : mode === 'assessment' ? 'Print Assessments' : 'Print Notebook'}
+              {mode === 'two-up' ? 'Print 2-Up Booklet' : isAssessment ? 'Print Assessments' : 'Print Notebook'}
               <small> / PDF</small>
             </span>
           </Button>
@@ -424,7 +441,7 @@ function Notebook() {
               <span className="toolbar-title">
                 {isCover
                   ? 'Cover Page · Minia British International School (MBIS)'
-                  : mode === 'assessment'
+                  : isAssessment
                   ? assessmentSheets[evalPage]?.title
                   : mode === 'two-up'
                   ? `Sheets ${twoUpIndex * 2 + 1} & ${Math.min(sheets.length, twoUpIndex * 2 + 2)} · ${sheets[twoUpIndex * 2]?.title}`
@@ -513,7 +530,7 @@ function Notebook() {
           )}
 
           {/* VIEW MODE 3: HIGH-YIELD CHALLENGING REVISION NOTEBOOK */}
-          {mode === 'assessment' && (
+          {isAssessment && (
             <>
               <div className="paper-stage">
                 <div className="paper-scale" style={{ zoom: zoom / 100 }}>
@@ -547,7 +564,7 @@ function Notebook() {
             <div className="contents-title">
               <List size={19}/>
               <h2>Notebook contents</h2>
-              <span>{mode === 'assessment' ? `${assessmentSheets.length} assessment sheets` : `${sheets.length} pages`}</span>
+              <span>{isAssessment ? `${assessmentSheets.length} assessment sheets` : `${sheets.length} pages`}</span>
             </div>
 
             <div className="cover-nav-section" style={{ padding: '6px 12px 12px', borderBottom: '1px solid rgba(0,0,0,0.08)', marginBottom: '10px' }}>
@@ -566,14 +583,14 @@ function Notebook() {
               </Button>
             </div>
 
-            {mode === 'assessment' ? (
+            {isAssessment ? (
               <div className="challenging-nav-list">
                 <div className="unit-summary">
                   <span className="unit-tag">OCTOBER ASSESSMENTS</span>
                   <h3>October Assessment<br/>Step-by-step Solutions</h3>
-                  <p>Ministry evaluation models · 30 sheets</p>
+                  <p>{mode === 'source-order' ? '12 MCQs · 43 written questions' : `Ministry evaluation models · ${assessmentCount} sheets`}</p>
                 </div>
-                {assessmentSheets.slice(0, 30).map((cs, idx) => (
+                {assessmentSheets.slice(0, assessmentCount).map((cs, idx) => (
                   <Button
                     key={cs.id}
                     variant="ghost"
@@ -583,21 +600,21 @@ function Notebook() {
                     <Sparkles size={16} />
                     <span>
                       {cs.title}
-                      <small>{chapters.find(c => c.id === cs.chapter)?.title} · Sheet {idx + 1}</small>
+                      <small>{cs.sourceSection ? `${cs.sourceSection === 'mcq' ? 'First · Choose' : 'Second · Written'} (${cs.sourceNumber})` : chapters.find(c => c.id === cs.chapter)?.title} · Sheet {idx + 1}</small>
                     </span>
                     {evalPage === idx && <span className="active-dot"/>}
                   </Button>
                 ))}
 
-                {assessmentSheets.length > 30 && (
+                {assessmentSheets.length > assessmentCount && (
                   <>
                     <div className="unit-summary" style={{ marginTop: '16px' }}>
                       <span className="unit-tag">HOMEWORK BOOKLET</span>
                       <h3>Hardest Booklet Questions<br/>Step-by-step Solutions</h3>
                       <p>Selected challenges · 14 sheets</p>
                     </div>
-                    {assessmentSheets.slice(30).map((cs, i) => {
-                      const idx = 30 + i;
+                    {assessmentSheets.slice(assessmentCount).map((cs, i) => {
+                      const idx = assessmentCount + i;
                       return (
                         <Button
                           key={cs.id}

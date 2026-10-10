@@ -959,6 +959,11 @@ body { font-family:'Nunito Sans',sans-serif; }
 .edition-tab { height: auto; white-space: normal; text-align: center; }
 .two-up-scale { flex-shrink: 0; }
 .footer-avatar-badge { border-radius: 0; }
+.part-whole-model { max-width: 420px; margin: 12px auto; border: 2px solid var(--ink-blue); color: var(--ink-black); font-size: 20px; text-align: center; }
+.bar-whole { padding: 8px; background: var(--note-yellow); border-bottom: 2px solid var(--ink-blue); }
+.bar-parts { display: grid; grid-template-columns: 1fr 1fr; background: var(--note-green); }
+.bar-parts span { padding: 8px; }
+.bar-parts span + span { border-left: 2px solid var(--ink-blue); }
 @media (max-width: 760px) { .edition-tabs { order: 3; width: 100%; } .edition-tab { flex: 1 1 140px; } .notebook-contents { top: auto; } }
 @media print { .two-up-scale { zoom: 1 !important; } .page-slot:last-child { break-after: auto !important; page-break-after: auto !important; } body.print-mode-2up .two-up-half { flex: 0 0 137.5mm !important; width: 137.5mm !important; } body.print-mode-2up .two-up-pair-card .paper.is-mini { width: 137.5mm !important; } }
 
