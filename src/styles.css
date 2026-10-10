@@ -2117,3 +2117,106 @@ body { font-family:'Nunito Sans',sans-serif; }
     box-shadow: none !important;
   }
 }
+
+
+/* ==========================================================================
+   MBIS ROYAL HYBRID: Handwritten Teacher Solutions & Answers
+   Keeps Royal borders, headers, and question text crisp & printed,
+   while rendering step-by-step math workings and answers in neat Kalam handwriting ink.
+   ========================================================================== */
+
+/* Multi-Question Cards (Grouped Pages) */
+.paper.royal-edition .worked-item-card .worked-steps {
+  list-style-type: decimal !important;
+  margin: 4px 0 8px !important;
+  padding-left: 28px !important;
+}
+
+.paper.royal-edition .worked-item-card .worked-steps li {
+  font-family: 'Kalam', cursive !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  color: #1e3a8a !important; /* Royal Blue Pen Ink */
+  margin: 3px 0 !important;
+  padding-left: 4px !important;
+}
+
+.paper.royal-edition .worked-item-card .worked-steps li::marker {
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 13px !important;
+  color: #c8a251 !important; /* Gold step numbers */
+}
+
+.paper.royal-edition .worked-item-card .worked-answer p {
+  font-family: 'Kalam', cursive !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #15803d !important;
+  margin: 0 !important;
+}
+
+/* Single-Page Cards (Standard & Booklet Pages) */
+.paper.royal-edition .worked-steps {
+  list-style-type: decimal !important;
+}
+
+.paper.royal-edition .worked-steps li {
+  font-family: 'Kalam', cursive !important;
+  font-size: 21px !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+  color: #1e3a8a !important;
+  margin: 6px 0 !important;
+}
+
+.paper.royal-edition .worked-steps li::marker {
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 15px !important;
+  color: #c8a251 !important;
+}
+
+.paper.royal-edition .worked-answer p {
+  font-family: 'Kalam', cursive !important;
+  font-size: 23px !important;
+  font-weight: 700 !important;
+  color: #15803d !important;
+  margin: 0 !important;
+}
+
+/* Two-Up / Mini-Page scaled sizing for handwritten steps */
+.paper.royal-edition.is-mini .worked-item-card .worked-steps li {
+  font-size: 13.5px !important;
+  line-height: 1.3 !important;
+  margin: 2px 0 !important;
+}
+
+.paper.royal-edition.is-mini .worked-item-card .worked-answer p {
+  font-size: 14px !important;
+}
+
+.paper.royal-edition.is-mini .worked-steps li {
+  font-size: 15px !important;
+  line-height: 1.35 !important;
+  margin: 3px 0 !important;
+}
+
+.paper.royal-edition.is-mini .worked-answer p {
+  font-size: 16px !important;
+}
+
+/* Ensure clean print output for handwriting colors */
+@media print {
+  .paper.royal-edition .worked-steps li {
+    color: #1e3a8a !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .paper.royal-edition .worked-answer p {
+    color: #15803d !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
