@@ -5103,6 +5103,1614 @@
   ],
   "octoberSourceOrderSheets": [
     {
+      "id": "october-mcq-group-1-3",
+      "chapter": "place",
+      "title": "October · Choose (1 – 3)",
+      "tag": "First: Choose the correct answer · (1 – 3)",
+      "rule": "The first place to the right of the decimal point is tenths; the second place is hundredths; the third place is thousandths.",
+      "note": "Moving the point right increases the value.",
+      "sourceSection": "mcq",
+      "sourceNumber": "1–3",
+      "sourcePages": [
+        1
+      ],
+      "items": [
+        {
+          "label": "(1)",
+          "question": "Choose: The digit lies in the hundredth position in the number 0.367 is ......\n(a) 8   (b) 6   (c) 3   (d) 7",
+          "steps": [
+            "Look at the digits to the right of the decimal point in 0.367:",
+            "3 is in the tenths place (first position).",
+            "6 is in the hundredths place (second position).",
+            "7 is in the thousandths place (third position).",
+            "Therefore, the digit in the hundredth position is 6."
+          ],
+          "answer": "(b) 6",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(2)",
+          "question": "Choose: 9 tenths, 5 hundredths and 3 thousandths = ......\n(a) 0.359   (b) 0.539   (c) 0.935   (d) 0.953",
+          "steps": [
+            "There are no whole units, so write 0 before the decimal point: 0.",
+            "Tenths place = 9 → 0.9",
+            "Hundredths place = 5 → 0.95",
+            "Thousandths place = 3 → 0.953"
+          ],
+          "answer": "(d) 0.953",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(3)",
+          "question": "Choose: If the decimal number 4.56 is multiplied by 10, the result will be ......\n(a) 0.456   (b) 45.6   (c) 40.56   (d) 4.560",
+          "steps": [
+            "Start with 4.56.",
+            "Multiplying by 10 has 1 zero, so move the decimal point 1 place to the right.",
+            "4.56 → 45.6.",
+            "Notice: 4 ones became 4 tens, 5 tenths became 5 ones, 6 hundredths became 6 tenths."
+          ],
+          "answer": "(b) 45.6",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-mcq-group-4-6",
+      "chapter": "shift",
+      "title": "October · Choose (4 – 6)",
+      "tag": "First: Choose the correct answer · (4 – 6)",
+      "rule": "When a number is multiplied by 10, every digit shifts one place to the left, and its value increases by 10 times.",
+      "note": "5/100 is 0.05 (hundredths), and 7/1000 is 0.007 (thousandths).",
+      "sourceSection": "mcq",
+      "sourceNumber": "4–6",
+      "sourcePages": [
+        1
+      ],
+      "items": [
+        {
+          "label": "(4)",
+          "question": "Choose: If the decimal number 7.23 is multiplied by 10, then the value of the digit 2 will be ......\n(a) 20   (b) 2   (c) 0.2   (d) 0.02",
+          "steps": [
+            "In 7.23, the digit 2 is in the tenths place, so its original value is 0.2.",
+            "When multiplied by 10: 7.23 × 10 = 72.3.",
+            "In 72.3, the digit 2 is now in the ones place.",
+            "The value of 2 in the ones place is 2 (0.2 × 10 = 2)."
+          ],
+          "answer": "(b) 2",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(5)",
+          "question": "Choose: 6 + 0.2 + 0.07 + 0.004 = ......\n(a) 6.724   (b) 6.742   (c) 7.247   (d) 6.274",
+          "steps": [
+            "6 ones + 2 tenths + 7 hundredths + 4 thousandths = 6.274."
+          ],
+          "answer": "(d) 6.274",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(6)",
+          "question": "Choose: 8 + 0.3 + 5/100 + 7/1000 = ......\n(a) 7.538   (b) 8.753   (c) 8.357   (d) 7.835",
+          "steps": [
+            "8 ones + 3 tenths (0.3) + 5 hundredths (0.05) + 7 thousandths (0.007) = 8.357."
+          ],
+          "answer": "(c) 8.357",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-mcq-group-7-9",
+      "chapter": "compare",
+      "title": "October · Choose (7 – 9)",
+      "tag": "First: Choose the correct answer · (7 – 9)",
+      "rule": "Pad decimals with ending zeros to have equal decimal places before comparing.",
+      "note": "Compare from left to right: whole part, then tenths, then hundredths.",
+      "sourceSection": "mcq",
+      "sourceNumber": "7–9",
+      "sourcePages": [
+        1
+      ],
+      "items": [
+        {
+          "label": "(7)",
+          "question": "Choose: 3.405 > ......\n(a) 3.504   (b) 5.240   (c) 3.240   (d) 4.530",
+          "steps": [
+            "5.240 and 4.530 are > 3.405. For 3.504: tenths 5 > 4. For 3.240: tenths 2 < 4, so 3.405 > 3.240."
+          ],
+          "answer": "(c) 3.240",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(8)",
+          "question": "Which of the following is the greatest?\n(a) 0.8   (b) 0.18   (c) 0.08   (d) 1.8",
+          "steps": [
+            "1.8 has whole part 1, while all others have 0. Greatest is 1.8."
+          ],
+          "answer": "(d) 1.8",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(9)",
+          "question": "Which of the following is the smallest?\n(a) 12.33   (b) 12.30   (c) 12.03   (d) 12.13",
+          "steps": [
+            "All have whole part 12. Compare tenths: 12.03 has 0 tenths (smallest)."
+          ],
+          "answer": "(c) 12.03",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-mcq-group-10-12",
+      "chapter": "round",
+      "title": "October · Choose (10 – 12)",
+      "tag": "First: Choose the correct answer · (10 – 12)",
+      "rule": "Underline the target place. Look at the digit immediately to the right: if 0–4 keep it, if 5–9 add 1.",
+      "note": "2 is the ONLY even prime number; 3 is the smallest odd prime.",
+      "sourceSection": "mcq",
+      "sourceNumber": "10–12",
+      "sourcePages": [
+        1
+      ],
+      "items": [
+        {
+          "label": "(10)",
+          "question": "Choose: 13.623 ≈ ...... (to the nearest hundredth)\n(a) 13.6   (b) 13.5   (c) 13.62   (d) 13",
+          "steps": [
+            "Target is hundredths (2). Next digit is thousandths 3 < 5 → keep 13.62."
+          ],
+          "answer": "(c) 13.62",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(11)",
+          "question": "Choose: The result of estimating 3.08 + 7.324 using first digit on the left equals ......\n(a) 4   (b) 10   (c) 11   (d) 11.382",
+          "steps": [
+            "3.08 → 3 (leftmost). 7.324 → 7 (leftmost). Estimate: 3 + 7 = 10."
+          ],
+          "answer": "(b) 10",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(12)",
+          "question": "Choose: The number 40 is a common multiple for the two numbers ......\n(a) 4, 7   (b) 6, 5   (c) 8, 4   (d) 4, 6",
+          "steps": [
+            "40 is divisible by 4 (4 × 10 = 40) and by 8 (8 × 5 = 40).",
+            "40 is not divisible by 7 or 6. Thus, 40 is a common multiple of 8 and 4."
+          ],
+          "answer": "(c) 8 , 4",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-1-2",
+      "chapter": "add",
+      "title": "October · Questions (1 – 2)",
+      "tag": "Second: Answer each of the following · (1 – 2)",
+      "rule": "Line up decimal points vertically and add from right to left, carrying over when a sum is 10 or more.",
+      "note": "19 hundredths is written as 0.19 in decimal standard form.",
+      "sourceSection": "written",
+      "sourceNumber": "1–2",
+      "sourcePages": [
+        2
+      ],
+      "items": [
+        {
+          "label": "(1)",
+          "question": "Find the result of: 6.372 + 2.584 = ........................",
+          "steps": [
+            "Thousandths: 2+4=6. Hundredths: 7+8=15 (5, carry 1). Tenths: 3+5+1=9. Ones: 6+2=8.",
+            "Result: 8.956."
+          ],
+          "answer": "8.956",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(2)",
+          "question": "Find the result of: 34 hundredth - 15 hundredth = ........................",
+          "steps": [
+            "Subtract whole units: 34 − 15 = 19 hundredths.",
+            "Write as decimal: 19 hundredths = 0.19."
+          ],
+          "answer": "19 hundredths = 0.19",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-3-4",
+      "chapter": "story",
+      "title": "October · Questions (3 – 4)",
+      "tag": "Second: Answer each of the following · (3 – 4)",
+      "rule": "When a problem asks for 'total' or 'together', use addition.",
+      "note": "Look for '=': equal sign present = equation; no '=' = expression.",
+      "sourceSection": "written",
+      "sourceNumber": "3–4",
+      "sourcePages": [
+        2
+      ],
+      "items": [
+        {
+          "label": "(3)",
+          "question": "With Ahmed, there is a bag of oranges of mass 6.309 kilograms and a bag of apples of mass 3.932 kilograms, so find the total mass he has in kilograms.",
+          "steps": [
+            "Total mass = 6.309 + 3.932.",
+            "Add thousandths: 9+2=11 (carry 1); hundredths: 0+3+1=4; tenths: 3+9=12 (carry 1); ones: 6+3+1=10 → 10.241 kg."
+          ],
+          "answer": "Total mass = 10.241 kilograms",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(4)",
+          "question": "Which of the following represent an equation?\na) x + 24 = y\nb) 2x + 8",
+          "steps": [
+            "Option a: 'x + 24 = y' contains an equal sign (=) showing two equal sides.",
+            "Option b: '2x + 8' has an addition operation and a variable, but no equal sign.",
+            "Since an equation is defined as a mathematical statement containing an equal sign (=), option a is the equation."
+          ],
+          "answer": "a) x + 24 = y is an equation (b is a mathematical expression)",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-5-6",
+      "chapter": "u2-solve",
+      "title": "October · Questions (5 – 6)",
+      "tag": "Second: Answer each of the following · (5 – 6)",
+      "rule": "In a bar model: Whole = Part + Part. When the whole is unknown, add parts. When a part is unknown, subtract from the whole.",
+      "note": "2 is the ONLY even prime number; 3 is the smallest odd prime.",
+      "sourceSection": "written",
+      "sourceNumber": "5–6",
+      "sourcePages": [
+        2
+      ],
+      "items": [
+        {
+          "label": "(5)",
+          "question": "Find the value of A in the equation: 5.402 - A = 2.230",
+          "steps": [
+            "5.402 is the Whole, A is a missing Part: A = 5.402 − 2.230.",
+            "Calculate: 5.402 − 2.230 = 3.172. Check: 5.402 − 3.172 = 2.230."
+          ],
+          "answer": "A = 3.172",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(6)",
+          "question": "Find the smallest odd prime number.",
+          "steps": [
+            "Prime numbers: 2, 3, 5, 7, 11...",
+            "2 is the smallest prime, but it is EVEN. The next prime is 3, which is ODD."
+          ],
+          "answer": "3",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-7-8",
+      "chapter": "u2-factors",
+      "title": "October · Questions (7 – 8)",
+      "tag": "Second: Answer each of the following · (7 – 8)",
+      "rule": "To find a number from its prime factors, multiply them. GCF is the product of common prime factors.",
+      "note": "First number is 12, second number is 18; their common factors are 1, 2, 3, 6.",
+      "sourceSection": "written",
+      "sourceNumber": "7–8",
+      "sourcePages": [
+        2
+      ],
+      "items": [
+        {
+          "label": "(7)",
+          "question": "What is the number whose prime factors are 2, 3 and 3?",
+          "steps": [
+            "Multiply the prime factors: Number = 2 × 3 × 3 = 6 × 3 = 18."
+          ],
+          "answer": "The number is 18",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(8)",
+          "question": "Two numbers, the prime factors of the first are (2, 2, 3) and the prime factors of the second are (2, 3, 3), then find the greatest common factor of the two numbers.",
+          "steps": [
+            "Identify common prime factors: one 2 and one 3.",
+            "Product of common factors: GCF = 2 × 3 = 6."
+          ],
+          "answer": "GCF = 2 × 3 = 6",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-9-10",
+      "chapter": "u2-factors",
+      "title": "October · Questions (9 – 10)",
+      "tag": "Second: Answer each of the following · (9 – 10)",
+      "rule": "Multiples of a number are found by multiplying it by 0, 1, 2, 3, ... LCM is the smallest non-zero common multiple.",
+      "note": "For prime numbers with no common factor, LCM is simply their product.",
+      "sourceSection": "written",
+      "sourceNumber": "9–10",
+      "sourcePages": [
+        2
+      ],
+      "items": [
+        {
+          "label": "(9)",
+          "question": "Mention three multiples of the number 3.",
+          "steps": [
+            "3 × 1 = 3.",
+            "3 × 2 = 6.",
+            "3 × 3 = 9."
+          ],
+          "answer": "3, 6, 9",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(10)",
+          "question": "Mention three multiples of the number 7.",
+          "steps": [
+            "7 × 1 = 7.",
+            "7 × 2 = 14.",
+            "7 × 3 = 21."
+          ],
+          "answer": "7, 14, 21",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-11-12",
+      "chapter": "place",
+      "title": "October · Questions (11 – 12)",
+      "tag": "Second: Answer each of the following · (11 – 12)",
+      "rule": "A fraction with denominator 1,000 has 3 decimal places.",
+      "note": "× shifts right, ÷ shifts left.",
+      "sourceSection": "written",
+      "sourceNumber": "11–12",
+      "sourcePages": [
+        2
+      ],
+      "items": [
+        {
+          "label": "(11)",
+          "question": "Write the fraction 264/1,000 in a form of a decimal fraction.",
+          "steps": [
+            "The denominator is 1,000, which has 3 zeros.",
+            "This means there must be 3 digits after the decimal point.",
+            "Place the numerator 264 after the decimal point: 0.264.",
+            "Check: 2 tenths, 6 hundredths, 4 thousandths = 0.264."
+          ],
+          "answer": "264/1000 = 0.264",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(12)",
+          "question": "Find the result of: 0.459 × 100",
+          "steps": [
+            "Multiplying by 100 has 2 zeros, so shift decimal point 2 places to the right.",
+            "0.459 → 45.9."
+          ],
+          "answer": "0.459 × 100 = 45.9",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-13-14",
+      "chapter": "shift",
+      "title": "October · Questions (13 – 14)",
+      "tag": "Second: Answer each of the following · (13 – 14)",
+      "rule": "Multiply by 100: move point right 2 places. Divide by 10: move point left 1 place.",
+      "note": "Whole numbers have an invisible decimal point at the far right.",
+      "sourceSection": "written",
+      "sourceNumber": "13–14",
+      "sourcePages": [
+        2
+      ],
+      "items": [
+        {
+          "label": "(13)",
+          "question": "Find the result of: 7.23 ÷ 10",
+          "steps": [
+            "Dividing by 10 has 1 zero, so shift decimal point 1 place to the left.",
+            "7.23 → 0.723."
+          ],
+          "answer": "7.23 ÷ 10 = 0.723",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(14)",
+          "question": "A factory owner divides 9,568 pounds equally among 10 workers. Calculate the share of each worker.",
+          "steps": [
+            "Operation: 9,568 ÷ 10 = 9,568.0 ÷ 10.",
+            "Shift decimal point 1 place to the left: 956.8 pounds."
+          ],
+          "answer": "Share of each worker = 956.8 pounds",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-15-16",
+      "chapter": "shift",
+      "title": "October · Questions (15 – 16)",
+      "tag": "Second: Answer each of the following · (15 – 16)",
+      "rule": "Dividing whole amounts equally among 10 moves the point left 1 place. Multiplying moves digits to higher place values.",
+      "note": "A number can be decomposed in multiple valid ways.",
+      "sourceSection": "written",
+      "sourceNumber": "15–16",
+      "sourcePages": [
+        2
+      ],
+      "items": [
+        {
+          "label": "(15)",
+          "question": "Determine what happens to the digits in the number 3.675 when multiplied by 10.",
+          "steps": [
+            "Calculate: 3.675 × 10 = 36.75.",
+            "Each digit shifts 1 place to the left into a higher place value; its value increases 10 times."
+          ],
+          "answer": "Digits shift 1 place left; value increases 10 times",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(16)",
+          "question": "Write the decimal number 9.358 in expanded form.",
+          "steps": [
+            "9 is in ones (9), 3 is in tenths (0.3), 5 is in hundredths (0.05), 8 is in thousandths (0.008).",
+            "Expanded form: 9 + 0.3 + 0.05 + 0.008."
+          ],
+          "answer": "9.358 = 9 + 0.3 + 0.05 + 0.008",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-17-18",
+      "chapter": "compose",
+      "title": "October · Questions (17 – 18)",
+      "tag": "Second: Answer each of the following · (17 – 18)",
+      "rule": "Expanded form shows the sum of each digit multiplied by its place value.",
+      "note": "Always check for missing places and fill them with 0.",
+      "sourceSection": "written",
+      "sourceNumber": "17–18",
+      "sourcePages": [
+        2
+      ],
+      "items": [
+        {
+          "label": "(17)",
+          "question": "Decompose the number 0.247.",
+          "steps": [
+            "Way 1 (place values): 0.2 + 0.04 + 0.007.",
+            "Way 2 (tenths + remaining): 0.2 + 0.047.",
+            "Way 3 (hundredths + remaining): 0.24 + 0.007."
+          ],
+          "answer": "0.247 = 0.2 + 0.04 + 0.007",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(18)",
+          "question": "Compose the number: (9 × 1/1,000) + (5 × 1/10) + (6 × 1)",
+          "steps": [
+            "(6 × 1) = 6 ones. (5 × 1/10) = 0.5 (5 tenths). (9 × 1/1000) = 0.009 (9 thousandths).",
+            "Hundredths place is missing, so insert 0: 6.509."
+          ],
+          "answer": "6.509",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-19-19",
+      "chapter": "compose",
+      "title": "October · Questions (19)",
+      "tag": "Second: Answer each of the following · (19)",
+      "rule": "Multiply each digit by its unit factor, then add. In a place value table, write each digit in its designated column.",
+      "note": "Always check for missing places and fill them with 0.",
+      "sourceSection": "written",
+      "sourceNumber": "19",
+      "sourcePages": [
+        2
+      ],
+      "items": [
+        {
+          "label": "(19)",
+          "question": "Express the number 4.369 in a place value table, and then decompose it in three different ways.",
+          "steps": [
+            "Ones = 4; tenths = 3; hundredths = 6; thousandths = 9.",
+            "Way 1: 4 + 0.3 + 0.06 + 0.009.",
+            "Way 2: 4 + 0.36 + 0.009.",
+            "Way 3: 4.3 + 0.069."
+          ],
+          "answer": "4.369 = 4 + 0.3 + 0.06 + 0.009 = 4 + 0.36 + 0.009 = 4.3 + 0.069",
+          "model": {
+            "type": "place",
+            "number": "0004.369"
+          },
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-20-21",
+      "chapter": "compare",
+      "title": "October · Questions (20 – 21)",
+      "tag": "Second: Answer each of the following · (20 – 21)",
+      "rule": "Convert verbal unit forms into standard decimal numbers before comparing.",
+      "note": "Whole number comparison comes before decimal comparison.",
+      "sourceSection": "written",
+      "sourceNumber": "20–21",
+      "sourcePages": [
+        2
+      ],
+      "items": [
+        {
+          "label": "(20)",
+          "question": "Compare between the two decimal numbers: 4.895 and 4.598",
+          "steps": [
+            "Both have whole part 4. Compare tenths: 8 tenths in 4.895 vs 5 tenths in 4.598.",
+            "Since 8 > 5: 4.895 > 4.598."
+          ],
+          "answer": "4.895 > 4.598",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(21)",
+          "question": "Compare between: (3 tenths, 7 hundredths and 2 thousandths) and 3.217",
+          "steps": [
+            "Convert to decimal: 3 tenths + 7 hundredths + 2 thousandths = 0.372.",
+            "Compare 0.372 (whole 0) with 3.217 (whole 3). Since 0 < 3: 0.372 < 3.217."
+          ],
+          "answer": "(3 tenths, 7 hundredths and 2 thousandths) < 3.217",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-22-23",
+      "chapter": "compare",
+      "title": "October · Questions (22 – 23)",
+      "tag": "Second: Answer each of the following · (22 – 23)",
+      "rule": "Ascending order means from smallest to greatest. When writing a number just in hundredths, it must have exactly 2 decimal places.",
+      "note": "6.330 is greater than 6.324.",
+      "sourceSection": "written",
+      "sourceNumber": "22–23",
+      "sourcePages": [
+        2
+      ],
+      "items": [
+        {
+          "label": "(22)",
+          "question": "Arrange ascendingly: 3.408, 6.097, 3.804 and 6.907",
+          "steps": [
+            "Compare 3s: 3.408 < 3.804. Compare 6s: 6.097 < 6.907.",
+            "Order from least to greatest: 3.408 , 3.804 , 6.097 , 6.907."
+          ],
+          "answer": "3.408 , 3.804 , 6.097 , 6.907",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(23)",
+          "question": "Write a decimal number greater than the decimal number 6.324 just in hundredth.",
+          "steps": [
+            "6.324 has whole 6, tenths 3, hundredths 2. In hundredths, 6.33 = 6.330 > 6.324."
+          ],
+          "answer": "6.33  (or 6.34, 6.35)",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-24-25",
+      "chapter": "round",
+      "title": "October · Questions (24 – 25)",
+      "tag": "Second: Answer each of the following · (24 – 25)",
+      "rule": "Underline the target place. Look at the digit immediately to the right: if 0–4 keep it, if 5–9 add 1.",
+      "note": "Nearest unit means nearest whole number (no decimal part).",
+      "sourceSection": "written",
+      "sourceNumber": "24–25",
+      "sourcePages": [
+        2
+      ],
+      "items": [
+        {
+          "label": "(24)",
+          "question": "Round the number 22.624 to the nearest tenth.",
+          "steps": [
+            "Target is tenths (6). Next digit is hundredths 2 < 5 → keep 22.6."
+          ],
+          "answer": "22.624 ≈ 22.6",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(25)",
+          "question": "Round the number 12.34 to the nearest unit.",
+          "steps": [
+            "Target is ones (2). Next digit is tenths 3 < 5 → keep 12."
+          ],
+          "answer": "12.34 ≈ 12",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-26-27",
+      "chapter": "round",
+      "title": "October · Questions (26 – 27)",
+      "tag": "Second: Answer each of the following · (26 – 27)",
+      "rule": "Apply the rounding rule to each target place from the original number.",
+      "note": "Nearest unit means nearest whole number (no decimal part).",
+      "sourceSection": "written",
+      "sourceNumber": "26–27",
+      "sourcePages": [
+        3
+      ],
+      "items": [
+        {
+          "label": "(26)",
+          "question": "Round the number 7.346 to the nearest hundredth.",
+          "steps": [
+            "Target is hundredths (4). Next digit is thousandths 6 ≥ 5 → round up to 7.35."
+          ],
+          "answer": "7.346 ≈ 7.35",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(27)",
+          "question": "Round the number 6.9832 to the nearest thousandth.",
+          "steps": [
+            "Target is thousandths (3). Next digit is ten-thousandths 2 < 5 → keep 6.983."
+          ],
+          "answer": "6.9832 ≈ 6.983",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-28-29",
+      "chapter": "round",
+      "title": "October · Questions (28 – 29)",
+      "tag": "Second: Answer each of the following · (28 – 29)",
+      "rule": "Compare the rounded result with the original number to see which place value was kept.",
+      "note": "Rounding to tenths provides a very close estimate to the actual sum.",
+      "sourceSection": "written",
+      "sourceNumber": "28–29",
+      "sourcePages": [
+        3
+      ],
+      "items": [
+        {
+          "label": "(28)",
+          "question": "Determine the type of rounding applied to the number 6.653 to be 6.7.",
+          "steps": [
+            "The original number is 6.653.",
+            "The rounded number is 6.7.",
+            "Notice that 6.7 has exactly 1 digit after the decimal point (the tenths place).",
+            "In 6.653, the tenths digit is 6. The next digit is hundredths 5.",
+            "Since 5 ≥ 5, the tenths digit 6 rounds up to 7, giving 6.7.",
+            "Therefore, the rounding was to the nearest tenth."
+          ],
+          "answer": "Rounding to the nearest tenth (or to one decimal place)",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(29)",
+          "question": "Estimating the addition operation: 4.823 + 3.157 using rounding strategy to the nearest tenth, then find the sum.",
+          "steps": [
+            "4.823 rounds to 4.8; 3.157 rounds to 3.2. Estimated sum = 4.8 + 3.2 = 8.0 = 8.",
+            "Actual sum: 4.823 + 3.157 = 7.98."
+          ],
+          "answer": "Estimated sum = 8  |  Actual sum = 7.98",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-30-31",
+      "chapter": "estimate",
+      "title": "October · Questions (30 – 31)",
+      "tag": "Second: Answer each of the following · (30 – 31)",
+      "rule": "Front-end estimation (first digit from the left): keep the leftmost digit and replace all other digits with zeros.",
+      "note": "Rounding to tenths provides a very close estimate to the actual sum.",
+      "sourceSection": "written",
+      "sourceNumber": "30–31",
+      "sourcePages": [
+        3
+      ],
+      "items": [
+        {
+          "label": "(30)",
+          "question": "Estimating the addition operation: 6.341 + 4.912 using the first digit on the left estimation strategy, then find the sum.",
+          "steps": [
+            "6.341 → 6; 4.912 → 4. Estimated sum = 6 + 4 = 10.",
+            "Actual sum: 6.341 + 4.912 = 11.253."
+          ],
+          "answer": "Estimated sum = 10  |  Actual sum = 11.253",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(31)",
+          "question": "Estimate the addition operation: 3.452 + 7.231 using a preferred strategy, then find the sum.",
+          "steps": [
+            "Rounding to nearest whole: 3.452 ≈ 3 and 7.231 ≈ 7. Estimated sum = 3 + 7 = 10.",
+            "Actual sum: 3.452 + 7.231 = 10.683."
+          ],
+          "answer": "Estimated sum = 10  |  Actual sum = 10.683",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-32-32",
+      "chapter": "add",
+      "title": "October · Questions (32)",
+      "tag": "Second: Answer each of the following · (32)",
+      "rule": "Hundredths model: shade both amounts. Place value table: align digits by column and add from right to left.",
+      "note": "Always regroup 10 hundredths into 1 tenth.",
+      "sourceSection": "written",
+      "sourceNumber": "32",
+      "sourcePages": [
+        3
+      ],
+      "items": [
+        {
+          "label": "(32)",
+          "question": "Find the result of: 0.15 + 0.45 using the given model.",
+          "steps": [
+            "Shade 15 squares for 0.15 and 45 squares for 0.45.",
+            "Total shaded squares = 15 + 45 = 60 squares out of 100 = 0.60 = 0.6."
+          ],
+          "answer": "0.15 + 0.45 = 0.60 (or 0.6)",
+          "model": {
+            "type": "grid",
+            "parts": [
+              15,
+              45
+            ],
+            "caption": "15 hundredths + 45 hundredths = 60 hundredths = 0.60"
+          },
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-33-33",
+      "chapter": "add",
+      "title": "October · Questions (33)",
+      "tag": "Second: Answer each of the following · (33)",
+      "rule": "Hundredths model: shade both amounts. Place value table: align digits by column and add from right to left.",
+      "note": "Always regroup 10 hundredths into 1 tenth.",
+      "sourceSection": "written",
+      "sourceNumber": "33",
+      "sourcePages": [
+        3
+      ],
+      "items": [
+        {
+          "label": "(33)",
+          "question": "Find the result of: 7.345 + 2.274 using the place value table.",
+          "steps": [
+            "Align: Thousandths: 5+4=9. Hundredths: 4+7=11 (1, carry 1). Tenths: 3+2+1=6. Ones: 7+2=9.",
+            "Result = 9.619."
+          ],
+          "answer": "7.345 + 2.274 = 9.619",
+          "model": {
+            "type": "place",
+            "rows": [
+              "0007.345",
+              "0002.274",
+              "0009.619"
+            ]
+          },
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-34-34",
+      "chapter": "add",
+      "title": "October · Questions (34)",
+      "tag": "Second: Answer each of the following · (34)",
+      "rule": "Line up decimal points vertically and add from right to left, carrying over when a sum is 10 or more.",
+      "note": "The source says subtracting, but both printed signs are +. Follow the printed + signs and add.",
+      "sourceSection": "written",
+      "sourceNumber": "34",
+      "sourcePages": [
+        3
+      ],
+      "items": [
+        {
+          "label": "(34)",
+          "question": "Find the result of subtracting each of the following using the standard algorithm:\na) 5.392 + 3.514\nb) 12.631 + 34.259",
+          "steps": [
+            "(a) 2+4=6; 9+1=10 (0, carry 1); 3+5+1=9; 5+3=8 → 8.906.",
+            "(b) 1+9=10 (0, carry 1); 3+5+1=9; 6+2=8; 2+4=6; 1+3=4 → 46.89."
+          ],
+          "answer": "(a) 8.906   (b) 46.89",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-35-35",
+      "chapter": "subtract",
+      "title": "October · Questions (35)",
+      "tag": "Second: Answer each of the following · (35)",
+      "rule": "Subtract quantities with the same unit name directly. For grids, shade the start and cross out the subtracted part.",
+      "note": "19 hundredths is written as 0.19 in decimal standard form.",
+      "sourceSection": "written",
+      "sourceNumber": "35",
+      "sourcePages": [
+        3
+      ],
+      "items": [
+        {
+          "label": "(35)",
+          "question": "Find the result of: 0.65 - 0.22 using the given model.",
+          "steps": [
+            "Shade 65 squares on a hundredths grid, then cross out 22 squares.",
+            "Count remaining shaded squares: 65 − 22 = 43 squares = 0.43."
+          ],
+          "answer": "0.65 − 0.22 = 0.43",
+          "model": {
+            "type": "grid",
+            "parts": [
+              65
+            ],
+            "removed": 22,
+            "caption": "65 hundredths − 22 hundredths = 43 hundredths = 0.43"
+          },
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-36-37",
+      "chapter": "subtract",
+      "title": "October · Questions (36 – 37)",
+      "tag": "Second: Answer each of the following · (36 – 37)",
+      "rule": "Line up decimal points. When a top digit is smaller than the bottom digit, borrow 1 from the next column to the left.",
+      "note": "Check remaining + covered: 13.155 + 22.192 = 35.347 km.",
+      "sourceSection": "written",
+      "sourceNumber": "36–37",
+      "sourcePages": [
+        3
+      ],
+      "items": [
+        {
+          "label": "(36)",
+          "question": "Find the result of subtracting each of the following using the standard algorithm:\na) 5.592 - 3.584\nb) 34.259 - 12.137",
+          "steps": [
+            "Part a: 5.592 − 3.584:\n- Thousandths: 2 < 4, borrow from 9 (9 becomes 8, 2 becomes 12): 12 − 4 = 8.\n- Hundredths: 8 − 8 = 0.\n- Tenths: 5 − 5 = 0.\n- Ones: 5 − 3 = 2 → Result: 2.008.",
+            "Part b: 34.259 − 12.137:\n- Thousandths: 9 − 7 = 2.\n- Hundredths: 5 − 3 = 2.\n- Tenths: 2 − 1 = 1.\n- Ones: 4 − 2 = 2. Tens: 3 − 1 = 2 → Result: 22.122."
+          ],
+          "answer": "a) 5.592 − 3.584 = 2.008\nb) 34.259 − 12.137 = 22.122",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(37)",
+          "question": "Huda bought a silver ring of mass 3.245 grams, and Mona bought a chain of mass 5.318 grams. Calculate the difference between the two masses, then find the actual difference between the masses.",
+          "steps": [
+            "Estimated difference (nearest whole): 5 − 3 = 2 grams.",
+            "Actual difference: 5.318 − 3.245 = 2.073 grams (8−5=3; 11−4=7; 2−2=0; 5−3=2)."
+          ],
+          "answer": "Estimated diff ≈ 2 g  |  Actual diff = 2.073 grams",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-38-39",
+      "chapter": "story",
+      "title": "October · Questions (38 – 39)",
+      "tag": "Second: Answer each of the following · (38 – 39)",
+      "rule": "Difference = larger amount − smaller amount. Remaining = total distance − covered distance.",
+      "note": "Always write the correct unit (kg, pounds) after your answer.",
+      "sourceSection": "written",
+      "sourceNumber": "38–39",
+      "sourcePages": [
+        3
+      ],
+      "items": [
+        {
+          "label": "(38)",
+          "question": "A road is 35.347 kilometers long, and the train has covered 22.192 kilometers of it. Calculate the remaining distance.",
+          "steps": [
+            "Remaining distance = 35.347 − 22.192.",
+            "Thousandths: 7−2=5; hundredths: 14−9=5; tenths: 2−1=1; ones: 5−2=3; tens: 3−2=1 → 13.155 km."
+          ],
+          "answer": "Remaining distance = 13.155 kilometers",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(39)",
+          "question": "Seham has 25.25 pounds, and her sister Asma has 19.75 pounds. Find the total amount they both have.",
+          "steps": [
+            "Total = 25.25 + 19.75.",
+            "Hundredths: 5+5=10 (carry 1); tenths: 2+7+1=10 (carry 1); ones: 5+9+1=15 (carry 1); tens: 2+1+1=4 → 45.00 pounds."
+          ],
+          "answer": "Total money = 45 pounds",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-40-40",
+      "chapter": "u2-story",
+      "title": "October · Questions (40)",
+      "tag": "Second: Answer each of the following · (40)",
+      "rule": "Use a letter (variable) for the unknown amount and write the relationship as an equation.",
+      "note": "A variable represents an unknown quantity described in the story.",
+      "sourceSection": "written",
+      "sourceNumber": "40",
+      "sourcePages": [
+        3
+      ],
+      "items": [
+        {
+          "label": "(40)",
+          "question": "Write the equation that represents: The sum of two numbers is 28.73. If the first number is 15.06, what is the other number?",
+          "steps": [
+            "Let unknown number be x. Equation: 15.06 + x = 28.73.",
+            "Solve: x = 28.73 − 15.06 = 13.67."
+          ],
+          "answer": "Equation: 15.06 + x = 28.73  (x = 13.67)",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-41-41",
+      "chapter": "u2-story",
+      "title": "October · Questions (41)",
+      "tag": "Second: Answer each of the following · (41)",
+      "rule": "Use a letter (variable) for the unknown amount and write the relationship as an equation.",
+      "note": "A variable represents an unknown quantity described in the story.",
+      "sourceSection": "written",
+      "sourceNumber": "41",
+      "sourcePages": [
+        3
+      ],
+      "items": [
+        {
+          "label": "(41)",
+          "question": "Mohamad caught a fish of mass 1.367 kilograms, and another fish of mass 1.529 kilograms. Mohamad wrote the following equation: X = 1.367 + 1.529. Write what X represents.",
+          "steps": [
+            "1.367 kg is first fish; 1.529 kg is second fish.",
+            "Adding them gives the total combined mass.",
+            "X represents the total mass of the two fish in kilograms."
+          ],
+          "answer": "X represents total mass of the two fish in kilograms",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "october-written-group-42-43",
+      "chapter": "u2-solve",
+      "title": "October · Questions (42 – 43)",
+      "tag": "Second: Answer each of the following · (42 – 43)",
+      "rule": "In a bar model: Whole = Part + Part. When the whole is unknown, add parts. When a part is unknown, subtract from the whole.",
+      "note": "For prime numbers with no common factor, LCM is simply their product.",
+      "sourceSection": "written",
+      "sourceNumber": "42–43",
+      "sourcePages": [
+        3
+      ],
+      "items": [
+        {
+          "label": "(42)",
+          "question": "Find the value of the unknown in the following equations using the part-to-whole bar model:\na) D - 2.405 = 3.712\nb) 5.391 + N = 8.207",
+          "steps": [
+            "(a) D is the Whole (top): D = 2.405 + 3.712 = 6.117.",
+            "(b) 8.207 is the Whole (top): N = 8.207 − 5.391 = 2.816."
+          ],
+          "answer": "(a) D = 6.117   (b) N = 2.816",
+          "model": null,
+          "column": null
+        },
+        {
+          "label": "(43)",
+          "question": "Find the least common multiple of the numbers:\na) 14 and 21\nb) 42 and 30\nc) 48 and 36\nd) 5 and 11",
+          "steps": [
+            "(a) 14 = 2×7, 21 = 3×7 → LCM = 2×3×7 = 42.",
+            "(b) 42 = 2×3×7, 30 = 2×3×5 → LCM = 2×3×5×7 = 210.",
+            "(c) 48 = 16×3, 36 = 4×9 → LCM = 16×9 = 144.",
+            "(d) 5 and 11 are primes → LCM = 5 × 11 = 55."
+          ],
+          "answer": "(a) 42   (b) 210   (c) 144   (d) 55",
+          "model": null,
+          "column": null
+        }
+      ]
+    },
+    {
+      "id": "booklet-u1-l1",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Decimals to Thousandths",
+      "tag": "Minia British School · Homework Booklet · U1 L1",
+      "rule": "In standard decimal form, every place right of the decimal point must be accounted for. If a place has no value, insert a zero placeholder (0 tenths = .0). \"Thousandths\" means exactly 3 decimal places.",
+      "question": "From Booklet p. 4, Q(3c) & Q(2b): (1) Write in standard form: \"6 units, 4 hundredths and 5 thousandths\". (2) Write standard form of \"4 tenths and 8 thousandths\".",
+      "steps": [
+        "Step 1: Identify place values for (1): Units (ones) = 6. Tenths place is omitted, so tenths = 0. Hundredths = 4. Thousandths = 5.",
+        "Step 2: Combine places: 6 ones + 0 tenths + 4 hundredths + 5 thousandths = 6.045.",
+        "Step 3: Identify place values for (2): Ones = 0. Tenths = 4. Hundredths place is omitted = 0. Thousandths = 8.",
+        "Step 4: Combine places: 0.408 (Notice: 0.48 would be 48 hundredths, not thousandths)."
+      ],
+      "answer": "(1) 6.045  |  (2) 0.408",
+      "note": "Never skip missing place values! When tenths are missing between units and hundredths, always insert a 0 placeholder.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 4 Q(3c)",
+          "question": "Write in standard form: \"6 units, 4 hundredths and 5 thousandths\".",
+          "steps": [
+            "Identify place values: Units (ones) = 6. Tenths place is omitted = 0. Hundredths = 4. Thousandths = 5.",
+            "Combine places: 6 ones + 0 tenths + 4 hundredths + 5 thousandths = 6.045."
+          ],
+          "answer": "6.045"
+        },
+        {
+          "label": "Question 2 · Booklet p. 4 Q(2b)",
+          "question": "Write standard form of: \"4 tenths and 8 thousandths\".",
+          "steps": [
+            "Identify place values: Ones = 0. Tenths = 4. Hundredths place is omitted = 0. Thousandths = 8.",
+            "Combine places: 0.408 (Notice: 0.48 would be 48 hundredths, not thousandths)."
+          ],
+          "answer": "0.408"
+        }
+      ]
+    },
+    {
+      "id": "booklet-u1-l2",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Place Value Shuffle",
+      "tag": "Minia British School · Homework Booklet · U1 L2",
+      "rule": "To make the greatest decimal less than 10 from given digits, the whole number (ones) part must be the greatest single digit available under 10. Then place remaining digits in descending order after the decimal point.",
+      "question": "From Booklet p. 5, Q(3b): Rearrange the digits 3, 5, 1, 8 (with a decimal point) to form the greatest decimal less than 10.",
+      "steps": [
+        "Step 1: Understand the constraint \"less than 10\": The number can only have a single whole number digit (ones place), because two whole digits would be ≥ 10.",
+        "Step 2: Pick the greatest available digit for the ones place: The digits are {1, 3, 5, 8}. The greatest is 8, so ones = 8 (giving 8.xxx < 10).",
+        "Step 3: Arrange remaining digits {5, 3, 1} descending to maximize value: Tenths = 5, Hundredths = 3, Thousandths = 1.",
+        "Step 4: Verify: 8.531 is less than 10 and greater than all other combinations (8.513, 8.351, 8.315, etc.)."
+      ],
+      "answer": "8.531",
+      "note": "The ones place has the largest impact on value. Setting 8 as the whole number ensures the maximum decimal value under 10."
+    },
+    {
+      "id": "booklet-u1-l3",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Composing & Decomposing",
+      "tag": "Minia British School · Homework Booklet · U1 L3",
+      "rule": "A decimal is decomposed into Expanded Form by writing the sum of the values of each non-zero digit. Zero digits indicate empty places and are omitted in standard expanded addition.",
+      "question": "From Booklet p. 6, Q(3a) & Q(2a): (1) Decompose 12.408 into expanded form and word units. (2) Identify the sum equivalent to 4.503.",
+      "steps": [
+        "Step 1: Determine the value of each digit in 12.408: 1 ten = 10, 2 ones = 2, 4 tenths = 0.4, 0 hundredths (omitted), 8 thousandths = 0.008.",
+        "Step 2: Write Expanded Form: 12.408 = 10 + 2 + 0.4 + 0.008.",
+        "Step 3: Write Unit Form: 1 ten, 2 ones, 4 tenths, 8 thousandths (or 12 ones and 408 thousandths).",
+        "Step 4: Check 4.503: 4 ones + 5 tenths (0.5) + 3 thousandths (0.003) = 4 + 0.5 + 0.003."
+      ],
+      "answer": "(1) 12.408 = 10 + 2 + 0.4 + 0.008  |  (2) 4 + 0.5 + 0.003",
+      "note": "Distinguish 0.008 from 0.08! Thousandths have two zeros between the decimal point and the digit when tenths and hundredths are zero.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 6 Q(3a)",
+          "question": "Decompose 12.408 into expanded form and word units.",
+          "steps": [
+            "Determine digit values: 1 ten = 10, 2 ones = 2, 4 tenths = 0.4, 0 hundredths, 8 thousandths = 0.008.",
+            "Expanded Form: 12.408 = 10 + 2 + 0.4 + 0.008.",
+            "Unit Form: 1 ten, 2 ones, 4 tenths, 8 thousandths."
+          ],
+          "answer": "12.408 = 10 + 2 + 0.4 + 0.008"
+        },
+        {
+          "label": "Question 2 · Booklet p. 6 Q(2a)",
+          "question": "Identify the sum equivalent to 4.503.",
+          "steps": [
+            "Break down 4.503: 4 ones (4) + 5 tenths (0.5) + 3 thousandths (0.003).",
+            "Combine parts: 4 + 0.5 + 0.003."
+          ],
+          "answer": "4 + 0.5 + 0.003"
+        }
+      ]
+    },
+    {
+      "id": "booklet-u1-l4",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Comparing Decimals",
+      "tag": "Minia British School · Homework Booklet · U1 L4",
+      "rule": "To compare or order decimals with different numbers of decimal digits, pad shorter decimals with trailing zeros until all numbers have equal decimal places (thousandths).",
+      "question": "From Booklet p. 7, Q(3a) & Q(3b): (1) Order from least to greatest: 2.45 , 2.4 , 2.405 , 2.54. (2) Order from greatest to least: 0.7 , 0.07 , 0.77 , 0.707.",
+      "steps": [
+        "Step 1: Equalize places for set (1) to thousandths: 2.450 , 2.400 , 2.405 , 2.540.",
+        "Step 2: Compare decimal parts: 400 < 405 < 450 < 540. Order: 2.4 < 2.405 < 2.45 < 2.54.",
+        "Step 3: Equalize places for set (2) to thousandths: 0.700 , 0.070 , 0.770 , 0.707.",
+        "Step 4: Compare from greatest to least: 770 > 707 > 700 > 70. Order: 0.77 > 0.707 > 0.7 > 0.07."
+      ],
+      "answer": "(1) Least to greatest: 2.4 , 2.405 , 2.45 , 2.54  |  (2) Greatest to least: 0.77 , 0.707 , 0.7 , 0.07",
+      "note": "More digits does not mean greater value! 2.405 has 4 digits but is smaller than 2.45 (2.450). Always pad zeros first.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 7 Q(3a)",
+          "question": "Order from least to greatest: 2.45 , 2.4 , 2.405 , 2.54.",
+          "steps": [
+            "Equalize places to thousandths: 2.450 , 2.400 , 2.405 , 2.540.",
+            "Compare decimal parts: 400 < 405 < 450 < 540.",
+            "Ascending order: 2.4 < 2.405 < 2.45 < 2.54."
+          ],
+          "answer": "2.4 , 2.405 , 2.45 , 2.54"
+        },
+        {
+          "label": "Question 2 · Booklet p. 7 Q(3b)",
+          "question": "Order from greatest to least: 0.7 , 0.07 , 0.77 , 0.707.",
+          "steps": [
+            "Equalize places to thousandths: 0.700 , 0.070 , 0.770 , 0.707.",
+            "Compare decimal parts: 770 > 707 > 700 > 70.",
+            "Descending order: 0.77 > 0.707 > 0.7 > 0.07."
+          ],
+          "answer": "0.77 , 0.707 , 0.7 , 0.07"
+        }
+      ]
+    },
+    {
+      "id": "booklet-u1-l5",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Rounding Decimals",
+      "tag": "Minia British School · Homework Booklet · U1 L5",
+      "rule": "When rounding to the nearest hundredth, inspect the thousandths digit. If the rounding place is 9 and we round up, the carry cascades to tenths and ones places.",
+      "question": "From Booklet p. 8, Q(3a) & Q(3b): (1) Round 0.999 to the nearest hundredth. (2) Round 11.98 to the nearest tenth.",
+      "steps": [
+        "Step 1: For 0.999 to hundredths: Underline hundredths: 0.99[9]. Look at thousandths digit (9).",
+        "Step 2: Since 9 ≥ 5, round up: 9 hundredths + 1 = 10 (write 0, carry 1 to tenths) → 9 tenths + 1 = 10 (write 0, carry 1 to ones) → 0 + 1 = 1.",
+        "Step 3: Result: 1.00 (Must keep two decimal zeros to show hundredths precision!).",
+        "Step 4: For 11.98 to tenths: Underline tenths: 11.9[8]. Hundredths digit is 8 ≥ 5 → round up: 9 + 1 = 10 tenths → 12.0."
+      ],
+      "answer": "(1) 0.999 ≈ 1.00 (nearest hundredth)  |  (2) 11.98 ≈ 12.0 (nearest tenth)",
+      "note": "Keep the trailing zeros! Writing 1 instead of 1.00 loses the specified hundredths precision required on exams.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 8 Q(3a)",
+          "question": "Round 0.999 to the nearest hundredth.",
+          "steps": [
+            "Underline hundredths digit: 0.99[9]. Look at thousandths digit (9).",
+            "9 ≥ 5 → round up: 9 hundredths + 1 = 10 (carry 1 to tenths) → 9 + 1 = 10 (carry 1 to ones) → 1.00.",
+            "Keep two decimal zeros to show hundredths precision."
+          ],
+          "answer": "0.999 ≈ 1.00"
+        },
+        {
+          "label": "Question 2 · Booklet p. 8 Q(3b)",
+          "question": "Round 11.98 to the nearest tenth.",
+          "steps": [
+            "Underline tenths digit: 11.9[8]. Hundredths digit is 8 ≥ 5.",
+            "Round up: 9 tenths + 1 = 10 tenths → carry 1 to ones: 11 + 1 = 12.0."
+          ],
+          "answer": "11.98 ≈ 12.0"
+        }
+      ]
+    },
+    {
+      "id": "booklet-u1-l6",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Estimating Sums",
+      "tag": "Minia British School · Homework Booklet · U1 L6",
+      "rule": "To estimate decimal sums, rounding to the nearest whole number gives a very practical and accurate benchmark for everyday money and measurements.",
+      "question": "From Booklet p. 9, Q(3b) & Q(4a): (1) Estimate then add: 12.34 + 7.85. (2) Ahmed bought a book for 18.75 L.E and a pen for 6.30 L.E. Estimate the total cost.",
+      "steps": [
+        "Step 1: Estimate 12.34 + 7.85 by rounding to nearest whole: 12.34 rounds to 12; 7.85 rounds to 8. Estimate: 12 + 8 = 20.",
+        "Step 2: Calculate actual sum: 12.34 + 7.85 = 20.19. The estimate 20 is close and reasonable (diff = 0.19).",
+        "Step 3: Estimate Ahmed purchases: 18.75 L.E rounds to 19 L.E; 6.30 L.E rounds to 6 L.E.",
+        "Step 4: Estimated total: 19 + 6 = 25 L.E (Actual total = 18.75 + 6.30 = 25.05 L.E; diff = only 0.05 L.E!)."
+      ],
+      "answer": "(1) Estimate ≈ 20 (Actual = 20.19)  |  (2) Estimated total ≈ 25 L.E (Actual = 25.05 L.E)",
+      "note": "Always compare your estimate with the exact sum to confirm that your calculated answer makes sense.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 9 Q(3b)",
+          "question": "Estimate then add: 12.34 + 7.85.",
+          "steps": [
+            "Round to nearest whole: 12.34 rounds to 12; 7.85 rounds to 8.",
+            "Estimate: 12 + 8 = 20. Actual: 12.34 + 7.85 = 20.19 (Reasonable, diff = 0.19)."
+          ],
+          "answer": "Estimate ≈ 20  (Actual = 20.19)"
+        },
+        {
+          "label": "Question 2 · Booklet p. 9 Q(4a)",
+          "question": "Ahmed bought a book for 18.75 L.E and a pen for 6.30 L.E. Estimate the total cost.",
+          "steps": [
+            "Round purchases: 18.75 L.E rounds to 19 L.E; 6.30 L.E rounds to 6 L.E.",
+            "Estimated total: 19 + 6 = 25 L.E. (Actual: 18.75 + 6.30 = 25.05 L.E, diff = 0.05 L.E)."
+          ],
+          "answer": "Estimated total ≈ 25 L.E  (Actual = 25.05 L.E)"
+        }
+      ]
+    },
+    {
+      "id": "booklet-u1-l7",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Adding Decimals",
+      "tag": "Minia British School · Homework Booklet · U1 L7",
+      "rule": "To add three decimals with varying lengths, align every decimal point vertically, pad missing places with zeros, and add from right to left with regrouping.",
+      "question": "From Booklet p. 10, Q(3b) & Q(2a): (1) Find: 12.4 + 6.35 + 0.08. (2) Calculate 14.56 + 9.89.",
+      "steps": [
+        "Step 1: Align vertically and pad 12.4 to 12.40: 12.40 + 6.35 + 0.08.",
+        "Step 2: Add hundredths column: 0 + 5 + 8 = 13 hundredths → write 3, carry 1 to tenths.",
+        "Step 3: Add tenths column: 1 (carried) + 4 + 3 + 0 = 8 tenths.",
+        "Step 4: Add whole numbers: 12 + 6 + 0 = 18 ones → Result = 18.83.",
+        "Step 5: For (2): 14.56 + 9.89: 6 + 9 = 15 (5, carry 1); 1 + 5 + 8 = 14 (4, carry 1); 1 + 14 + 9 = 24 → 24.45."
+      ],
+      "column": {
+        "lines": [
+          "   1     (carried)",
+          "  12.40",
+          "+  6.35",
+          "+  0.08",
+          "-------",
+          "  18.83"
+        ]
+      },
+      "answer": "(1) 18.83  |  (2) 24.45",
+      "note": "Pad 12.4 with a zero so it becomes 12.40. Misaligning tenths with hundredths is the most frequent calculation error.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 10 Q(3b)",
+          "question": "Find: 12.4 + 6.35 + 0.08.",
+          "steps": [
+            "Pad 12.4 to 12.40 and align: 12.40 + 6.35 + 0.08.",
+            "Hundredths: 0 + 5 + 8 = 13 (write 3, carry 1). Tenths: 1 + 4 + 3 + 0 = 8. Ones: 12 + 6 = 18."
+          ],
+          "answer": "18.83"
+        },
+        {
+          "label": "Question 2 · Booklet p. 10 Q(2a)",
+          "question": "Calculate: 14.56 + 9.89.",
+          "steps": [
+            "Align vertically: 14.56 + 9.89.",
+            "Hundredths: 6 + 9 = 15 (5, carry 1). Tenths: 1 + 5 + 8 = 14 (4, carry 1). Ones: 1 + 14 + 9 = 24."
+          ],
+          "answer": "24.45"
+        }
+      ]
+    },
+    {
+      "id": "booklet-u1-l8",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Modeling Subtraction",
+      "tag": "Minia British School · Homework Booklet · U1 L8",
+      "rule": "When subtracting a decimal from a whole number, rewrite the whole number with a decimal point and zeros (12 = 12.00, 1 = 1.000). Regroup across zeros from left to right.",
+      "question": "From Booklet p. 11, Q(3b) & Q(2b): (1) Find: 12 − 5.47. (2) Calculate: 1 − 0.001.",
+      "steps": [
+        "Step 1: Rewrite 12 as 12.00 to match the 2 decimal places of 5.47.",
+        "Step 2: Regroup from ones across tenths into hundredths: 12.00 becomes 11 ones, 9 tenths, and 10 hundredths.",
+        "Step 3: Subtract: 10 − 7 = 3 (hundredths); 9 − 4 = 5 (tenths); 11 − 5 = 6 (ones) → 6.53.",
+        "Step 4: For (2): 1.000 − 0.001: 1 one regrouped gives 9 tenths, 9 hundredths, 10 thousandths. 10 − 1 = 9 → 0.999."
+      ],
+      "column": {
+        "lines": [
+          "  1 1 9 10 (regrouped)",
+          "  1 2 . 0  0",
+          "-   5 . 4  7",
+          "------------",
+          "    6 . 5  3"
+        ]
+      },
+      "answer": "(1) 12 − 5.47 = 6.53  |  (2) 1 − 0.001 = 0.999",
+      "note": "Check by adding back: 6.53 + 5.47 = 12.00 and 0.999 + 0.001 = 1.000. Inverse addition verifies subtraction instantly.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 11 Q(3b)",
+          "question": "Find: 12 − 5.47.",
+          "steps": [
+            "Rewrite 12 as 12.00 to match decimal places of 5.47.",
+            "Regroup: 12.00 becomes 11 ones, 9 tenths, 10 hundredths.",
+            "Subtract: 10 − 7 = 3 (hundredths); 9 − 4 = 5 (tenths); 11 − 5 = 6 (ones) → 6.53."
+          ],
+          "answer": "12 − 5.47 = 6.53"
+        },
+        {
+          "label": "Question 2 · Booklet p. 11 Q(2b)",
+          "question": "Calculate: 1 − 0.001.",
+          "steps": [
+            "Rewrite 1 as 1.000 to match thousandths.",
+            "Regroup 1 one into 9 tenths, 9 hundredths, 10 thousandths.",
+            "Subtract: 10 − 1 = 9 (thousandths); 9 − 0 = 9; 9 − 0 = 9 → 0.999."
+          ],
+          "answer": "1 − 0.001 = 0.999"
+        }
+      ]
+    },
+    {
+      "id": "booklet-u1-l9",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Estimating Differences",
+      "tag": "Minia British School · Homework Booklet · U1 L9",
+      "rule": "To estimate decimal differences, round each number to the nearest whole before subtracting. Compare with the exact difference to verify reasonability.",
+      "question": "From Booklet p. 12, Q(3b) & Q(4a): (1) Estimate then subtract: 24.35 − 11.68. (2) A shopper had 50 L.E and spent 27.65 L.E. Estimate the change and calculate actual.",
+      "steps": [
+        "Step 1: Estimate 24.35 − 11.68: 24.35 rounds to 24; 11.68 rounds to 12. Estimated difference: 24 − 12 = 12.",
+        "Step 2: Calculate actual difference: 24.35 − 11.68 = 12.67 (Difference between estimate and actual is only 0.67).",
+        "Step 3: Estimate shopper change: 50 − 28 = 22 L.E (rounding 27.65 to 28).",
+        "Step 4: Calculate exact change: 50.00 − 27.65 = 22.35 L.E (Estimate 22 L.E is within 0.35 L.E)."
+      ],
+      "answer": "(1) Estimate ≈ 12 (Actual = 12.67)  |  (2) Estimated change ≈ 22 L.E (Actual = 22.35 L.E)",
+      "note": "Because 27.65 is closer to 28 than 27, rounding up to 28 gives an estimate of 22, very close to the exact 22.35 L.E.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 12 Q(3b)",
+          "question": "Estimate then subtract: 24.35 − 11.68.",
+          "steps": [
+            "Round to whole: 24.35 → 24; 11.68 → 12. Estimated difference: 24 − 12 = 12.",
+            "Calculate actual difference: 24.35 − 11.68 = 12.67 (Difference = 0.67)."
+          ],
+          "answer": "Estimate ≈ 12  (Actual = 12.67)"
+        },
+        {
+          "label": "Question 2 · Booklet p. 12 Q(4a)",
+          "question": "A shopper had 50 L.E and spent 27.65 L.E. Estimate the change and calculate actual.",
+          "steps": [
+            "Estimate: 50 − 28 = 22 L.E (rounding 27.65 to 28).",
+            "Actual change: 50.00 − 27.65 = 22.35 L.E (Estimate 22 L.E is within 0.35 L.E)."
+          ],
+          "answer": "Estimated change ≈ 22 L.E  (Actual = 22.35 L.E)"
+        }
+      ]
+    },
+    {
+      "id": "booklet-u1-l10",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Subtracting to Thousandths",
+      "tag": "Minia British School · Homework Booklet · U1 L10",
+      "rule": "Subtracting across three decimal zeros requires cascade regrouping from the whole number through tenths and hundredths into thousandths.",
+      "question": "From Booklet p. 13, Q(3b) & Q(4a): (1) Find: 20 − 13.256. (2) A wire was 4.5 m long. A piece of 1.275 m was cut. How long is the remaining wire?",
+      "steps": [
+        "Step 1: Set up 20 as 20.000: Align 20.000 − 13.256.",
+        "Step 2: Regroup from 20 ones → leaves 19 ones, 9 tenths, 9 hundredths, and 10 thousandths.",
+        "Step 3: Subtract: 10 − 6 = 4 (thous.); 9 − 5 = 4 (hund.); 9 − 2 = 7 (tenths); 19 − 13 = 6 (ones) → 6.744.",
+        "Step 4: For wire: 4.500 − 1.275: 4.500 becomes 4.4(9)(10). 10 − 5 = 5; 9 − 7 = 2; 4 − 2 = 2; 4 − 1 = 3 → 3.225 m."
+      ],
+      "column": {
+        "lines": [
+          "  1 9 . 9  9 10 (regrouped)",
+          "  2 0 . 0  0  0",
+          "- 1 3 . 2  5  6",
+          "----------------",
+          "    6 . 7  4  4"
+        ]
+      },
+      "answer": "(1) 20 − 13.256 = 6.744  |  (2) Remaining wire = 3.225 m",
+      "note": "Remember to pad 4.5 m with two zeros to make 4.500 m before subtracting 1.275 m!",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 13 Q(3b)",
+          "question": "Find: 20 − 13.256.",
+          "steps": [
+            "Set up 20 as 20.000: Align 20.000 − 13.256.",
+            "Regroup 20 ones → leaves 19 ones, 9 tenths, 9 hundredths, 10 thousandths.",
+            "Subtract: 10 − 6 = 4; 9 − 5 = 4; 9 − 2 = 7; 19 − 13 = 6 → 6.744."
+          ],
+          "answer": "20 − 13.256 = 6.744"
+        },
+        {
+          "label": "Question 2 · Booklet p. 13 Q(4a)",
+          "question": "A wire was 4.5 m long. A piece of 1.275 m was cut. How long is the remaining wire?",
+          "steps": [
+            "Pad to thousandths: 4.500 − 1.275.",
+            "Regroup: 4.500 becomes 4.4(9)(10).",
+            "Subtract: 10 − 5 = 5; 9 − 7 = 2; 4 − 2 = 2; 4 − 1 = 3 → 3.225 m."
+          ],
+          "answer": "Remaining wire = 3.225 m"
+        }
+      ]
+    },
+    {
+      "id": "booklet-u1-l11",
+      "chapter": "booklet-u1",
+      "title": "Booklet Challenge · Decimal Story Problems",
+      "tag": "Minia British School · Homework Booklet · U1 L11",
+      "rule": "Multi-step story problems require identifying intermediate totals first (addition) before finding the final unknown (subtraction).",
+      "question": "From Booklet p. 14, Q(4a) & Q(1a): (1) Sara bought a bag for 145.75 L.E and shoes for 89.5 L.E. She paid with 300 L.E. How much change did she receive? (2) If a + 3.45 = 7.2, find a.",
+      "steps": [
+        "Step 1: Step 1 (Total spent): Add bag and shoes: 145.75 + 89.50 = 235.25 L.E.",
+        "Step 2: Step 2 (Change received): Subtract total spent from 300 L.E: 300.00 − 235.25.",
+        "Step 3: Regroup 300.00: 300 becomes 299 and 100 hundredths. 300.00 − 235.25 = 64.75 L.E.",
+        "Step 4: For (2): a + 3.45 = 7.2 → a = 7.20 − 3.45 = 3.75."
+      ],
+      "answer": "(1) Total spent = 235.25 L.E | Change = 64.75 L.E  |  (2) a = 3.75",
+      "note": "Break word problems into clearly labeled steps: Step 1 = Total purchases, Step 2 = Change. Check: 235.25 + 64.75 = 300.00 L.E.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 14 Q(4a)",
+          "question": "Sara bought a bag for 145.75 L.E and shoes for 89.5 L.E. She paid with 300 L.E. How much change did she receive?",
+          "steps": [
+            "Step 1 (Total spent): Add purchases: 145.75 + 89.50 = 235.25 L.E.",
+            "Step 2 (Change received): Subtract total from 300: 300.00 − 235.25 = 64.75 L.E."
+          ],
+          "answer": "Total spent = 235.25 L.E  |  Change = 64.75 L.E"
+        },
+        {
+          "label": "Question 2 · Booklet p. 14 Q(1a)",
+          "question": "If a + 3.45 = 7.2, find the value of a.",
+          "steps": [
+            "Use inverse operation: a = 7.20 − 3.45.",
+            "Regroup and subtract: 7.20 − 3.45 = 3.75."
+          ],
+          "answer": "a = 3.75"
+        }
+      ]
+    },
+    {
+      "id": "booklet-u2-l1",
+      "chapter": "booklet-u2",
+      "title": "Booklet Challenge · Expressions vs Equations",
+      "tag": "Minia British School · Homework Booklet · U2 L1",
+      "rule": "An Expression has no equals sign (e.g. x − 5.23). An Equation equates two expressions with \"=\" (e.g. x − 5.23 = 9.42). In \"subtract A from B\", B comes FIRST: B − A.",
+      "question": "From Booklet p. 15, Q(2b) & Q(1): (1) Write an equation: \"We subtract 5.23 from a number to get a result of 9.42\". (2) Distinguish: Which of m + 6 = 9, 1.2 − m = 0.2, m + 44 is an expression?",
+      "steps": [
+        "Step 1: Analyze English phrasing \"subtract 5.23 from a number\": Let the unknown number be x. Subtracting 5.23 from x means x is the starting amount (minuend).",
+        "Step 2: Formulate the equation: x − 5.23 = 9.42. (Common error: writing 5.23 − x = 9.42 which is incorrect!).",
+        "Step 3: For part (2): Look for the presence of an equals sign \"=\".",
+        "Step 4: m + 6 = 9 (equation), 1.2 − m = 0.2 (equation). Only \"m + 44\" has no equals sign, so it is an algebraic expression."
+      ],
+      "answer": "(1) Equation: x − 5.23 = 9.42  |  (2) Expression: m + 44 (Equations: m + 6 = 9, 1.2 − m = 0.2)",
+      "note": "Remember the phrase \"subtract from\": the number following \"from\" is always written first in the subtraction expression!",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 15 Q(2b)",
+          "question": "Write an equation: \"We subtract 5.23 from a number to get a result of 9.42\".",
+          "steps": [
+            "Let unknown number be x. Subtracting 5.23 from x means x is the minuend.",
+            "Write equation: x − 5.23 = 9.42 (Caution: 5.23 − x is incorrect)."
+          ],
+          "answer": "Equation: x − 5.23 = 9.42"
+        },
+        {
+          "label": "Question 2 · Booklet p. 15 Q(1)",
+          "question": "Distinguish: Which of m + 6 = 9, 1.2 − m = 0.2, m + 44 is an expression?",
+          "steps": [
+            "Look for an equals sign '='.",
+            "m + 6 = 9 and 1.2 − m = 0.2 have '=' so they are equations.",
+            "m + 44 has no equals sign, so it is an algebraic expression."
+          ],
+          "answer": "Expression: m + 44  (m + 6 = 9 and 1.2 − m = 0.2 are equations)"
+        }
+      ]
+    },
+    {
+      "id": "booklet-u2-l2",
+      "chapter": "booklet-u2",
+      "title": "Booklet Challenge · Variables in Equations",
+      "tag": "Minia British School · Homework Booklet · U2 L2",
+      "rule": "When solving subtraction equations: If variable is minuend (A − b = c), add: A = c + b. If variable is subtrahend (a − z = c), subtract: z = a − c.",
+      "question": "From Booklet p. 16, Q(3a) & Q(3b): Solve for the variable: (1) A − 32.61 = 12.28  |  (2) 3.245 − z = 1.265.",
+      "steps": [
+        "Step 1: Analyze (1) A − 32.61 = 12.28: A is the total (whole). To find the whole, add the parts: A = 12.28 + 32.61.",
+        "Step 2: Calculate: 12.28 + 32.61 = 44.89. Check: 44.89 − 32.61 = 12.28 (True).",
+        "Step 3: Analyze (2) 3.245 − z = 1.265: 3.245 is the whole; z and 1.265 are the parts. To find the missing part z, subtract: z = 3.245 − 1.265.",
+        "Step 4: Calculate: 3.245 − 1.265: 5−5=0; 14−6=8; 11−2=9; 2−1=1 → z = 1.980 = 1.98."
+      ],
+      "answer": "(1) A = 44.89  |  (2) z = 1.98",
+      "note": "Use a Bar Model to check! In A − 32.61 = 12.28, A sits at the top (whole). In 3.245 − z = 1.265, 3.245 sits at the top, so z = 3.245 − 1.265.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 16 Q(3a)",
+          "question": "Solve for the variable: A − 32.61 = 12.28.",
+          "steps": [
+            "A is the total (whole). Add the parts: A = 12.28 + 32.61.",
+            "Calculate: 12.28 + 32.61 = 44.89. Check: 44.89 − 32.61 = 12.28."
+          ],
+          "answer": "A = 44.89"
+        },
+        {
+          "label": "Question 2 · Booklet p. 16 Q(3b)",
+          "question": "Solve for the variable: 3.245 − z = 1.265.",
+          "steps": [
+            "3.245 is the whole; z is a missing part. Subtract: z = 3.245 − 1.265.",
+            "Calculate: 3.245 − 1.265: 5−5=0; 14−6=8; 11−2=9; 2−1=1 → z = 1.98."
+          ],
+          "answer": "z = 1.98"
+        }
+      ]
+    },
+    {
+      "id": "booklet-u2-l3",
+      "chapter": "booklet-u2",
+      "title": "Booklet Challenge · Stories with Numbers",
+      "tag": "Minia British School · Homework Booklet · U2 L3",
+      "rule": "\"less than\" reverses word order: \"5 less than x\" means x − 5 (NOT 5 − x). In age word problems, set up an equation with a variable before solving.",
+      "question": "From Booklet p. 17, Q(2a), Q(3b) & Q(4a): (1) Write expression: \"5 less than x\". (2) Write & solve: \"When 7 is subtracted from a number, the result is 15\". (3) Mona is 3 years older than brother. If Mona is 12, how old is her brother?",
+      "steps": [
+        "Step 1: For (1): \"5 less than x\" translates to x − 5.",
+        "Step 2: For (2): Let the number be n. \"7 is subtracted from n\" gives n − 7. \"Result is 15\" gives equation: n − 7 = 15. Solve: n = 15 + 7 = 22.",
+        "Step 3: For (3): Let brother age be b. Mona is 3 years older → b + 3 = 12 (or 12 − b = 3).",
+        "Step 4: Solve for brother age: b = 12 − 3 = 9 years old."
+      ],
+      "answer": "(1) x − 5  |  (2) Equation: n − 7 = 15 ⇒ n = 22  |  (3) Equation: b + 3 = 12 ⇒ Brother is 9 years old",
+      "note": "Beware the \"less than\" trap: 5 less than 10 is 10 − 5 = 5, not 5 − 10. So \"5 less than x\" is ALWAYS x − 5.",
+      "items": [
+        {
+          "label": "Question 1 · Booklet p. 17 Q(2a)",
+          "question": "Write expression: \"5 less than x\".",
+          "steps": [
+            "\"5 less than x\" means subtracting 5 from x.",
+            "Expression: x − 5."
+          ],
+          "answer": "x − 5"
+        },
+        {
+          "label": "Question 2 · Booklet p. 17 Q(3b)",
+          "question": "Write & solve: \"When 7 is subtracted from a number, the result is 15\".",
+          "steps": [
+            "Let the number be n. Equation: n − 7 = 15.",
+            "Solve: n = 15 + 7 = 22."
+          ],
+          "answer": "Equation: n − 7 = 15  ⇒  n = 22"
+        },
+        {
+          "label": "Question 3 · Booklet p. 17 Q(4a)",
+          "question": "Mona is 3 years older than her brother. If Mona is 12, how old is her brother?",
+          "steps": [
+            "Let brother's age be b. Equation: b + 3 = 12.",
+            "Solve: b = 12 − 3 = 9 years old."
+          ],
+          "answer": "Brother is 9 years old"
+        }
+      ]
+    }
+  ],
+  "octoberSingleOrderSheets": [
+    {
       "chapter": "place",
       "rule": "The first place to the right of the decimal point is tenths; the second place is hundredths; the third place is thousandths.",
       "note": "Hundredths is the 2nd digit after the decimal point.",
