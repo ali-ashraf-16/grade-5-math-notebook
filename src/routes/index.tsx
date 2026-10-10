@@ -33,7 +33,7 @@ type Sheet = {
   title: string;
   sourcePages?: number[];
   sourceSection?: string;
-  sourceNumber?: number;
+  sourceNumber?: number | string;
   tag?: string;
   vocabulary?: string[][];
   rule?: string;
