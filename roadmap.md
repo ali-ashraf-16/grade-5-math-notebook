@@ -8,3 +8,6 @@
 - [x] Remove external challenging revision questions and update page display, styles, and teacher badge.
 - [x] Verify lesson ordering, all supplied assessment inclusion, navigation, and print editions.
 - [ ] Verify completeness against month10.pdf (blocked: PDF not supplied).
+
+# October source-order solutions edition
+- [ ] Add a separate solutions edition following the original October question order, then append booklet questions unchanged (blocked: month10.pdf not supplied; existing solutions combine nonconsecutive questions).
