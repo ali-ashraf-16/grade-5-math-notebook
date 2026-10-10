@@ -254,7 +254,7 @@ function Paper({ sheet, index, isMini = false, theme = 'royal' }: { sheet: Sheet
 type NotebookMode = 'full' | 'two-up' | 'assessment' | 'source-order';
 
 function Notebook() {
-  const [mode, setMode] = useState<NotebookMode>('full');
+  const [mode, setMode] = useState<NotebookMode>('source-order');
   const [page, setPage] = useState(0);
   const [evalPage, setEvalPage] = useState(0);
   const [twoUpIndex, setTwoUpIndex] = useState(0);
@@ -374,24 +374,35 @@ function Notebook() {
             <BookOpen size={14} style={{ marginRight: '6px' }} />
             <span>النسخة الدفترية (Classic)</span>
           </Button>
-          <Button variant="ghost"
-            type="button"
-            className={`edition-tab ${mode === 'source-order' ? 'active' : ''}`}
-            aria-pressed={mode === 'source-order'}
-            onClick={() => { setMode('source-order'); setEvalPage(0); setIsCover(true); }}
-          >
-            <List size={15} />
-            <span>حل أكتوبر بالترتيب الأصلي + البوكليت</span>
-          </Button>
         </div>
 
         {/* Version / Edition Switcher */}
         <div className="edition-tabs">
           <Button variant="ghost"
             type="button"
+            className={`edition-tab ${mode === 'source-order' ? 'active' : ''}`}
+            aria-pressed={mode === 'source-order'}
+            onClick={() => { setMode('source-order'); setEvalPage(0); setIsCover(true); }}
+            title="حل مراجعة شهر أكتوبر بالترتيب الأصلي (اختياري ومقالي) متبوعة بأسئلة البوكليت"
+          >
+            <List size={15} />
+            <span>حل مراجعة أكتوبر (الترتيب الأصلي + البوكليت)</span>
+          </Button>
+          <Button variant="ghost"
+            type="button"
+            className={`edition-tab ${mode === 'assessment' ? 'active' : ''}`}
+            aria-pressed={mode === 'assessment'}
+            onClick={() => { setMode('assessment'); setEvalPage(0); setIsCover(true); }}
+            title="مذكرة شهر أكتوبر: حل تقييمات الوزارة وأصعب أسئلة البوكليت مقسمة حسب الدروس"
+          >
+            <Sparkles size={15} />
+            <span>مذكرة أكتوبر (مقسمة دروس)</span>
+          </Button>
+          <Button variant="ghost"
+            type="button"
             className={`edition-tab ${mode === 'full' ? 'active' : ''}`}
             aria-pressed={mode === 'full'}
-            onClick={() => setMode('full')}
+            onClick={() => { setMode('full'); setPage(0); setIsCover(true); }}
             title="النسخة الكاملة المفصلة (صفحة واحدة A4 عمودي)"
           >
             <FileText size={15} />
@@ -401,21 +412,11 @@ function Notebook() {
             type="button"
             className={`edition-tab ${mode === 'two-up' ? 'active' : ''}`}
             aria-pressed={mode === 'two-up'}
-            onClick={() => setMode('two-up')}
+            onClick={() => { setMode('two-up'); setTwoUpIndex(0); setIsCover(true); }}
             title="نسخة موفرة للطباعة (صفحتين جنب بعض A4 بالعرض)"
           >
             <Copy size={15} />
             <span>نسخة صفحتين جنب بعض (A4 أفقي)</span>
-          </Button>
-          <Button variant="ghost"
-            type="button"
-            className={`edition-tab ${mode === 'assessment' ? 'active' : ''}`}
-            aria-pressed={mode === 'assessment'}
-            onClick={() => setMode('assessment')}
-            title="مذكرة شهر أكتوبر: حل تقييمات الوزارة وأصعب أسئلة البوكليت"
-          >
-            <Sparkles size={15} />
-            <span>مذكرة أكتوبر وأسئلة البوكليت</span>
           </Button>
         </div>
 
@@ -586,8 +587,8 @@ function Notebook() {
             {isAssessment ? (
               <div className="challenging-nav-list">
                 <div className="unit-summary">
-                  <span className="unit-tag">OCTOBER ASSESSMENTS</span>
-                  <h3>October Assessment<br/>Step-by-step Solutions</h3>
+                  <span className="unit-tag">{mode === 'source-order' ? 'OCTOBER REVISION · ORIGINAL ORDER' : 'OCTOBER ASSESSMENTS'}</span>
+                  <h3>{mode === 'source-order' ? 'October Revision Questions' : 'October Assessment'}<br/>Step-by-step Solutions</h3>
                   <p>{mode === 'source-order' ? '12 MCQs · 43 written questions' : `Ministry evaluation models · ${assessmentCount} sheets`}</p>
                 </div>
                 {assessmentSheets.slice(0, assessmentCount).map((cs, idx) => (
