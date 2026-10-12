@@ -2219,3 +2219,22 @@ body { font-family:'Nunito Sans',sans-serif; }
     print-color-adjust: exact !important;
   }
 }
+
+/* Miniature teaching reference: reserve a separate footer row. */
+.mode-reference .two-up-pair-card .paper.is-mini .paper-content {
+  min-height: 0;
+  padding-bottom: 8px !important;
+}
+.mode-reference .two-up-pair-card .paper.is-mini .paper-footer {
+  position: relative !important;
+  inset: auto !important;
+  margin: 0 24px 16px !important;
+}
+.mode-reference .two-up-pair-card .paper.is-mini .worked-steps li {
+  font-size: 13px !important;
+  line-height: 1.3 !important;
+  margin: 3px 0 !important;
+}
+.mode-reference .two-up-pair-card .paper.is-mini .revision-note p {
+  font-size: 12px !important;
+}
