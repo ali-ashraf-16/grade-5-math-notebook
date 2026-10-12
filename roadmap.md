@@ -14,5 +14,5 @@
 - [ ] Verify source ordering, booklet preservation, navigation, and portrait printing.
 
 # Miniature lesson reference
-- [x] Add a separate explanation-only miniature edition with original worked examples, excluding assessments and booklet exercises.
-- [x] Verify lesson navigation, content preservation, and two-up printing (96 unchanged teaching pages on 48 landscape A4 sheets).
+- [x] Replace the 96-page miniature with a condensed 27-page reference: 2 pages per lesson, 3 for large lessons.
+- [x] Verify original-source examples and wording, lesson navigation, readable pages, and portrait printing without changing the original edition.
