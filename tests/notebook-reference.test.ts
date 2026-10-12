@@ -12,6 +12,7 @@ describe('Explanation-only miniature reference', () => {
     const originals = revision.sheets.filter(s => s.sourcePages && !s.id.startsWith('booklet-'));
     expect(reference).toEqual(originals);
     for (const sheet of reference) expect(sheet).toBe(revision.sheets.find(s => s.id === sheet.id));
-    expect(new Set(reference.map(s => s.chapter)).size).toBe(13);
+    expect(reference[0]?.id).toBe('place-1');
+    expect(reference.at(-1)?.chapter).toBe('u2-factors');
   });
 });
