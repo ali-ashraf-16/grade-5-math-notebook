@@ -2238,3 +2238,34 @@ body { font-family:'Nunito Sans',sans-serif; }
 .mode-reference .two-up-pair-card .paper.is-mini .revision-note p {
   font-size: 12px !important;
 }
+
+/* Condensed source-only revision pages: unframed teaching sections. */
+.paper.reference-paper .paper-content {
+  min-height: 0;
+  padding: 26px 38px 12px !important;
+}
+.paper.reference-paper .paper-title {
+  font-size: 21px !important;
+  margin: 5px 0 8px !important;
+  letter-spacing: 0 !important;
+}
+.reference-patterns { display: flex; flex-direction: column; gap: 12px; }
+.reference-pattern { border-bottom: 1px solid var(--grid); padding-bottom: 10px; }
+.reference-pattern:last-child { border-bottom: 0; }
+.reference-pattern h3 { font: 800 16px/1.2 'Nunito Sans', sans-serif; color: var(--ink-blue); margin: 0 0 5px; }
+.reference-golden-rule { font: 600 12px/1.35 'Nunito Sans', sans-serif; color: var(--ink-black); }
+.reference-golden-rule b { color: var(--ink-blue); }
+.reference-golden-rule p { margin: 1px 0 5px; }
+.reference-question { font: 700 12px/1.35 'Nunito Sans', sans-serif; color: var(--ink-black); margin: 5px 0; }
+.reference-steps { font: 400 13px/1.4 'Kalam', cursive; color: var(--ink-blue); padding-left: 20px; margin: 4px 0; }
+.reference-steps li { margin: 1px 0; }
+.reference-answer { display: flex; align-items: center; gap: 6px; font: 700 12px/1.35 'Nunito Sans', sans-serif; color: var(--ink-green); margin: 5px 0; }
+.reference-warning { font: 500 11px/1.35 'Nunito Sans', sans-serif; color: var(--ink-black); margin: 4px 0 0; }
+.reference-warning b { color: var(--ink-red); }
+.reference-column { font: 12px/1.2 monospace; color: var(--ink-blue); margin: 3px 0; }
+.reference-model { zoom: .55; margin: 3px 0; }
+.paper.reference-paper .paper-footer {
+  position: relative !important;
+  inset: auto !important;
+  margin: 0 38px 22px !important;
+}

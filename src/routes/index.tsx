@@ -47,6 +47,7 @@ type Sheet = {
   column?: { lines: string[] } | null;
   shift?: { direction: string; places: number; input: string; output: string; operation: string; factor: number };
   items?: SheetItem[];
+  referencePatterns?: Sheet[];
 };
 
 const sheets: Sheet[] = revision.sheets;
@@ -153,7 +154,7 @@ function Paper({ sheet, index, isMini = false, theme = 'royal' }: { sheet: Sheet
 
   const isRoyal = theme === 'royal';
 
-  return <article className={`paper ${isRoyal ? 'royal-edition' : ''} ${isDense ? 'is-dense' : ''} ${sheet.tag ? 'eval-sheet' : ''} ${isMini ? 'is-mini' : ''}`} data-sheet-id={sheet.id} aria-label={`Page ${index+1}: ${sheet.title}`}>
+  return <article className={`paper ${isRoyal ? 'royal-edition' : ''} ${isDense ? 'is-dense' : ''} ${sheet.tag ? 'eval-sheet' : ''} ${isMini ? 'is-mini' : ''} ${sheet.referencePatterns ? 'reference-paper' : ''}`} data-sheet-id={sheet.id} aria-label={`Page ${index+1}: ${sheet.title}`}>
     <div className="binding" aria-hidden="true">{Array.from({length:18},(_,i) => <i key={i}/>)}</div>
     {isRoyal && (
       <>
@@ -176,7 +177,22 @@ function Paper({ sheet, index, isMini = false, theme = 'royal' }: { sheet: Sheet
       </div>
       <h2 className="paper-title">{sheet.title}</h2>
       {sheet.tag && <span className="eval-tag-pill">{sheet.tag}</span>}
-      {sheet.vocabulary ? <>
+      {sheet.referencePatterns ? (
+        <div className="reference-patterns">
+          {sheet.referencePatterns.map(pattern => (
+            <section className="reference-pattern" key={pattern.id} data-source-id={pattern.id}>
+              <h3>{pattern.title}</h3>
+              <div className="reference-golden-rule"><b>Golden rule</b><p>{pattern.rule}</p></div>
+              <p className="reference-question">{pattern.question}</p>
+              <ol className="reference-steps">{pattern.steps?.map((step, i) => <li key={i}>{step}</li>)}</ol>
+              {pattern.column && <pre className="reference-column">{pattern.column.lines.join('\n')}</pre>}
+              {pattern.model && <div className="reference-model"><MathModel model={pattern.model} /></div>}
+              <p className="reference-answer"><Check size={14} />{pattern.answer}</p>
+              <p className="reference-warning"><b>Exam trap</b> {pattern.note}</p>
+            </section>
+          ))}
+        </div>
+      ) : sheet.vocabulary ? <>
         <table className="revision-vocab"><thead><tr><th>Math word</th><th>Simple meaning & example</th></tr></thead><tbody>{sheet.vocabulary.map(([term,definition]) => <tr key={term}><td>{term}</td><td>{definition}</td></tr>)}</tbody></table>
       </> : <>
         {sheet.words && (
@@ -266,7 +282,7 @@ function Notebook() {
   const [isCover, setIsCover] = useState(true);
   const [theme, setTheme] = useState<'royal' | 'classic'>('royal');
   const isReference = mode === 'reference';
-  const isPaired = mode === 'two-up' || isReference;
+  const isPaired = mode === 'two-up';
   const sheets: Sheet[] = isReference ? referenceSheets : revision.sheets;
   const chapters = revision.chapters.map(ch => ({ ...ch, start: sheets.findIndex(s => s.chapter === ch.id), count: sheets.filter(s => s.chapter === ch.id).length })).filter(ch => ch.count > 0);
   const isAssessment = mode === 'assessment' || mode === 'source-order';
@@ -389,10 +405,10 @@ function Notebook() {
             className={`edition-tab ${isReference ? 'active' : ''}`}
             aria-pressed={isReference}
             onClick={() => { setMode('reference'); setPage(0); setTwoUpIndex(0); setIsCover(false); }}
-            title="الشرح الأصلي والأمثلة المحلولة فقط، صفحتان مصغرتان على ورقة A4، بدون تقييمات أو بوكليت"
+            title="ملخص الدروس: القواعد والأفكار الأساسية والأمثلة الأصلية وتنبيهات الامتحان، بحد أقصى 3 صفحات لكل درس"
           >
             <BookOpen size={15} />
-            <span>مرجع مصغّر (شرح فقط)</span>
+            <span>ملخص الدروس (شرح مركز)</span>
           </Button>
           <Button variant="ghost"
             type="button"
@@ -475,13 +491,13 @@ function Notebook() {
           </div>
 
           {/* VIEW MODE 1: ORIGINAL FULL NOTEBOOK (1 Page per A4 sheet) */}
-          {mode === 'full' && (
+          {(mode === 'full' || isReference) && (
             <>
               <div className="paper-stage">
                 <div className="paper-scale" style={{ zoom: zoom / 100 }}>
-                  <div className={`page-slot ${isCover ? 'active-page' : ''} cover-slot`}>
+                  {!isReference && <div className={`page-slot ${isCover ? 'active-page' : ''} cover-slot`}>
                     <OctoberCoverPage />
-                  </div>
+                  </div>}
                   {sheets.map((s, i) => (
                     <div key={s.id} className={`page-slot ${!isCover && i === page ? 'active-page' : ''}`}>
                       <Paper sheet={s} index={i} theme={theme} />
@@ -491,9 +507,9 @@ function Notebook() {
               </div>
               <div className="page-navigation">
                 <Button variant="outline" size="icon" onClick={() => {
-                  if (page === 0 && !isCover) setIsCover(true);
+                  if (page === 0 && !isCover && !isReference) setIsCover(true);
                   else if (!isCover) go(page - 1);
-                }} disabled={isCover} aria-label="Previous page"><ChevronLeft/></Button>
+                }} disabled={isCover || (isReference && page === 0)} aria-label="Previous page"><ChevronLeft/></Button>
                 <span>{isCover ? <b>Cover Page · غلاف المذكرة</b> : <>Page <b>{page + 1}</b> of {sheets.length}</>}</span>
                 <Button variant="outline" size="icon" onClick={() => {
                   if (isCover) { setIsCover(false); setPage(0); }
@@ -551,9 +567,9 @@ function Notebook() {
             <>
               <div className="paper-stage">
                 <div className="paper-scale" style={{ zoom: zoom / 100 }}>
-                  <div className={`page-slot ${isCover ? 'active-page' : ''} cover-slot`}>
+                  {!isReference && <div className={`page-slot ${isCover ? 'active-page' : ''} cover-slot`}>
                     <OctoberCoverPage />
-                  </div>
+                  </div>}
                   {assessmentSheets.map((s, i) => (
                     <div key={s.id} className={`page-slot ${!isCover && i === evalPage ? 'active-page' : ''}`}>
                       <Paper sheet={s} index={i} theme={theme} />
@@ -658,7 +674,7 @@ function Notebook() {
                   <h3>Decimal Place Value & Equations</h3>
                   <p>Rules, models & worked cases</p>
                 </div>
-                {(isReference ? [1, 2, 3, 4] : [1, 2, 3, 4, 5]).map(concept => (
+                {(isReference ? [1, 2, 3] : [1, 2, 3, 4, 5]).map(concept => (
                   <div className="concept-group" key={concept}>
                     <h4>
                       {concept === 5 ? 'Homework Booklet · Hardest Questions' : concept >= 3 ? `Unit 2 · Concept ${concept - 2}` : `Concept ${concept}`}
