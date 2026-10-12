@@ -13,6 +13,6 @@ describe('Explanation-only miniature reference', () => {
     expect(reference).toEqual(originals);
     for (const sheet of reference) expect(sheet).toBe(revision.sheets.find(s => s.id === sheet.id));
     expect(reference[0]?.id).toBe('place-1');
-    expect(reference.at(-1)?.chapter).toBe('u2-factors');
+    expect(reference.at(-1)?.chapter).toBe('u2-story');
   });
 });
