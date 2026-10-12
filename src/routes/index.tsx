@@ -5,13 +5,14 @@ import { Button } from '@/components/ui/button';
 import { OctoberCoverPage } from '@/components/OctoberCoverPage';
 import revision from '@/data/revision.json';
 import badge from '@/assets/prepared-badge-october.png.asset.json';
+import { getReferenceSheets } from '@/lib/notebook-reference';
 
 export const Route = createFileRoute('/')({
   head: () => ({ meta: [
     { title: 'Math Notebook | Grade 5 · Units 1 & 2 Revision' },
     { name: 'description', content: 'Grade 5 lessons and October solutions: 12 multiple-choice and 43 written questions in original order, followed by homework booklet solutions. Prepared by Mr. Ali Ashraf.' },
     { property: 'og:title', content: 'Math Notebook · Grade 5 Revision' },
-    { property: 'og:description', content: 'Original lesson explanations and step-by-step October assessments with A4 and two-up printing.' },
+    { property: 'og:description', content: 'Original lesson explanations, an explanation-only miniature revision reference, and October assessment solutions with A4 and two-up printing.' },
     { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' },
   ] }), component: Notebook,
 });
@@ -22,9 +23,9 @@ type SheetItem = {
   question: string;
   steps?: string[];
   answer?: string;
-  column?: { lines: string[] };
+  column?: { lines: string[] } | null;
   shift?: { direction: string; places: number; input: string; output: string; operation: string; factor: number };
-  model?: Model;
+  model?: Model | null;
 };
 
 type Sheet = {
@@ -42,8 +43,8 @@ type Sheet = {
   answer?: string;
   note?: string;
   words?: string[][];
-  model?: Model;
-  column?: { lines: string[] };
+  model?: Model | null;
+  column?: { lines: string[] } | null;
   shift?: { direction: string; places: number; input: string; output: string; operation: string; factor: number };
   items?: SheetItem[];
 };
@@ -251,7 +252,9 @@ function Paper({ sheet, index, isMini = false, theme = 'royal' }: { sheet: Sheet
   </article>;
 }
 
-type NotebookMode = 'full' | 'two-up' | 'assessment' | 'source-order';
+const referenceSheets = getReferenceSheets(sheets);
+
+type NotebookMode = 'full' | 'two-up' | 'assessment' | 'source-order' | 'reference';
 
 function Notebook() {
   const [mode, setMode] = useState<NotebookMode>('source-order');
@@ -262,6 +265,10 @@ function Notebook() {
   const [sidebar, setSidebar] = useState(true);
   const [isCover, setIsCover] = useState(true);
   const [theme, setTheme] = useState<'royal' | 'classic'>('royal');
+  const isReference = mode === 'reference';
+  const isPaired = mode === 'two-up' || isReference;
+  const sheets: Sheet[] = isReference ? referenceSheets : revision.sheets;
+  const chapters = revision.chapters.map(ch => ({ ...ch, start: sheets.findIndex(s => s.chapter === ch.id), count: sheets.filter(s => s.chapter === ch.id).length })).filter(ch => ch.count > 0);
   const isAssessment = mode === 'assessment' || mode === 'source-order';
   const assessmentSheets = mode === 'source-order' ? sourceOrderSheets : lessonAssessmentSheets;
   const octoberCount = assessmentSheets.findIndex(s => s.id.startsWith('booklet-'));
@@ -282,13 +289,13 @@ function Notebook() {
     const fit = () => {
       const mobile = window.innerWidth <= 760;
       const available = Math.min(window.innerWidth, 1600) - (!mobile && sidebar ? 300 : 0) - 48;
-      const paperWidth = mode === 'two-up' ? 1118 : 794;
+      const paperWidth = isPaired ? 1118 : 794;
       setZoom(Math.max(30, Math.min(90, Math.floor(available / paperWidth * 100))));
     };
     fit();
     window.addEventListener('resize', fit);
     return () => window.removeEventListener('resize', fit);
-  }, [mode, sidebar]);
+  }, [mode, sidebar, isPaired]);
 
   useEffect(() => {
     document.body.classList.remove('print-mode-full', 'print-mode-2up', 'print-mode-chal', 'theme-royal', 'theme-classic');
@@ -297,8 +304,8 @@ function Notebook() {
     } else {
       document.body.classList.add('theme-classic');
     }
-    document.body.classList.add(mode === 'two-up' ? 'print-mode-2up' : isAssessment ? 'print-mode-chal' : 'print-mode-full');
-  }, [mode, theme, isAssessment]);
+    document.body.classList.add(isPaired ? 'print-mode-2up' : isAssessment ? 'print-mode-chal' : 'print-mode-full');
+  }, [mode, theme, isAssessment, isPaired]);
 
   const go = (p: number) => {
     setIsCover(false);
@@ -329,7 +336,7 @@ function Notebook() {
     } else {
       document.body.classList.add('theme-classic');
     }
-    if (mode === 'two-up') {
+    if (isPaired) {
       document.body.classList.add('print-mode-2up');
     } else if (isAssessment) {
       document.body.classList.add('print-mode-chal');
@@ -378,6 +385,15 @@ function Notebook() {
 
         {/* Version / Edition Switcher */}
         <div className="edition-tabs">
+          <Button variant="ghost" type="button"
+            className={`edition-tab ${isReference ? 'active' : ''}`}
+            aria-pressed={isReference}
+            onClick={() => { setMode('reference'); setPage(0); setTwoUpIndex(0); setIsCover(false); }}
+            title="الشرح الأصلي والأمثلة المحلولة فقط، صفحتان مصغرتان على ورقة A4، بدون تقييمات أو بوكليت"
+          >
+            <BookOpen size={15} />
+            <span>مرجع مصغّر (شرح فقط)</span>
+          </Button>
           <Button variant="ghost"
             type="button"
             className={`edition-tab ${mode === 'source-order' ? 'active' : ''}`}
@@ -410,7 +426,7 @@ function Notebook() {
           </Button>
           <Button variant="ghost"
             type="button"
-            className={`edition-tab ${mode === 'two-up' ? 'active' : ''}`}
+            className={`edition-tab ${isPaired ? 'active' : ''}`}
             aria-pressed={mode === 'two-up'}
             onClick={() => { setMode('two-up'); setTwoUpIndex(0); setIsCover(true); }}
             title="نسخة موفرة للطباعة (صفحتين جنب بعض A4 بالعرض)"
@@ -425,7 +441,7 @@ function Notebook() {
           <Button onClick={print} className="print-button">
             <Printer/>
             <span>
-              {mode === 'two-up' ? 'Print 2-Up Booklet' : isAssessment ? 'Print Assessments' : 'Print Notebook'}
+              {isReference ? 'Print Lesson Reference' : isPaired ? 'Print 2-Up Booklet' : isAssessment ? 'Print Assessments' : 'Print Notebook'}
               <small> / PDF</small>
             </span>
           </Button>
@@ -454,7 +470,7 @@ function Notebook() {
               <span>{zoom}%</span>
               <Button size="icon" variant="ghost" aria-label="Zoom in" disabled={zoom>=110} onClick={() => setZoom(Math.min(110,zoom+10))}><Plus/></Button>
               <span className="toolbar-divider"/>
-              <span>{mode === 'two-up' ? 'A4 Landscape (2-Up)' : 'A4 Portrait'}</span>
+              <span>{isPaired ? 'A4 Landscape (2-Up)' : 'A4 Portrait'}</span>
             </div>
           </div>
 
@@ -488,7 +504,7 @@ function Notebook() {
           )}
 
           {/* VIEW MODE 2: 2-UP SIDE-BY-SIDE (2 Pages per A4 Landscape sheet) */}
-          {mode === 'two-up' && (
+          {isPaired && (
             <>
               <div className="paper-stage two-up-stage">
                 <div className="two-up-scale" style={{ zoom: zoom / 100 }}>
@@ -518,9 +534,9 @@ function Notebook() {
               </div>
               <div className="page-navigation">
                 <Button variant="outline" size="icon" onClick={() => {
-                  if (twoUpIndex === 0 && !isCover) setIsCover(true);
+                  if (twoUpIndex === 0 && !isCover && !isReference) setIsCover(true);
                   else if (!isCover) goTwoUp(twoUpIndex - 1);
-                }} disabled={isCover} aria-label="Previous sheet"><ChevronLeft/></Button>
+                }} disabled={isCover || (isReference && twoUpIndex === 0)} aria-label="Previous sheet"><ChevronLeft/></Button>
                 <span>{isCover ? <b>Cover Page · غلاف المذكرة</b> : <>Sheet <b>{twoUpIndex + 1}</b> of {pairs.length} (Pages {twoUpIndex * 2 + 1}–{Math.min(sheets.length, twoUpIndex * 2 + 2)})</>}</span>
                 <Button variant="outline" size="icon" onClick={() => {
                   if (isCover) { setIsCover(false); setTwoUpIndex(0); }
@@ -568,7 +584,7 @@ function Notebook() {
               <span>{isAssessment ? `${assessmentSheets.length} assessment sheets` : `${sheets.length} pages`}</span>
             </div>
 
-            <div className="cover-nav-section" style={{ padding: '6px 12px 12px', borderBottom: '1px solid rgba(0,0,0,0.08)', marginBottom: '10px' }}>
+            {!isReference && <div className="cover-nav-section" style={{ padding: '6px 12px 12px', borderBottom: '1px solid rgba(0,0,0,0.08)', marginBottom: '10px' }}>
               <Button
                 variant="ghost"
                 className={`contents-item cover-item ${isCover ? 'selected' : ''}`}
@@ -582,7 +598,7 @@ function Notebook() {
                 </span>
                 {isCover && <span className="active-dot" />}
               </Button>
-            </div>
+            </div>}
 
             {isAssessment ? (
               <div className="challenging-nav-list">
@@ -642,7 +658,7 @@ function Notebook() {
                   <h3>Decimal Place Value & Equations</h3>
                   <p>Rules, models & worked cases</p>
                 </div>
-                {[1, 2, 3, 4, 5].map(concept => (
+                {(isReference ? [1, 2, 3, 4] : [1, 2, 3, 4, 5]).map(concept => (
                   <div className="concept-group" key={concept}>
                     <h4>
                       {concept === 5 ? 'Homework Booklet · Hardest Questions' : concept >= 3 ? `Unit 2 · Concept ${concept - 2}` : `Concept ${concept}`}
@@ -660,7 +676,7 @@ function Notebook() {
                           {c.title}
                           <small>{c.lessons} · pp. {c.start + 1}–{c.start + c.count}</small>
                         </span>
-                        {sheets[page]?.chapter === c.id && <span className="active-dot"/>}
+                        {!isCover && sheets[page]?.chapter === c.id && <span className="active-dot"/>}
                       </Button>
                     ))}
                   </div>
