@@ -1,0 +1,14 @@
+{
+  "place": [["place-1", "place-3", "place-4"], ["place-5", "place-7", "place-8"]],
+  "shift": [["shift-1", "shift-3", "shift-5"], ["shift-6", "shift-8", "shift-9"]],
+  "compose": [["compose-1", "compose-2", "compose-3"], ["compose-4", "compose-5"]],
+  "compare": [["compare-1", "compare-2", "compare-3"], ["compare-4", "compare-5", "compare-6"]],
+  "round": [["round-1", "round-2", "round-3"], ["round-4", "round-5", "round-7"], ["round-6", "round-8", "round-10"]],
+  "estimate": [["estimate-1", "estimate-2", "estimate-3"], ["estimate-4", "estimate-5"]],
+  "add": [["add-1", "add-3", "add-4"], ["add-5", "add-6", "add-7"]],
+  "subtract": [["subtract-1", "subtract-2", "subtract-3"], ["subtract-4", "subtract-6", "subtract-7"], ["subtract-9", "subtract-11", "subtract-12"]],
+  "story": [["story-1", "story-2", "story-3"], ["story-4", "story-5", "story-6"], ["story-7", "story-8", "story-10"]],
+  "u2-words": [["u2-1", "u2-2", "u2-3"], ["u2-4", "u2-5", "u2-6"]],
+  "u2-solve": [["u2-8", "u2-9", "u2-10"], ["u2-11", "u2-13", "u2-14"]],
+  "u2-story": [["u2-15", "u2-16", "u2-17"], ["u2-18", "u2-19"]]
+}
