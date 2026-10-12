@@ -13,3 +13,4 @@
 - Use revision.sheets for lesson-plus-assessment viewing, revision.assessmentSheets for grouped assessments, and revision.octoberSourceOrderSheets for source-order solutions followed by unchanged booklet sheets; all use Paper so print and preview stay consistent.
 - Reference uploaded teacher artwork through a Lovable Assets pointer rather than bundling the binary so the supplied image stays available without repository media overhead.
 - Use named CSS print pages for portrait and landscape editions because @page rules cannot be conditional descendants of body selectors.
+- Derive the miniature lesson reference with getReferenceSheets and reuse the paired Paper view and landscape print layout so original teaching content remains unchanged across editions.

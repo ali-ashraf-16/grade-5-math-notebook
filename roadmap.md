@@ -12,3 +12,7 @@
 # October source-order solutions edition
 - [ ] Add a separate solutions edition: 12 MCQs, then 43 written questions in source order, then unchanged booklet questions.
 - [ ] Verify source ordering, booklet preservation, navigation, and portrait printing.
+
+# Miniature lesson reference
+- [ ] Add a separate explanation-only miniature edition with original worked examples, excluding assessments and booklet exercises.
+- [ ] Verify lesson navigation, content preservation, and two-up printing.
