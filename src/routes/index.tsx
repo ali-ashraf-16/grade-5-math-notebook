@@ -12,7 +12,7 @@ export const Route = createFileRoute('/')({
     { title: 'Math Notebook | Grade 5 · Units 1 & 2 Revision' },
     { name: 'description', content: 'Grade 5 lessons and October solutions: 12 multiple-choice and 43 written questions in original order, followed by homework booklet solutions. Prepared by Mr. Ali Ashraf.' },
     { property: 'og:title', content: 'Math Notebook · Grade 5 Revision' },
-    { property: 'og:description', content: 'Original lesson explanations, an explanation-only miniature revision reference, and October assessment solutions with A4 and two-up printing.' },
+    { property: 'og:description', content: 'Mr. Ali Ashraf’s Grade 5 notebook: original lessons, a focused 27-page lesson reference with worked examples and exam traps, and October solutions.' },
     { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' },
   ] }), component: Notebook,
 });
@@ -185,6 +185,7 @@ function Paper({ sheet, index, isMini = false, theme = 'royal' }: { sheet: Sheet
               <div className="reference-golden-rule"><b>Golden rule</b><p>{pattern.rule}</p></div>
               <p className="reference-question">{pattern.question}</p>
               <ol className="reference-steps">{pattern.steps?.map((step, i) => <li key={i}>{step}</li>)}</ol>
+              {pattern.shift && <p className="reference-answer">{pattern.shift.input} {pattern.shift.direction === 'right' ? '→' : '←'} {pattern.shift.output} · {pattern.shift.places} {pattern.shift.places === 1 ? 'place' : 'places'} {pattern.shift.direction}</p>}
               {pattern.column && <pre className="reference-column">{pattern.column.lines.join('\n')}</pre>}
               {pattern.model && <div className="reference-model"><MathModel model={pattern.model} /></div>}
               <p className="reference-answer"><Check size={14} />{pattern.answer}</p>

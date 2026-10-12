@@ -14,5 +14,5 @@
 - [ ] Verify source ordering, booklet preservation, navigation, and portrait printing.
 
 # Miniature lesson reference
-- [ ] Replace the 96-page miniature with a condensed reference: 1–2 pages per lesson, maximum 3 for large lessons.
-- [ ] Verify original-source examples and wording, lesson navigation, readable pages, and printing without changing the original edition.
+- [x] Replace the 96-page miniature with a condensed 27-page reference: 2 pages per lesson, 3 for large lessons.
+- [x] Verify original-source examples and wording, lesson navigation, readable pages, and portrait printing without changing the original edition.
