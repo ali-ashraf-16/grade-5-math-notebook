@@ -2,17 +2,27 @@ import { describe, expect, test } from 'bun:test';
 import revision from '../src/data/revision.json';
 import { getReferenceSheets } from '../src/lib/notebook-reference';
 
-describe('Explanation-only miniature reference', () => {
+describe('Condensed lesson reference', () => {
   const reference = getReferenceSheets(revision.sheets);
   test('excludes October assessments and booklet exercises', () => {
-    expect(reference.length).toBe(96);
-    expect(reference.some(s => s.id.startsWith('eval-') || s.id.startsWith('booklet-'))).toBe(false);
+    expect(reference.length).toBeLessThan(30);
+    expect(reference.flatMap(s => s.referencePatterns).some(s => s.id.startsWith('eval-') || s.id.startsWith('booklet-'))).toBe(false);
   });
-  test('preserves every original teaching page and its order without rewriting', () => {
-    const originals = revision.sheets.filter(s => s.sourcePages && !s.id.startsWith('booklet-'));
-    expect(reference).toEqual(originals);
-    for (const sheet of reference) expect(sheet).toBe(revision.sheets.find(s => s.id === sheet.id));
-    expect(reference[0]?.id).toBe('place-1');
-    expect(reference.at(-1)?.chapter).toBe('u2-story');
+  test('uses only original examples, rules, steps and exam warnings without rewriting', () => {
+    for (const sheet of reference.flatMap(s => s.referencePatterns)) {
+      expect(sheet).toBe(revision.sheets.find(s => s.id === sheet.id));
+      expect(sheet.steps.length).toBeGreaterThan(0);
+      expect(sheet.rule.length).toBeGreaterThan(0);
+      expect(sheet.note.length).toBeGreaterThan(0);
+    }
+  });
+  test('every supplied teaching lesson has 1–2 pages or maximum 3 for large lessons', () => {
+    const chapters = new Set(revision.sheets.filter(s => !s.id.startsWith('eval-') && !s.id.startsWith('booklet-')).map(s => s.chapter));
+    expect(new Set(reference.map(s => s.chapter))).toEqual(chapters);
+    for (const chapter of chapters) {
+      const count = reference.filter(s => s.chapter === chapter).length;
+      expect(count).toBeGreaterThanOrEqual(1);
+      expect(count).toBeLessThanOrEqual(3);
+    }
   });
 });
