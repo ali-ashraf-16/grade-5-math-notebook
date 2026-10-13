@@ -1,4 +1,3 @@
-# Notebook migration
 # October welcome page
 - [ ] Add a warm English note directly after the source-order cover, with a loving closing and heart.
 - [ ] Verify welcome navigation and portrait print placement without changing the solutions or other editions.
