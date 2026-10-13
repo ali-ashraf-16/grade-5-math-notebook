@@ -16,3 +16,7 @@
 # Miniature lesson reference
 - [x] Replace the 96-page miniature with a condensed 27-page reference: 2 pages per lesson, 3 for large lessons.
 - [x] Verify original-source examples and wording, lesson navigation, readable pages, and portrait printing without changing the original edition.
+
+# Cover and attribution corrections
+- [x] Restore the cover in every edition, remove supervision attribution throughout, and remove the Classic footer photo.
+- [x] Verify edition navigation and printed cover/footer output (all five editions; condensed PDF has cover + 27 lesson pages).

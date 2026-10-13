@@ -4,7 +4,6 @@ import { BookOpen, Printer, ChevronLeft, ChevronRight, Check, List, Minus, Plus,
 import { Button } from '@/components/ui/button';
 import { OctoberCoverPage } from '@/components/OctoberCoverPage';
 import revision from '@/data/revision.json';
-import badge from '@/assets/prepared-badge-october.png.asset.json';
 import { getReferenceSheets } from '@/lib/notebook-reference';
 
 export const Route = createFileRoute('/')({
@@ -255,10 +254,10 @@ function Paper({ sheet, index, isMini = false, theme = 'royal' }: { sheet: Sheet
     </div>
     <footer className="paper-footer">
       <div className="footer-prepared">
-        <img src={isRoyal ? "/mbis_logo.png" : badge.url} alt="Prepared by Mr. Ali Ashraf" className="footer-avatar-badge" />
+        {isRoyal && <img src="/mbis_logo.png" alt="Minia British International School" className="footer-avatar-badge" />}
         <span className="footer-teacher-name">
           {isRoyal ? (
-            <>Prepared by <b>Mr. Ali Ashraf</b> <small>· Supervised by Ms. Hadeel & Ms. Christine</small></>
+            <>Prepared by <b>Mr. Ali Ashraf</b></>
           ) : (
             'Prepared by Mr. Ali Ashraf'
           )}
@@ -405,7 +404,7 @@ function Notebook() {
           <Button variant="ghost" type="button"
             className={`edition-tab ${isReference ? 'active' : ''}`}
             aria-pressed={isReference}
-            onClick={() => { setMode('reference'); setPage(0); setTwoUpIndex(0); setIsCover(false); }}
+            onClick={() => { setMode('reference'); setPage(0); setTwoUpIndex(0); setIsCover(true); }}
             title="ملخص الدروس: القواعد والأفكار الأساسية والأمثلة الأصلية وتنبيهات الامتحان، بحد أقصى 3 صفحات لكل درس"
           >
             <BookOpen size={15} />
@@ -496,9 +495,9 @@ function Notebook() {
             <>
               <div className="paper-stage">
                 <div className="paper-scale" style={{ zoom: zoom / 100 }}>
-                  {!isReference && <div className={`page-slot ${isCover ? 'active-page' : ''} cover-slot`}>
+                  <div className={`page-slot ${isCover ? 'active-page' : ''} cover-slot`}>
                     <OctoberCoverPage />
-                  </div>}
+                  </div>
                   {sheets.map((s, i) => (
                     <div key={s.id} className={`page-slot ${!isCover && i === page ? 'active-page' : ''}`}>
                       <Paper sheet={s} index={i} theme={theme} />
@@ -508,9 +507,9 @@ function Notebook() {
               </div>
               <div className="page-navigation">
                 <Button variant="outline" size="icon" onClick={() => {
-                  if (page === 0 && !isCover && !isReference) setIsCover(true);
+                  if (page === 0 && !isCover) setIsCover(true);
                   else if (!isCover) go(page - 1);
-                }} disabled={isCover || (isReference && page === 0)} aria-label="Previous page"><ChevronLeft/></Button>
+                }} disabled={isCover} aria-label="Previous page"><ChevronLeft/></Button>
                 <span>{isCover ? <b>Cover Page · غلاف المذكرة</b> : <>Page <b>{page + 1}</b> of {sheets.length}</>}</span>
                 <Button variant="outline" size="icon" onClick={() => {
                   if (isCover) { setIsCover(false); setPage(0); }
@@ -525,13 +524,11 @@ function Notebook() {
             <>
               <div className="paper-stage two-up-stage">
                 <div className="two-up-scale" style={{ zoom: zoom / 100 }}>
-                  {isCover ? (
-                    <div className="page-slot active-page cover-slot" style={{ display: 'flex', justifyContent: 'center' }}>
+                    <div className={`page-slot ${isCover ? 'active-page' : ''} cover-slot`}>
                       <OctoberCoverPage />
                     </div>
-                  ) : (
-                    pairs.map(([leftSheet, rightSheet], idx) => (
-                      <div key={leftSheet.id} className={`two-up-slot ${idx === twoUpIndex ? 'active-two-up' : ''}`}>
+                    {pairs.map(([leftSheet, rightSheet], idx) => (
+                      <div key={leftSheet.id} className={`two-up-slot ${!isCover && idx === twoUpIndex ? 'active-two-up' : ''}`}>
                         <div className="two-up-pair-card">
                           <div className="two-up-half left-half">
                             <Paper sheet={leftSheet} index={idx * 2} isMini theme={theme} />
@@ -545,8 +542,7 @@ function Notebook() {
                           )}
                         </div>
                       </div>
-                    ))
-                  )}
+                    ))}
                 </div>
               </div>
               <div className="page-navigation">
@@ -601,7 +597,7 @@ function Notebook() {
               <span>{isAssessment ? `${assessmentSheets.length} assessment sheets` : `${sheets.length} pages`}</span>
             </div>
 
-            {!isReference && <div className="cover-nav-section" style={{ padding: '6px 12px 12px', borderBottom: '1px solid rgba(0,0,0,0.08)', marginBottom: '10px' }}>
+            <div className="cover-nav-section" style={{ padding: '6px 12px 12px', borderBottom: '1px solid rgba(0,0,0,0.08)', marginBottom: '10px' }}>
               <Button
                 variant="ghost"
                 className={`contents-item cover-item ${isCover ? 'selected' : ''}`}
@@ -615,7 +611,7 @@ function Notebook() {
                 </span>
                 {isCover && <span className="active-dot" />}
               </Button>
-            </div>}
+            </div>
 
             {isAssessment ? (
               <div className="challenging-nav-list">

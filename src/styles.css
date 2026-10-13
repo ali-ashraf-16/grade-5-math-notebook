@@ -1460,7 +1460,7 @@ body { font-family:'Nunito Sans',sans-serif; }
 /* Credits Grid */
 .cover-credits-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 18px;
   margin: 10px auto 4px auto;
   max-width: 630px;
