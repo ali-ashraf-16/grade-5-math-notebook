@@ -1,0 +1,16 @@
+{
+  "id": "october-welcome",
+  "chapter": "october-introduction",
+  "title": "A Little Note Before You Begin",
+  "welcome": {
+    "greeting": "My dear students,",
+    "paragraphs": [
+      "This booklet brings together step-by-step solutions to the October assessment questions and the Ministry textbook questions, along with the most important and challenging questions from our homework booklet.",
+      "After revising the lesson explanations, please review the following questions carefully. Take your time with each question, follow the steps thoughtfully, and give every idea the attention it deserves.",
+      "I believe in you and in the effort you put into learning. May this revision help you feel confident, prepared, and proud of your progress."
+    ],
+    "closing": "Wishing you all the best, my dear students!",
+    "signoff": "With love,",
+    "signature": "Mr. Ali Ashraf"
+  }
+}

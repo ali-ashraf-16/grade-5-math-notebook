@@ -1,10 +1,11 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { useEffect, useState } from 'react';
-import { BookOpen, Printer, ChevronLeft, ChevronRight, Check, List, Minus, Plus, PanelRightClose, PanelRightOpen, GraduationCap, AlertTriangle, Sparkles, Copy, FileText } from 'lucide-react';
+import { BookOpen, Printer, ChevronLeft, ChevronRight, Check, List, Minus, Plus, PanelRightClose, PanelRightOpen, GraduationCap, AlertTriangle, Sparkles, Copy, FileText, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { OctoberCoverPage } from '@/components/OctoberCoverPage';
 import revision from '@/data/revision.json';
 import { getReferenceSheets } from '@/lib/notebook-reference';
+import { getOctoberEditionSheets } from '@/lib/october-edition';
 
 export const Route = createFileRoute('/')({
   head: () => ({ meta: [
@@ -47,11 +48,12 @@ type Sheet = {
   shift?: { direction: string; places: number; input: string; output: string; operation: string; factor: number };
   items?: SheetItem[];
   referencePatterns?: Sheet[];
+  welcome?: { greeting: string; paragraphs: string[]; closing: string; signoff: string; signature: string };
 };
 
 const sheets: Sheet[] = revision.sheets;
 const lessonAssessmentSheets: Sheet[] = revision.assessmentSheets;
-const sourceOrderSheets: Sheet[] = revision.octoberSourceOrderSheets;
+const sourceOrderSheets: Sheet[] = getOctoberEditionSheets(revision.octoberSourceOrderSheets);
 const chapters = revision.chapters.map(ch => ({ ...ch, start: sheets.findIndex(s => s.chapter === ch.id), count: sheets.filter(s => s.chapter === ch.id).length }));
 
 function NumberLineModel({ model }: { model: Model }) {
@@ -168,15 +170,25 @@ function Paper({ sheet, index, isMini = false, theme = 'royal' }: { sheet: Sheet
     <div className="paper-content">
       <div className="paper-running">
         <span>{isRoyal ? 'MINIA BRITISH INTERNATIONAL SCHOOL · GRADE 5' : 'GRADE 5 · MATHEMATICS'}</span>
-        <span>{sheet.sourceSection ? `OCTOBER · SOURCE PAGE ${sheet.sourcePages?.[0]}` : chapter?.concept === 5 ? 'OCTOBER REVISION · HARDEST QUESTIONS' : chapter?.concept && chapter.concept >= 3 ? `OCTOBER REVISION · UNIT 2 · CONCEPT ${chapter.concept - 2}` : `OCTOBER REVISION · UNIT 1 · CONCEPT ${chapter?.concept}`}</span>
+        <span>{sheet.welcome ? 'OCTOBER REVISION · A NOTE FOR YOU' : sheet.sourceSection ? `OCTOBER · SOURCE PAGE ${sheet.sourcePages?.[0]}` : chapter?.concept === 5 ? 'OCTOBER REVISION · HARDEST QUESTIONS' : chapter?.concept && chapter.concept >= 3 ? `OCTOBER REVISION · UNIT 2 · CONCEPT ${chapter.concept - 2}` : `OCTOBER REVISION · UNIT 1 · CONCEPT ${chapter?.concept}`}</span>
       </div>
-      <div className="paper-lesson-banner">
+      {!sheet.welcome && <div className="paper-lesson-banner">
         <span className="lesson-badge">{sheet.sourceSection ? `(${sheet.sourceNumber})` : chapter?.lessons}</span>
         <span className="lesson-topic">{sheet.sourceSection ? sheet.sourceSection === 'mcq' ? 'First: Choose the correct answer' : 'Second: Answer each of the following' : chapter?.title}</span>
-      </div>
+      </div>}
       <h2 className="paper-title">{sheet.title}</h2>
       {sheet.tag && <span className="eval-tag-pill">{sheet.tag}</span>}
-      {sheet.referencePatterns ? (
+      {sheet.welcome ? (
+        <section className="october-welcome" lang="en" dir="ltr">
+          <p className="welcome-greeting">{sheet.welcome.greeting}</p>
+          {sheet.welcome.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+          <div className="welcome-closing">
+            <Heart className="welcome-heart" size={36} aria-label="With love" />
+            <p>{sheet.welcome.closing}</p>
+            <p className="welcome-signature">{sheet.welcome.signoff}<br/>{sheet.welcome.signature}</p>
+          </div>
+        </section>
+      ) : sheet.referencePatterns ? (
         <div className="reference-patterns">
           {sheet.referencePatterns.map(pattern => (
             <section className="reference-pattern" key={pattern.id} data-source-id={pattern.id}>
