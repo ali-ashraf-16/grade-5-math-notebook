@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Star, Sparkles, BookOpen, UserCheck, ShieldCheck, Calendar, BookMarked } from 'lucide-react';
+import { Star, UserCheck } from 'lucide-react';
 
 export function OctoberCoverPage() {
   return (
@@ -77,7 +77,7 @@ export function OctoberCoverPage() {
             </div>
           </section>
 
-          {/* Credits Grid: Prepared By & Supervised By */}
+          {/* Teacher attribution */}
           <section className="cover-credits-grid" aria-label="Academic Credits">
             <div className="cover-credit-card prep-card">
               <div className="credit-badge-label">
@@ -88,16 +88,6 @@ export function OctoberCoverPage() {
               <p className="credit-role">Mathematics Specialist</p>
             </div>
 
-            <div className="cover-credit-card sup-card">
-              <div className="credit-badge-label">
-                <ShieldCheck size={14} style={{ color: '#c8a251' }} />
-                <span>Under the Supervision of</span>
-              </div>
-              <h3 className="credit-name">
-                Ms. Hadeel <span className="amp">&</span> Ms. Christine
-              </h3>
-              <p className="credit-role">Academic Leadership & Supervision</p>
-            </div>
           </section>
 
           {/* Footer Metadata */}
