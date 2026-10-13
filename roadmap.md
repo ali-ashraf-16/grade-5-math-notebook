@@ -1,6 +1,7 @@
 # October welcome page
 - [ ] Add a warm English note directly after the source-order cover, with a loving closing and heart.
 - [ ] Verify welcome navigation and portrait print placement without changing the solutions or other editions.
+- [ ] Suggest an affectionate farewell and two original poetic lines for the teacher's departure for military service; await wording approval before adding a final page.
 
 # Notebook migration
 - [x] Import supplied notebook data, page code, and styles.
